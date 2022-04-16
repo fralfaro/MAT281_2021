@@ -1,0 +1,841 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MAT281 - Laboratorio N°03 &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/basic_tools/lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_013_ide.html">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_014_jupyter.html">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/pandas/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/modulos_pandas/groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/modulos_pandas/merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/modulos_pandas/pivot.html">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/sqlalchemy/sqlalchemy.html">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/ml/introduccion_ml/introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/analisis_supervisado_regresion/intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_supervisado_regresion/02_regresion_lineal.html">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_supervisado_regresion/02_modelos_regresion.html">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/introduccion_ml/no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/ml/time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/mat281/labs/lab_03.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problema-01">
+   Problema 01
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problema-02">
+   Problema 02
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#problema-03">
+   Problema 03
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-subproblema-01">
+     a) Subproblema 01
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#b-subproblema-02">
+     b) Subproblema 02
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="mat281-laboratorio-n03">
+<h1>MAT281 - Laboratorio N°03<a class="headerlink" href="#mat281-laboratorio-n03" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="problema-01">
+<h2>Problema 01<a class="headerlink" href="#problema-01" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="https://imagenes.universia.net/gc/net/images/practicas-empleo/p/pr/pro/profesiones-con-el-avance-de-la-tecnologia.jpg"><img alt="https://imagenes.universia.net/gc/net/images/practicas-empleo/p/pr/pro/profesiones-con-el-avance-de-la-tecnologia.jpg" class="align-center" src="https://imagenes.universia.net/gc/net/images/practicas-empleo/p/pr/pro/profesiones-con-el-avance-de-la-tecnologia.jpg" style="width: 480px; height: 360px;" /></a>
+<p>EL conjunto de datos se denomina <code class="docutils literal notranslate"><span class="pre">ocupation.csv</span></code>, el cual contiene información de distintos usuarios (edad ,sexo, profesión, etc.).</p>
+<p>Lo primero es cargar el conjunto de datos y ver las primeras filas que lo componen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cargar datos</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span><span class="s2">&quot;ocupation.csv&quot;</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;|&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>user_id</th>
+      <th>age</th>
+      <th>gender</th>
+      <th>occupation</th>
+      <th>zip_code</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>24</td>
+      <td>M</td>
+      <td>technician</td>
+      <td>85711</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>53</td>
+      <td>F</td>
+      <td>other</td>
+      <td>94043</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>23</td>
+      <td>M</td>
+      <td>writer</td>
+      <td>32067</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>24</td>
+      <td>M</td>
+      <td>technician</td>
+      <td>43537</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>33</td>
+      <td>F</td>
+      <td>other</td>
+      <td>15213</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>El objetivo es tratar de obtener la mayor información posible de este conjunto de datos. Para cumplir este objetivo debe resolver las siguientes problemáticas:</p>
+<p>1.- ¿Cuál es el número de observaciones en el conjunto de datos?</p>
+<p>2.- ¿Cuál es el número de columnas en el conjunto de datos?</p>
+<p>3.- Imprime el nombre de todas las columnas</p>
+<p>4.- Imprima el índice del dataframe</p>
+<p>5.- ¿Cuál es el tipo de datos de cada columna?</p>
+<p>6.- Describir el conjunto de datos (<strong>hint</strong>: .describe())</p>
+<p>7.- Imprimir solo la columna de <strong>occupation</strong>.</p>
+<p>8.- ¿Cuántas ocupaciones diferentes hay en este conjunto de datos?</p>
+<p>9.- ¿Cuál es la ocupación más frecuente?</p>
+<p>10.- ¿Cuál es la edad media de los usuarios?</p>
+<p>11.- ¿Cuál es la edad con menos ocurrencia?</p>
+<p>12.- Encontrar la edad promedio según la variable <strong>occupation</strong></p>
+</div>
+<div class="section" id="problema-02">
+<h2>Problema 02<a class="headerlink" href="#problema-02" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="https://image.freepik.com/vector-gratis/varios-automoviles-dibujos-animados_23-2147613095.jpg"><img alt="https://image.freepik.com/vector-gratis/varios-automoviles-dibujos-animados_23-2147613095.jpg" class="align-center" src="https://image.freepik.com/vector-gratis/varios-automoviles-dibujos-animados_23-2147613095.jpg" style="width: 360px; height: 360px;" /></a>
+<p>EL conjunto de datos se denomina <code class="docutils literal notranslate"><span class="pre">Automobile_data.csv</span></code>, el cual contiene información tal como: compañia, precio, kilometraje, etc.</p>
+<p>Lo primero es cargar el conjunto de datos y ver las primeras filas que lo componen:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cargar datos</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span><span class="s2">&quot;Automobile_data.csv&quot;</span><span class="p">))</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;index&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>company</th>
+      <th>body-style</th>
+      <th>wheel-base</th>
+      <th>length</th>
+      <th>engine-type</th>
+      <th>num-of-cylinders</th>
+      <th>horsepower</th>
+      <th>average-mileage</th>
+      <th>price</th>
+    </tr>
+    <tr>
+      <th>index</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>alfa-romero</td>
+      <td>convertible</td>
+      <td>88.6</td>
+      <td>168.8</td>
+      <td>dohc</td>
+      <td>four</td>
+      <td>111</td>
+      <td>21</td>
+      <td>13495.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>alfa-romero</td>
+      <td>convertible</td>
+      <td>88.6</td>
+      <td>168.8</td>
+      <td>dohc</td>
+      <td>four</td>
+      <td>111</td>
+      <td>21</td>
+      <td>16500.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>alfa-romero</td>
+      <td>hatchback</td>
+      <td>94.5</td>
+      <td>171.2</td>
+      <td>ohcv</td>
+      <td>six</td>
+      <td>154</td>
+      <td>19</td>
+      <td>16500.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>audi</td>
+      <td>sedan</td>
+      <td>99.8</td>
+      <td>176.6</td>
+      <td>ohc</td>
+      <td>four</td>
+      <td>102</td>
+      <td>24</td>
+      <td>13950.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>audi</td>
+      <td>sedan</td>
+      <td>99.4</td>
+      <td>176.6</td>
+      <td>ohc</td>
+      <td>five</td>
+      <td>115</td>
+      <td>18</td>
+      <td>17450.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>El objetivo es tratar de obtener la mayor información posible de este conjunto de datos. Para cumplir este objetivo debe resolver las siguientes problemáticas:</p>
+<ol class="simple">
+<li><p>Elimine los valores nulos (Nan)</p></li>
+</ol>
+<ol class="simple">
+<li><p>Encuentra el nombre de la compañía de automóviles más cara</p></li>
+</ol>
+<ol class="simple">
+<li><p>Imprimir todos los detalles de Toyota Cars</p></li>
+</ol>
+<ol class="simple">
+<li><p>Cuente el total de automóviles por compañía</p></li>
+</ol>
+<ol class="simple">
+<li><p>Encuentra el coche con el precio más alto por compañía</p></li>
+</ol>
+<ol class="simple">
+<li><p>Encuentre el kilometraje promedio (<strong>average-mileage</strong>) de cada compañía automotriz</p></li>
+</ol>
+<ol class="simple">
+<li><p>Ordenar todos los autos por columna de precio (<strong>price</strong>)</p></li>
+</ol>
+</div>
+<div class="section" id="problema-03">
+<h2>Problema 03<a class="headerlink" href="#problema-03" title="Permalink to this headline">¶</a></h2>
+<p>Siguiendo la temática de los automóviles, resuelva los siguientes problemas:</p>
+<div class="section" id="a-subproblema-01">
+<h3>a) Subproblema 01<a class="headerlink" href="#a-subproblema-01" title="Permalink to this headline">¶</a></h3>
+<p>A partir de los siguientes diccionarios:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">GermanCars</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Company&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Ford&#39;</span><span class="p">,</span> <span class="s1">&#39;Mercedes&#39;</span><span class="p">,</span> <span class="s1">&#39;BMV&#39;</span><span class="p">,</span> <span class="s1">&#39;Audi&#39;</span><span class="p">],</span>
+              <span class="s1">&#39;Price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">23845</span><span class="p">,</span> <span class="mi">171995</span><span class="p">,</span> <span class="mi">135925</span> <span class="p">,</span> <span class="mi">71400</span><span class="p">]}</span>
+<span class="n">japaneseCars</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Company&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Toyota&#39;</span><span class="p">,</span> <span class="s1">&#39;Honda&#39;</span><span class="p">,</span> <span class="s1">&#39;Nissan&#39;</span><span class="p">,</span> <span class="s1">&#39;Mitsubishi &#39;</span><span class="p">],</span> 
+                <span class="s1">&#39;Price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">29995</span><span class="p">,</span> <span class="mi">23600</span><span class="p">,</span> <span class="mi">61500</span> <span class="p">,</span> <span class="mi">58900</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Cree dos dataframes (<strong>carsDf1</strong> y <strong>carsDf2</strong>) según corresponda.</p></li>
+<li><p>Concatene ambos dataframes (<strong>carsDf</strong>) y añada una llave [“Germany”, “Japan”], según corresponda.</p></li>
+</ul>
+</div>
+<div class="section" id="b-subproblema-02">
+<h3>b) Subproblema 02<a class="headerlink" href="#b-subproblema-02" title="Permalink to this headline">¶</a></h3>
+<p>A partir de los siguientes diccionarios:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Car_Price</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Company&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Toyota&#39;</span><span class="p">,</span> <span class="s1">&#39;Honda&#39;</span><span class="p">,</span> <span class="s1">&#39;BMV&#39;</span><span class="p">,</span> <span class="s1">&#39;Audi&#39;</span><span class="p">],</span> <span class="s1">&#39;Price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">23845</span><span class="p">,</span> <span class="mi">17995</span><span class="p">,</span> <span class="mi">135925</span> <span class="p">,</span> <span class="mi">71400</span><span class="p">]}</span>
+<span class="n">car_Horsepower</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Company&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Toyota&#39;</span><span class="p">,</span> <span class="s1">&#39;Honda&#39;</span><span class="p">,</span> <span class="s1">&#39;BMV&#39;</span><span class="p">,</span> <span class="s1">&#39;Audi&#39;</span><span class="p">],</span> <span class="s1">&#39;horsepower&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">141</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="mi">182</span> <span class="p">,</span> <span class="mi">160</span><span class="p">]}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Cree dos dataframes (<strong>carsDf1</strong> y <strong>carsDf2</strong>) según corresponda.</p></li>
+<li><p>Junte ambos dataframes (<strong>carsDf</strong>) por la llave <strong>Company</strong>.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/labs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

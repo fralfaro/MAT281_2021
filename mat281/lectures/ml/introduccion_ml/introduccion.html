@@ -1,0 +1,741 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducción &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Aprendizaje supervisado - Regresión" href="../analisis_supervisado_regresion/intro.html" />
+    <link rel="prev" title="Caso Aplicado" href="../../data_manipulation/eda/eda.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../index.html">
+      
+      <img src="../../../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../basic_tools/lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basic_tools/lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_013_ide.html">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_014_jupyter.html">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/data_manipulation/base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_manipulation/data_manipulation/pandas/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/data_manipulation/modulos_pandas/groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/data_manipulation/modulos_pandas/merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/data_manipulation/modulos_pandas/pivot.html">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/data_manipulation/sqlalchemy/sqlalchemy.html">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../analisis_supervisado_regresion/intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_supervisado_regresion/02_regresion_lineal.html">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_supervisado_regresion/02_modelos_regresion.html">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/mat281/lectures/ml/introduccion_ml/introduccion.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#que-es-el-machine-learning">
+   ¿Qué es el Machine learning?
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#que-se-entiende-por-modelo">
+     ¿Qué se entiende por modelo?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#que-tipos-de-problemas-podemos-abordar-con-machine-learning">
+     ¿ Qué tipos de problemas podemos abordar con machine learning?
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aprendizaje-supervisado">
+       Aprendizaje supervisado
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aprendizaje-no-supervisado">
+       Aprendizaje no supervisado
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aprendizaje-por-refuerzo">
+       Aprendizaje por refuerzo
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#algoritmos-mas-utilizados">
+     Algoritmos más utilizados
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#librerias-de-machine-learning-en-python">
+     Librerías de machine learning en python
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#scikit-learn">
+       Scikit-Learn
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#statsmodels">
+       Statsmodels
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conceptos-claves-en-machine-learning">
+   Conceptos claves en machine learning
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#esquema-machine-learning">
+     Esquema machine learning
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referencias
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="introduccion">
+<h1>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="que-es-el-machine-learning">
+<h2>¿Qué es el Machine learning?<a class="headerlink" href="#que-es-el-machine-learning" title="Permalink to this headline">¶</a></h2>
+<p>Podemos resumir <a class="reference external" href="https://en.wikipedia.org/wiki/Machine_learning">Machine Learning</a> en cuatro puntos:</p>
+<ul class="simple">
+<li><p>Estudia y construye sistemas que pueden aprender de los datos, más
+que seguir instrucciones explícitamente programadas.</p></li>
+<li><p>Conjunto de técnicas y modelos que permiten
+el modelamiento predictivo de datos, reunidas a partir de la
+intersección de elementos de probabilidad, estadística e
+inteligencia artificial.</p></li>
+<li><p>Típicamente, alguien que trabaja en Machine Learning está en la Academia y busca realizar investigación y publicar artículos.</p></li>
+<li><p>Pregunta fundamental:
+¿Qué conocimiento emerge a partir de los datos? ¿Qué modelo/técnica
+otorga la mejor predicción para estos datos?</p></li>
+</ul>
+<p>Para poder avanzar en el estudio de machine learning es de vital importancia definir el concepto de <strong>modelo</strong>.</p>
+<div class="section" id="que-se-entiende-por-modelo">
+<h3>¿Qué se entiende por modelo?<a class="headerlink" href="#que-se-entiende-por-modelo" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../../../../_images/ds_01.jpg"><img alt="../../../../_images/ds_01.jpg" class="align-center" src="../../../../_images/ds_01.jpg" style="width: 480px; height: 240px;" /></a>
+<p>Un <a class="reference external" href="https://en.wikipedia.org/wiki/Mathematical_model">modelo</a> se entinde como:</p>
+<ul class="simple">
+<li><p>Una representación abstracta y conveniente de un sistema.</p></li>
+<li><p>Una simplificación del mundo real.</p></li>
+<li><p>Un medio de exploración y de explicación para nuestro entendimiento de la realidad.</p></li>
+</ul>
+<p>Por otro lado, un modelo <strong>no</strong> es:</p>
+<ul class="simple">
+<li><p>Igual al mundo real.</p></li>
+<li><p>Un sustituto para mediciones o experimentos.</p></li>
+</ul>
+<p>Los modelos nos permiten:</p>
+<ul class="simple">
+<li><p>reproducir experimentos donde factores no pueden ser fácilmente controlados.</p>
+<ul>
+<li><p><strong>Ejemplo</strong>: Comportamiento de cápsula lunar en gravedad cero y al atravesar atmósfera a gran velocidad.</p></li>
+</ul>
+</li>
+<li><p>simplificar el entendimiento de sistemas complejos, al permitir el análisis y exploración de cada componente del sistema por separado.</p>
+<ul>
+<li><p><strong>Ejemplo</strong>: Adelgazamiento de la capa de hielo polar por calentamiento global.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="que-tipos-de-problemas-podemos-abordar-con-machine-learning">
+<h3>¿ Qué tipos de problemas podemos abordar con machine learning?<a class="headerlink" href="#que-tipos-de-problemas-podemos-abordar-con-machine-learning" title="Permalink to this headline">¶</a></h3>
+<p>Los problemas que se pueden resolver con machine learning se pueden englobar en tres tipos: <strong>aprendeizaje supervisado</strong>, <strong>aprendizaje no supervisado</strong> y <strong>aprendizaje reforzado</strong>.</p>
+<img alt="Machine Learning" src="../../../../_images/esquema.png" />
+<div class="section" id="aprendizaje-supervisado">
+<h4>Aprendizaje supervisado<a class="headerlink" href="#aprendizaje-supervisado" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>El sistema aprende en base a datos estructurados o no
+estructurados.</p></li>
+<li><p>Clasificados previamente (se conoce la respuesta).</p></li>
+<li><p>El algoritmo produce una función que establece una
+correspondencia entre las entradas y las salidas
+deseadas del sistema.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../../_images/class.jpeg"><img alt="../../../../_images/class.jpeg" class="align-center" src="../../../../_images/class.jpeg" style="width: 480px; height: 300px;" /></a>
+</div>
+<div class="section" id="aprendizaje-no-supervisado">
+<h4>Aprendizaje no supervisado<a class="headerlink" href="#aprendizaje-no-supervisado" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Modelo se construye usando un conjunto de datos
+como entrada, los cuales no han sido clasificados
+previamente.</p></li>
+<li><p>El sistema tiene que ser capaz de reconocer patrones
+para poder etiquetar las nuevas entradas.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../../_images/clust1.png"><img alt="../../../../_images/clust1.png" class="align-center" src="../../../../_images/clust1.png" style="width: 480px; height: 300px;" /></a>
+</div>
+<div class="section" id="aprendizaje-por-refuerzo">
+<h4>Aprendizaje por refuerzo<a class="headerlink" href="#aprendizaje-por-refuerzo" title="Permalink to this headline">¶</a></h4>
+<p>Aprendizaje por refuerzo o Aprendizaje reforzado es un área del aprendizaje automático inspirada en la psicología conductista, cuya ocupación es determinar qué acciones debe escoger un agente de software en un entorno dado con el fin de maximizar alguna noción de “recompensa” o premio acumulado.</p>
+<a class="reference internal image-reference" href="../../../../_images/ref.jpg"><img alt="../../../../_images/ref.jpg" class="align-center" src="../../../../_images/ref.jpg" style="width: 480px; height: 300px;" /></a>
+</div>
+</div>
+<div class="section" id="algoritmos-mas-utilizados">
+<h3>Algoritmos más utilizados<a class="headerlink" href="#algoritmos-mas-utilizados" title="Permalink to this headline">¶</a></h3>
+<p>Los algoritmos que más se suelen utilizar en los problemas de Machine Learning son los siguientes:</p>
+<ol class="simple">
+<li><p><a class="reference external" href="https://es.wikipedia.org/wiki/Regresi%C3%B3n_lineal">Regresión Lineal</a></p></li>
+<li><p><a class="reference external" href="https://es.wikipedia.org/wiki/Regresi%C3%B3n_log%C3%ADstica">Regresión Logística</a></p></li>
+<li><p><a class="reference external" href="https://es.wikipedia.org/wiki/%C3%81rbol_de_decisi%C3%B3n">Arboles de Decision</a></p></li>
+<li><p><a class="reference external" href="https://es.wikipedia.org/wiki/Random_forest">Random Forest</a></p></li>
+<li><p><a class="reference external" href="https://es.wikipedia.org/wiki/M%C3%A1quinas_de_vectores_de_soporte">SVM</a></p></li>
+<li><p><a class="reference external" href="https://es.wikipedia.org/wiki/K-vecinos_m%C3%A1s_cercanos">KNN</a></p></li>
+<li><p><a class="reference external" href="https://es.wikipedia.org/wiki/K-means">K-means</a></p></li>
+</ol>
+<p><strong>¿ Qué se necesita para aprender machine learning?</strong></p>
+<p>Se necesita tener conocimientos de los siguientes tópicos.</p>
+<ul class="simple">
+<li><p><strong>Algebra Lineal</strong></p></li>
+<li><p><strong>Probabilidad y estadística</strong></p></li>
+<li><p><strong>Optimización</strong></p></li>
+</ul>
+</div>
+<div class="section" id="librerias-de-machine-learning-en-python">
+<h3>Librerías de machine learning en python<a class="headerlink" href="#librerias-de-machine-learning-en-python" title="Permalink to this headline">¶</a></h3>
+<p>Una de las grandes ventajas que ofrece python  sobre otros lenguajes de programación; es lo grande y prolifera que es la comunidad de desarrolladores que lo rodean; comunidad que ha contribuido con una gran variedad de librerías de primer nivel que extienden la funcionalidades del lenguaje. Para el caso de Machine Learning , las principales librerías que podemos utilizar son:</p>
+<div class="section" id="scikit-learn">
+<h4>Scikit-Learn<a class="headerlink" href="#scikit-learn" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="../../../../_images/sklearn.png"><img alt="../../../../_images/sklearn.png" class="align-center" src="../../../../_images/sklearn.png" style="width: 240px; height: 100px;" /></a>
+<p><a class="reference external" href="http://scikit-learn.org/stable/">Scikit-learn</a> es la principal librería que existe para trabajar con Machine Learning, incluye la implementación de un gran número de algoritmos  de aprendizaje. La podemos utilizar para <a href='http://scikit-learn.org/stable/supervised_learning.html#supervised-learning' target='_blank'>clasificaciones</a>, <a href='http://scikit-learn.org/stable/modules/feature_extraction.html#feature-extractionfeature' target='_blank'>extraccion de características</a>, <a href='http://scikit-learn.org/stable/supervised_learning.html#supervised-learning' target='_blank'>regresiones</a>, <a href='http://scikit-learn.org/stable/modules/clustering.html#clustering' target='_blank'>agrupaciones</a>, <a href='http://scikit-learn.org/stable/modules/decomposition.html#decompositions' target='_blank'>reducción de dimensiones</a>, <a href='http://scikit-learn.org/stable/model_selection.html#model-selection' target='_blank'>selección de modelos</a>, o <a href='http://scikit-learn.org/stable/modules/preprocessing.html#preprocessing' target='_blank'>preprocesamiento</a>.</p>
+</div>
+<div class="section" id="statsmodels">
+<h4>Statsmodels<a class="headerlink" href="#statsmodels" title="Permalink to this headline">¶</a></h4>
+<a class="reference internal image-reference" href="../../../../_images/statsmodels.svg"><img alt="../../../../_images/statsmodels.svg" class="align-center" height="100" src="../../../../_images/statsmodels.svg" width="240" /></a>
+<p><a class="reference external" href="http://statsmodels.sourceforge.net/">Statsmodels</a> es otra gran librería que hace foco en modelos estadísticos y se utiliza principalmente para análisis predictivos y exploratorios.  Las pruebas estadísticas que ofrece son bastante amplias y abarcan tareas de validación para la mayoría de los casos.</p>
+<p><a id='c2'></a></p>
+</div>
+</div>
+</div>
+<div class="section" id="conceptos-claves-en-machine-learning">
+<h2>Conceptos claves en machine learning<a class="headerlink" href="#conceptos-claves-en-machine-learning" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="esquema-machine-learning">
+<h3>Esquema machine learning<a class="headerlink" href="#esquema-machine-learning" title="Permalink to this headline">¶</a></h3>
+<p>EL proceso de machine learning se puede resumir a grandes rasgo por el siguiente esquema.</p>
+<a class="reference internal image-reference" href="../../../../_images/mlflow.png"><img alt="../../../../_images/mlflow.png" class="align-center" src="../../../../_images/mlflow.png" style="width: 480px; height: 480px;" /></a>
+<ol class="simple">
+<li><p><strong>Recolectar los datos</strong>. Podemos recolectar los datos desde muchas fuentes, podemos por ejemplo extraer los datos de un sitio web o obtener los datos utilizando una <a class="reference external" href="https://es.wikipedia.org/wiki/Interfaz_de_programaci%C3%B3n_de_aplicaciones">API</a> o desde una base de datos.</p></li>
+<li><p><strong>Preprocesar los datos</strong>. Es prácticamente inevitable tener que realizar varias tareas de preprocesamiento antes de poder utilizar los datos. Igualmente este punto suele ser mucho más sencillo que el paso anterior.</p></li>
+<li><p><strong>Explorar los datos</strong>. Una vez que ya tenemos los datos y están con el formato correcto, podemos realizar un pre análisis para corregir los casos de valores faltantes o intentar encontrar a simple vista algún patrón en los mismos que nos facilite la construcción del modelo.</p></li>
+<li><p><strong>Entrenar el modelo</strong>. En esta etapa se entrenan los modelos con los datos que venimos procesando en las etapas anteriores. La idea es que los modelos puedan extraer información útil de los datos que le pasamos para luego poder hacer predicciones.</p></li>
+<li><p><strong>Evaluar el modelo</strong>. Evaluamos que tan preciso es el modelo en sus predicciones y si no estamos muy conforme con su rendimiento, podemos volver a la etapa anterior y continuar entrenando el modelo cambiando algunos parámetros hasta lograr un rendimiento aceptable.</p></li>
+<li><p><strong>Utilizar el modelo</strong>. En esta ultima etapa, ya ponemos a nuestro modelo a enfrentarse al problema real. Aquí también podemos medir su rendimiento, lo que tal vez nos obligue a revisar todos los pasos anteriores.</p></li>
+</ol>
+<p>Los pasos 1,2,3 son los pasos que ya se han visto con detalle en este curso. Por otro lado, la etapa de modelamiento (entrenar, evaluar y predecir) será necesario introducir nuevos conceptos.</p>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://machinelearningmastery.com/basic-concepts-in-machine-learning/">Basic Concepts in Machine Learning</a></p></li>
+<li><p><a class="reference external" href="https://www.toptal.com/machine-learning/machine-learning-theory-an-introductory-primer">An Introduction to Machine Learning Theory and Its Applications: A Visual Tutorial with Examples</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/lectures/ml/introduccion_ml"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../../data_manipulation/eda/eda.html" title="previous page">Caso Aplicado</a>
+    <a class='right-next' id="next-link" href="../analisis_supervisado_regresion/intro.html" title="next page">Aprendizaje supervisado - Regresión</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

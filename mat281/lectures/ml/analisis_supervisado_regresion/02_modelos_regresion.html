@@ -1,0 +1,1761 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelos de regressión multiple &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../../../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Aprendizaje supervisado - Clasificación" href="../analisis_supervisado_clasificacion/intro.html" />
+    <link rel="prev" title="Modelos de regressión lineal" href="02_regresion_lineal.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../index.html">
+      
+      <img src="../../../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../basic_tools/lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basic_tools/lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_013_ide.html">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_014_jupyter.html">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/data_manipulation/base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_manipulation/data_manipulation/pandas/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/data_manipulation/modulos_pandas/groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/data_manipulation/modulos_pandas/merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/data_manipulation/modulos_pandas/pivot.html">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/data_manipulation/sqlalchemy/sqlalchemy.html">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduccion_ml/introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_regresion_lineal.html">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../introduccion_ml/no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/mat281/lectures/ml/analisis_supervisado_regresion/02_modelos_regresion.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aplicacion-con-python">
+   Aplicación con python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dataset-boston-house-prices">
+     Dataset  Boston house prices
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#otros-modelos-de-regresion">
+   Otros modelos de Regresión
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modelos-lineales">
+     Modelos lineales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bayesian-regression">
+     <strong>
+      Bayesian Regression
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#k-vecinos-mas-cercanos-knn">
+     k-vecinos más cercanos
+     <strong>
+      Knn
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#decision-tree-regressor">
+     <strong>
+      Decision Tree Regressor
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#elementos">
+       Elementos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#conceptos">
+       Conceptos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#reglas">
+       Reglas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#svm">
+     <strong>
+      SVM
+     </strong>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#idea-basica">
+       Idea Básica
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aplicando-varios-modelos-al-mismo-tiempo">
+   Aplicando varios modelos al mismo tiempo
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusión
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencia">
+   Referencia
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="modelos-de-regression-multiple">
+<h1>Modelos de regressión multiple<a class="headerlink" href="#modelos-de-regression-multiple" title="Permalink to this headline">¶</a></h1>
+<p>Los modelos de regresión multiple son los más utilizados en el mundo de machine learning, puestos que se dispone de varios característica de la población objetivo. A menudo, se estará abordando estos modelos de la perspectiva de los modelos lineales, por lo cual se debetener en mente algunos supuestos antes de comenzar:</p>
+<ul class="simple">
+<li><p><strong>No colinialidad o multicolinialidad</strong>: En los modelos lineales múltiples los predictores deben ser independientes, no debe de haber colinialidad entre ellos</p></li>
+<li><p><strong>Parsimonia</strong>: Este término hace referencia a que el mejor modelo es aquel capaz de explicar con mayor precisión la variabilidad observada en la variable respuesta empleando el menor número de predictores, por lo tanto, con menos asunciones.</p></li>
+<li><p><strong>Homocedasticidad</strong>:La varianza de los residuos debe de ser constante en todo el rango de observaciones.</p></li>
+<li><p><strong>Otros Factores</strong>:</p>
+<ul>
+<li><p><strong>Distribución normal de los residuos</strong></p></li>
+<li><p><strong>No autocorrelación (Independencia)</strong></p></li>
+<li><p><strong>Valores atípicos, con alto leverage o influyentes</strong></p></li>
+<li><p><strong>Tamaño de la muestra</strong></p></li>
+</ul>
+</li>
+</ul>
+<p>Por otro lado, existen otros tipos de modelos de regresión, en los cuales se  necesitan menos supuestos que los modelos de regresión lineal, a cambio se pierde un poco de interpretabilidad en sus parámetros y centran su atención en los resultados obtenidos de las predicciones.</p>
+<div class="section" id="aplicacion-con-python">
+<h2>Aplicación con python<a class="headerlink" href="#aplicacion-con-python" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="dataset-boston-house-prices">
+<h3>Dataset  Boston house prices<a class="headerlink" href="#dataset-boston-house-prices" title="Permalink to this headline">¶</a></h3>
+<p>En este ejemplo se va utilizar el dataset <strong>Boston</strong> que ya viene junto con <strong>sklearn</strong> y es ideal para practicar con Regresiones Lineales; el mismo contiene precios de casas de varias áreas de la ciudad de Boston.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># librerias</span>
+ 
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> 
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>  <span class="c1"># Ver más columnas de los dataframes</span>
+
+<span class="c1"># Ver gráficos de matplotlib en jupyter notebook/lab</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># sklearn models</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">LinearRegression</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cargar datos</span>
+<span class="n">boston</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">load_boston</span><span class="p">()</span>
+
+<span class="c1"># dejar en formato dataframe</span>
+<span class="n">boston_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">boston</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">boston</span><span class="o">.</span><span class="n">feature_names</span><span class="p">)</span>
+<span class="n">boston_df</span><span class="p">[</span><span class="s1">&#39;TARGET&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">target</span>
+<span class="n">boston_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1"># estructura de nuestro dataset.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CRIM</th>
+      <th>ZN</th>
+      <th>INDUS</th>
+      <th>CHAS</th>
+      <th>NOX</th>
+      <th>RM</th>
+      <th>AGE</th>
+      <th>DIS</th>
+      <th>RAD</th>
+      <th>TAX</th>
+      <th>PTRATIO</th>
+      <th>B</th>
+      <th>LSTAT</th>
+      <th>TARGET</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.00632</td>
+      <td>18.0</td>
+      <td>2.31</td>
+      <td>0.0</td>
+      <td>0.538</td>
+      <td>6.575</td>
+      <td>65.2</td>
+      <td>4.0900</td>
+      <td>1.0</td>
+      <td>296.0</td>
+      <td>15.3</td>
+      <td>396.90</td>
+      <td>4.98</td>
+      <td>24.0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.02731</td>
+      <td>0.0</td>
+      <td>7.07</td>
+      <td>0.0</td>
+      <td>0.469</td>
+      <td>6.421</td>
+      <td>78.9</td>
+      <td>4.9671</td>
+      <td>2.0</td>
+      <td>242.0</td>
+      <td>17.8</td>
+      <td>396.90</td>
+      <td>9.14</td>
+      <td>21.6</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.02729</td>
+      <td>0.0</td>
+      <td>7.07</td>
+      <td>0.0</td>
+      <td>0.469</td>
+      <td>7.185</td>
+      <td>61.1</td>
+      <td>4.9671</td>
+      <td>2.0</td>
+      <td>242.0</td>
+      <td>17.8</td>
+      <td>392.83</td>
+      <td>4.03</td>
+      <td>34.7</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.03237</td>
+      <td>0.0</td>
+      <td>2.18</td>
+      <td>0.0</td>
+      <td>0.458</td>
+      <td>6.998</td>
+      <td>45.8</td>
+      <td>6.0622</td>
+      <td>3.0</td>
+      <td>222.0</td>
+      <td>18.7</td>
+      <td>394.63</td>
+      <td>2.94</td>
+      <td>33.4</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.06905</td>
+      <td>0.0</td>
+      <td>2.18</td>
+      <td>0.0</td>
+      <td>0.458</td>
+      <td>7.147</td>
+      <td>54.2</td>
+      <td>6.0622</td>
+      <td>3.0</td>
+      <td>222.0</td>
+      <td>18.7</td>
+      <td>396.90</td>
+      <td>5.33</td>
+      <td>36.2</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># descripcion del conjunto de datos</span>
+<span class="n">boston_df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>CRIM</th>
+      <th>ZN</th>
+      <th>INDUS</th>
+      <th>CHAS</th>
+      <th>NOX</th>
+      <th>RM</th>
+      <th>AGE</th>
+      <th>DIS</th>
+      <th>RAD</th>
+      <th>TAX</th>
+      <th>PTRATIO</th>
+      <th>B</th>
+      <th>LSTAT</th>
+      <th>TARGET</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+      <td>506.000000</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>3.613524</td>
+      <td>11.363636</td>
+      <td>11.136779</td>
+      <td>0.069170</td>
+      <td>0.554695</td>
+      <td>6.284634</td>
+      <td>68.574901</td>
+      <td>3.795043</td>
+      <td>9.549407</td>
+      <td>408.237154</td>
+      <td>18.455534</td>
+      <td>356.674032</td>
+      <td>12.653063</td>
+      <td>22.532806</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>8.601545</td>
+      <td>23.322453</td>
+      <td>6.860353</td>
+      <td>0.253994</td>
+      <td>0.115878</td>
+      <td>0.702617</td>
+      <td>28.148861</td>
+      <td>2.105710</td>
+      <td>8.707259</td>
+      <td>168.537116</td>
+      <td>2.164946</td>
+      <td>91.294864</td>
+      <td>7.141062</td>
+      <td>9.197104</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>0.006320</td>
+      <td>0.000000</td>
+      <td>0.460000</td>
+      <td>0.000000</td>
+      <td>0.385000</td>
+      <td>3.561000</td>
+      <td>2.900000</td>
+      <td>1.129600</td>
+      <td>1.000000</td>
+      <td>187.000000</td>
+      <td>12.600000</td>
+      <td>0.320000</td>
+      <td>1.730000</td>
+      <td>5.000000</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>0.082045</td>
+      <td>0.000000</td>
+      <td>5.190000</td>
+      <td>0.000000</td>
+      <td>0.449000</td>
+      <td>5.885500</td>
+      <td>45.025000</td>
+      <td>2.100175</td>
+      <td>4.000000</td>
+      <td>279.000000</td>
+      <td>17.400000</td>
+      <td>375.377500</td>
+      <td>6.950000</td>
+      <td>17.025000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>0.256510</td>
+      <td>0.000000</td>
+      <td>9.690000</td>
+      <td>0.000000</td>
+      <td>0.538000</td>
+      <td>6.208500</td>
+      <td>77.500000</td>
+      <td>3.207450</td>
+      <td>5.000000</td>
+      <td>330.000000</td>
+      <td>19.050000</td>
+      <td>391.440000</td>
+      <td>11.360000</td>
+      <td>21.200000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>3.677083</td>
+      <td>12.500000</td>
+      <td>18.100000</td>
+      <td>0.000000</td>
+      <td>0.624000</td>
+      <td>6.623500</td>
+      <td>94.075000</td>
+      <td>5.188425</td>
+      <td>24.000000</td>
+      <td>666.000000</td>
+      <td>20.200000</td>
+      <td>396.225000</td>
+      <td>16.955000</td>
+      <td>25.000000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>88.976200</td>
+      <td>100.000000</td>
+      <td>27.740000</td>
+      <td>1.000000</td>
+      <td>0.871000</td>
+      <td>8.780000</td>
+      <td>100.000000</td>
+      <td>12.126500</td>
+      <td>24.000000</td>
+      <td>711.000000</td>
+      <td>22.000000</td>
+      <td>396.900000</td>
+      <td>37.970000</td>
+      <td>50.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#matriz de correlacion</span>
+<span class="n">corr_mat</span><span class="o">=</span><span class="n">boston_df</span><span class="o">.</span><span class="n">corr</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;pearson&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">corr_mat</span><span class="p">,</span><span class="n">vmax</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">square</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;cubehelix&#39;</span><span class="p">,</span><span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;.2f&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/02_modelos_regresion_6_0.png" src="../../../../_images/02_modelos_regresion_6_0.png" />
+</div>
+</div>
+<p>Apliquemos el modelo de regresión lineal multiple con <strong>sklearn</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># datos para la regresion lineal simple</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">data</span> 
+<span class="n">Y</span> <span class="o">=</span> <span class="n">boston_df</span><span class="p">[</span><span class="s2">&quot;TARGET&quot;</span><span class="p">]</span>
+
+<span class="c1"># split dataset</span>
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">,</span> <span class="n">Y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span> <span class="o">=</span> <span class="mi">2</span><span class="p">)</span> 
+
+<span class="c1"># ajustar el modelo</span>
+<span class="n">model_rl</span> <span class="o">=</span> <span class="n">LinearRegression</span><span class="p">()</span> <span class="c1"># Creando el modelo.</span>
+<span class="n">model_rl</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">Y_train</span><span class="p">)</span> <span class="c1"># ajustando el modelo</span>
+
+<span class="c1"># prediciones</span>
+<span class="n">Y_predict</span> <span class="o">=</span> <span class="n">model_rl</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">metrics_regression</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
+
+<span class="c1"># ejemplo: boston df</span>
+<span class="n">df_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">Y_test</span><span class="p">,</span>
+        <span class="s1">&#39;yhat&#39;</span><span class="p">:</span> <span class="n">model_rl</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+        <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="n">df_metrics</span> <span class="o">=</span> <span class="n">summary_metrics</span><span class="p">(</span><span class="n">df_temp</span><span class="p">)</span>
+<span class="n">df_metrics</span><span class="p">[</span><span class="s1">&#39;r2&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="nb">round</span><span class="p">(</span><span class="n">r2_score</span><span class="p">(</span><span class="n">Y_test</span><span class="p">,</span> <span class="n">model_rl</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)),</span><span class="mi">4</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Metricas para el regresor CRIM:&#39;</span><span class="p">)</span>
+<span class="n">df_metrics</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metricas para el regresor CRIM:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mae</th>
+      <th>mse</th>
+      <th>rmse</th>
+      <th>mape</th>
+      <th>maape</th>
+      <th>wmape</th>
+      <th>mmape</th>
+      <th>smape</th>
+      <th>r2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3.113</td>
+      <td>18.4954</td>
+      <td>4.3006</td>
+      <td>0.1604</td>
+      <td>0.1525</td>
+      <td>0.136</td>
+      <td>0.1507</td>
+      <td>0.1694</td>
+      <td>0.7789</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Cuando se aplica el modelo de regresión lineal con todas las variables regresoras, las métricas disminuyen considerablemente, lo implica una mejora en el modelo</p>
+<p>Un problema que se tiene, a diferencia de la regresión lineal simple,es que no se puede ver gráficamente la calidad del ajuste, por lo que solo se puede confiar en las métricas calculadas. Además, se dejan las siguientes preguntas:</p>
+<ul class="simple">
+<li><p>¿ Entre más regresores, mejor será el modelo de regresión lineal?</p></li>
+<li><p>¿ Qué se debe tener en cuenta antes de agregar otro variable regresora al modelo de regresión lineal ?</p></li>
+<li><p>¿ Qué sucede si se tienen outliers ?</p></li>
+<li><p>¿ Existen otros modelos mejor que la regresión lineal ?</p></li>
+</ul>
+<p>Ya se han discutido algunos de estos puntos, por lo que la atención estará en abordar otros modelos.</p>
+</div>
+</div>
+<div class="section" id="otros-modelos-de-regresion">
+<h2>Otros modelos de Regresión<a class="headerlink" href="#otros-modelos-de-regresion" title="Permalink to this headline">¶</a></h2>
+<p>Existen varios modelos de regresión, sin embargo, la intepretación de sus parámetros y el análisis de confiabilidad no es tan directo como los modelos de regresión lineal. Por este motivo, la atención estará centrada en la predicción más que en la confiabilidad como tal del modelo.</p>
+<div class="section" id="modelos-lineales">
+<h3>Modelos lineales<a class="headerlink" href="#modelos-lineales" title="Permalink to this headline">¶</a></h3>
+<p>Existen varios modelos lineales que podemos trabajar en sklearn (ver <a class="reference external" href="https://scikit-learn.org/stable/modules/linear_model.html">referencia</a>), los cualeas podemos utilizar e ir comparando unos con otros.</p>
+<p>De lo modelos lineales, destacamos los siguientes:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Linear_regression">regresión lineal clásica</a>: regresión clásica por mínimos cudrados.
+$<span class="math notranslate nohighlight">\((P)\ \min \sum_{i=1}^n (y_{i}-f_{i}(x;\beta))^2   \)</span>$</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Lasso_(statistics)">lasso</a>: se ocupa cuando tenemos un gran número de regresores y queremos que disminuya el problema de colinealidad (es decir, estimar como cero los parámetros poco relevantes).
+$<span class="math notranslate nohighlight">\((P)\ \min \sum_{i=1}^n (y_{i}-f_{i}(x;\beta))^2 + \lambda \sum_{i=1}^n |\beta_{i}| \)</span>$</p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Tikhonov_regularization">ridge</a>: también sirve para disminuir el problema de colinealidad, y además trata de que los coeficientes sean más rocuesto bajo outliers.
+$<span class="math notranslate nohighlight">\((P)\ \min \sum_{i=1}^n (y_{i}-f_{i}(x;\beta))^2  + \lambda \sum_{i=1}^n \beta_{i}^2 \)</span>$</p></li>
+</ul>
+<p>Dado que en sklearn, la forma de entrenar, estimar y predecir modelos de regresión siguen una misma estructura, para fectos prácticos, definimos una rutina para estimar las distintas métricas de la siguiente manera:</p>
+</div>
+<div class="section" id="bayesian-regression">
+<h3><strong>Bayesian Regression</strong><a class="headerlink" href="#bayesian-regression" title="Permalink to this headline">¶</a></h3>
+<p>En estadística, la <a class="reference external" href="https://en.wikipedia.org/wiki/Bayesian_linear_regression">regresión lineal bayesiana</a> es un enfoque de regresión lineal en el que el análisis estadístico se realiza dentro del contexto de la inferencia bayesiana. Cuando el modelo de regresión tiene errores que tienen una distribución normal, y si se asume una forma particular de distribución previa, los resultados explícitos están disponibles para las distribuciones de probabilidad posteriores de los parámetros del modelo.</p>
+<a class="reference internal image-reference" href="../../../../_images/bayesian.png"><img alt="../../../../_images/bayesian.png" class="align-center" src="../../../../_images/bayesian.png" style="width: 560px; height: 560px;" /></a>
+</div>
+<div class="section" id="k-vecinos-mas-cercanos-knn">
+<h3>k-vecinos más cercanos  <strong>Knn</strong><a class="headerlink" href="#k-vecinos-mas-cercanos-knn" title="Permalink to this headline">¶</a></h3>
+<p>El método de los <a class="reference external" href="https://en.wikipedia.org/wiki/K-nearest_neighbors_algorithm"><span class="math notranslate nohighlight">\(k\)</span> vecinos más cercanos</a> (en inglés, k-nearest neighbors, abreviado <span class="math notranslate nohighlight">\(knn\)</span>) es un método de clasificación supervisada (Aprendizaje, estimación basada en un conjunto de entrenamiento y prototipos) que sirve para estimar la función de densidad <span class="math notranslate nohighlight">\(F(x/C_j)\)</span> de las predictoras <span class="math notranslate nohighlight">\(x\)</span> por cada clase  <span class="math notranslate nohighlight">\(C_{j}\)</span>.</p>
+<p>Este es un método de clasificación no paramétrico, que estima el valor de la función de densidad de probabilidad o directamente la probabilidad a posteriori de que un elemento <span class="math notranslate nohighlight">\(x\)</span> pertenezca a la clase <span class="math notranslate nohighlight">\(C_j\)</span> a partir de la información proporcionada por el conjunto de prototipos. En el proceso de aprendizaje no se hace ninguna suposición acerca de la distribución de las variables predictoras.</p>
+<p>En el reconocimiento de patrones, el algoritmo <span class="math notranslate nohighlight">\(knn\)</span> es usado como método de clasificación de objetos (elementos) basado en un entrenamiento mediante ejemplos cercanos en el espacio de los elementos. <span class="math notranslate nohighlight">\(knn\)</span> es un tipo de aprendizaje vago (lazy learning), donde la función se aproxima solo localmente y todo el cómputo es diferido a la clasificación. La normalización de datos puede mejorar considerablemente la exactitud del algoritmo <span class="math notranslate nohighlight">\(knn\)</span>.</p>
+<a class="reference internal image-reference" href="../../../../_images/knn.png"><img alt="../../../../_images/knn.png" class="align-center" src="../../../../_images/knn.png" style="width: 360px; height: 360px;" /></a>
+</div>
+<div class="section" id="decision-tree-regressor">
+<h3><strong>Decision Tree Regressor</strong><a class="headerlink" href="#decision-tree-regressor" title="Permalink to this headline">¶</a></h3>
+<p>Un <a class="reference external" href="https://en.wikipedia.org/wiki/Decision_tree">árbol de decisión</a> es un modelo de predicción utilizado en diversos ámbitos que van desde la inteligencia artificial hasta la Economía. Dado un conjunto de datos se fabrican diagramas de construcciones lógicas, muy similares a los sistemas de predicción basados en reglas, que sirven para representar y categorizar una serie de condiciones que ocurren de forma sucesiva, para la resolución de un problema.</p>
+<a class="reference internal image-reference" href="../../../../_images/tree.png"><img alt="../../../../_images/tree.png" class="align-center" src="../../../../_images/tree.png" style="width: 480px; height: 480px;" /></a>
+<p>Vamos a explicar cómo se construye un árbol de decisión. Para ello, vamos a hacer hincapié en varios aspectos</p>
+<div class="section" id="elementos">
+<h4>Elementos<a class="headerlink" href="#elementos" title="Permalink to this headline">¶</a></h4>
+<p>Los árboles de decisión están formados por nodos, vectores de números, flechas y etiquetas.</p>
+<ul class="simple">
+<li><p>Cada nodo se puede definir como el momento en el que se ha de tomar una decisión de entre varias posibles, lo que va haciendo que a medida que aumenta el número de nodos aumente el número de posibles finales a los que puede llegar el individuo. Esto hace que un árbol con muchos nodos sea complicado de dibujar a mano y de analizar debido a la existencia de numerosos caminos que se pueden seguir.</p></li>
+<li><p>Los vectores de números serían la solución final a la que se llega en función de las diversas posibilidades que se tienen, dan las utilidades en esa solución.</p></li>
+<li><p>Las flechas son las uniones entre un nodo y otro y representan cada acción distinta.</p></li>
+<li><p>Las etiquetas se encuentran en cada nodo y cada flecha y dan nombre a cada acción.</p></li>
+</ul>
+</div>
+<div class="section" id="conceptos">
+<h4>Conceptos<a class="headerlink" href="#conceptos" title="Permalink to this headline">¶</a></h4>
+<p>Cuando tratemos en el desarrollo de árboles utilizaremos frecuentemente estos conceptos:</p>
+<ul class="simple">
+<li><p>Costo. Se refiere a dos conceptos diferentes: el costo de medición para determinar el valor de una determinada propiedad (atributo) exhibida por el objeto y el costo de clasificación errónea al decidir que el objeto pertenece a la clase <span class="math notranslate nohighlight">\(X\)</span> cuando su clase real es <span class="math notranslate nohighlight">\(Y\)</span>.</p></li>
+<li><p>Sobreajuste (Overfitting). Se produce cuando los datos de entrenamiento son pocos o contienen incoherencias. Al tomar un espacio de hipótesis <span class="math notranslate nohighlight">\(H\)</span>, se dice que una hipótesis <span class="math notranslate nohighlight">\(h ∈ H\)</span> sobreajusta un conjunto de entrenamiento <span class="math notranslate nohighlight">\(C\)</span> si existe alguna hipótesis alternativa <span class="math notranslate nohighlight">\(h' ∈ H\)</span> tal que <span class="math notranslate nohighlight">\(h\)</span> clasifica mejor que <span class="math notranslate nohighlight">\(h'\)</span> los elementos del conjunto de entrenamiento, pero <span class="math notranslate nohighlight">\(h'\)</span> clasifica mejor que h el conjunto completo de posibles instancias.</p></li>
+<li><p>Poda (Prunning). La poda consiste en eliminar una rama de un nodo transformándolo en una hoja (terminal), asignándole la clasificación más común de los ejemplos de entrenamiento considerados en ese nodo.</p></li>
+<li><p>La validación cruzada. Es el proceso de construir un árbol con la mayoría de los datos y luego usar la parte restante de los datos para probar la precisión del árbol.</p></li>
+</ul>
+</div>
+<div class="section" id="reglas">
+<h4>Reglas<a class="headerlink" href="#reglas" title="Permalink to this headline">¶</a></h4>
+<p>En los árboles de decisión se tiene que cumplir una serie de reglas.</p>
+<ol class="simple">
+<li><p>Al comienzo del juego se da un nodo inicial que no es apuntado por ninguna flecha, es el único del juego con esta característica.</p></li>
+<li><p>El resto de los nodos del juego son apuntados por una única flecha.</p></li>
+<li><p>De esto se deduce que hay un único camino para llegar del nodo inicial a cada uno de los nodos del juego. No hay varias formas de llegar a la misma solución final, las decisiones son excluyentes.</p></li>
+</ol>
+<p>En los árboles de decisiones las decisiones que se eligen son lineales, a medida que vas seleccionando entre varias opciones se van cerrando otras, lo que implica normalmente que no hay marcha atrás. En general se podría decir que las normas siguen una forma condicional:</p>
+<div class="math notranslate nohighlight">
+\[\textrm{Opción }1-&gt;\textrm{opción }2-&gt;\textrm{opción }3-&gt;\textrm{Resultado Final }X\]</div>
+<p>Estas reglas suelen ir implícitas en el conjunto de datos a raíz del cual se construye el árbol de decisión.</p>
+</div>
+</div>
+<div class="section" id="svm">
+<h3><strong>SVM</strong><a class="headerlink" href="#svm" title="Permalink to this headline">¶</a></h3>
+<p>Las <a class="reference external" href="https://en.wikipedia.org/wiki/Support-vector_machine">máquinas de vectores de soporte</a>  (del inglés Support Vector Machines, SVM) son un conjunto de algoritmos de aprendizaje supervisado desarrollados por Vladimir Vapnik y su equipo en los laboratorios AT&amp;T.</p>
+<p>Estos métodos están propiamente relacionados con problemas de clasificación y regresión. Dado un conjunto de ejemplos de entrenamiento (de muestras) podemos etiquetar las clases y entrenar una SVM para construir un modelo que prediga la clase de una nueva muestra. Intuitivamente, una SVM es un modelo que representa a los puntos de muestra en el espacio, separando las clases a 2 espacios lo más amplios posibles mediante un hiperplano de separación definido como el vector entre los 2 puntos, de las 2 clases, más cercanos al que se llama vector soporte. Cuando las nuevas muestras se ponen en correspondencia con dicho modelo, en función de los espacios a los que pertenezcan, pueden ser clasificadas a una o la otra clase.</p>
+<p>Más formalmente, una SVM construye un hiperplano o conjunto de hiperplanos en un espacio de dimensionalidad muy alta (o incluso infinita) que puede ser utilizado en problemas de clasificación o regresión. Una buena separación entre las clases permitirá una clasificación correcta.</p>
+<a class="reference internal image-reference" href="../../../../_images/svm_01.png"><img alt="../../../../_images/svm_01.png" class="align-center" src="../../../../_images/svm_01.png" style="width: 480px; height: 480px;" /></a>
+<div class="section" id="idea-basica">
+<h4>Idea Básica<a class="headerlink" href="#idea-basica" title="Permalink to this headline">¶</a></h4>
+<p>Dado un conjunto de puntos, subconjunto de un conjunto mayor (espacio), en el que cada uno de ellos pertenece a una de dos posibles categorías, un algoritmo basado en SVM construye un modelo capaz de predecir si un punto nuevo (cuya categoría desconocemos) pertenece a una categoría o a la otra.</p>
+<p>Como en la mayoría de los métodos de clasificación supervisada, los datos de entrada (los puntos) son vistos como un vector <span class="math notranslate nohighlight">\(p-dimensional\)</span> (una lista ordenada de <span class="math notranslate nohighlight">\(p\)</span> números).</p>
+<p>La SVM busca un hiperplano que separe de forma óptima a los puntos de una clase de la de otra, que eventualmente han podido ser previamente proyectados a un espacio de dimensionalidad superior.</p>
+<p>En ese concepto de “separación óptima” es donde reside la característica fundamental de las SVM: este tipo de algoritmos buscan el hiperplano que tenga la máxima distancia (margen) con los puntos que estén más cerca de él mismo. Por eso también a veces se les conoce a las SVM como clasificadores de margen máximo. De esta forma, los puntos del vector que son etiquetados con una categoría estarán a un lado del hiperplano y los casos que se encuentren en la otra categoría estarán al otro lado.</p>
+<p>Los algoritmos SVM pertenecen a la familia de los clasificadores lineales. También pueden ser considerados un caso especial de la regularización de Tikhonov.</p>
+<p>En la literatura de las SVM, se llama atributo a la variable predictora y característica a un atributo transformado que es usado para definir el hiperplano. La elección de la representación más adecuada del universo estudiado, se realiza mediante un proceso denominado selección de características.</p>
+<p>Al vector formado por los puntos más cercanos al hiperplano se le llama vector de soporte.</p>
+<p>Los modelos basados en SVM están estrechamente relacionados con las redes neuronales. Usando una función kernel, resultan un método de entrenamiento alternativo para clasificadores polinomiales, funciones de base radial y perceptrón multicapa.</p>
+<a class="reference internal image-reference" href="../../../../_images/svm_02.jpeg"><img alt="../../../../_images/svm_02.jpeg" class="align-center" src="../../../../_images/svm_02.jpeg" style="width: 480px; height: 480px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="aplicando-varios-modelos-al-mismo-tiempo">
+<h2>Aplicando varios modelos al mismo tiempo<a class="headerlink" href="#aplicando-varios-modelos-al-mismo-tiempo" title="Permalink to this headline">¶</a></h2>
+<p>Veremos el performance de los distintos modelos estudiados.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">svm</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">neighbors</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">SklearnRegressionModels</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">model</span><span class="p">,</span><span class="n">name_model</span><span class="p">):</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">model</span> <span class="o">=</span> <span class="n">model</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name_model</span> <span class="o">=</span> <span class="n">name_model</span>
+        
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">test_train_model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">n_size</span><span class="p">):</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="n">n_size</span> <span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span>
+    
+    <span class="k">def</span> <span class="nf">fit_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="p">):</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_train_model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span> <span class="p">)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span> 
+    
+    <span class="k">def</span> <span class="nf">df_testig</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="p">):</span>
+        <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">test_train_model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span> <span class="p">)</span>
+        <span class="n">model_fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+        <span class="n">preds</span> <span class="o">=</span> <span class="n">model_fit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+        <span class="n">df_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="p">{</span>
+                <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">y_test</span><span class="p">,</span>
+                <span class="s1">&#39;yhat&#39;</span><span class="p">:</span> <span class="n">model_fit</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+            <span class="p">}</span>
+        <span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">df_temp</span>
+    
+    <span class="k">def</span> <span class="nf">metrics</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="p">):</span>
+        <span class="n">df_temp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">df_testig</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="p">)</span>
+        <span class="n">df_metrics</span> <span class="o">=</span> <span class="n">summary_metrics</span><span class="p">(</span><span class="n">df_temp</span><span class="p">)</span>
+        <span class="n">df_metrics</span><span class="p">[</span><span class="s1">&#39;r2&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="nb">round</span><span class="p">(</span><span class="n">r2_score</span><span class="p">(</span><span class="n">df_temp</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">],</span><span class="n">df_temp</span><span class="p">[</span><span class="s1">&#39;yhat&#39;</span><span class="p">]),</span><span class="mi">4</span><span class="p">)</span>
+
+        <span class="n">df_metrics</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_model</span>
+        
+        <span class="k">return</span> <span class="n">df_metrics</span>
+
+    <span class="k">def</span> <span class="nf">parameters</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="p">):</span>
+        <span class="n">model_fit</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fit_model</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">test_size</span><span class="p">)</span>
+        
+        <span class="n">list_betas</span> <span class="o">=</span> <span class="p">[</span>
+             <span class="p">(</span><span class="s1">&#39;beta_0&#39;</span><span class="p">,</span><span class="n">model_fit</span><span class="o">.</span><span class="n">intercept_</span><span class="p">)</span>
+                <span class="p">]</span>
+            
+        <span class="n">betas</span> <span class="o">=</span> <span class="n">model_fit</span><span class="o">.</span><span class="n">coef_</span>
+        
+        <span class="k">for</span> <span class="n">num</span><span class="p">,</span> <span class="n">beta</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">betas</span><span class="p">):</span>
+            <span class="n">name_beta</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;beta_</span><span class="si">{</span><span class="n">num</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s1">&#39;</span>
+            <span class="n">list_betas</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">name_beta</span><span class="p">,</span><span class="nb">round</span><span class="p">(</span><span class="n">beta</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+            <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;coef&#39;</span><span class="p">,</span><span class="s1">&#39;value&#39;</span><span class="p">],</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">list_betas</span>
+        <span class="p">)</span>
+        
+        <span class="n">result</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">name_model</span>
+        <span class="k">return</span> <span class="n">result</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># boston dataframe</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">boston</span><span class="o">.</span><span class="n">data</span> 
+<span class="n">Y</span> <span class="o">=</span> <span class="n">boston_df</span><span class="p">[</span><span class="s2">&quot;TARGET&quot;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># models</span>
+<span class="n">reg_lineal</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
+<span class="n">reg_ridge</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">Ridge</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">.5</span><span class="p">)</span>
+<span class="n">reg_lasso</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="mf">0.1</span><span class="p">)</span>
+
+<span class="n">reg_knn</span> <span class="o">=</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">KNeighborsRegressor</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="n">weights</span><span class="o">=</span><span class="s1">&#39;uniform&#39;</span><span class="p">)</span>
+<span class="n">reg_bayesian</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">BayesianRidge</span><span class="p">()</span>
+<span class="n">reg_tree</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">reg_svm</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">SVR</span><span class="p">(</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+
+
+<span class="n">list_models</span> <span class="o">=</span><span class="p">[</span>
+    <span class="p">[</span><span class="n">reg_lineal</span><span class="p">,</span><span class="s1">&#39;lineal&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">reg_ridge</span><span class="p">,</span><span class="s1">&#39;ridge&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">reg_lasso</span><span class="p">,</span><span class="s1">&#39;lasso&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">reg_knn</span><span class="p">,</span><span class="s1">&#39;knn&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">reg_bayesian</span><span class="p">,</span><span class="s1">&#39;bayesian&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">reg_tree</span><span class="p">,</span><span class="s1">&#39;decision_tree&#39;</span><span class="p">],</span>
+    <span class="p">[</span><span class="n">reg_svm</span><span class="p">,</span><span class="s1">&#39;svm&#39;</span><span class="p">],</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frames_metrics</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">frames_coef</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">model</span><span class="p">,</span><span class="n">name_models</span> <span class="ow">in</span> <span class="n">list_models</span><span class="p">:</span>
+    <span class="n">fit_model</span> <span class="o">=</span>  <span class="n">SklearnRegressionModels</span><span class="p">(</span> <span class="n">model</span><span class="p">,</span><span class="n">name_models</span><span class="p">)</span>
+    <span class="n">frames_metrics</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fit_model</span><span class="o">.</span><span class="n">metrics</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mf">0.2</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">name_models</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;lineal&#39;</span><span class="p">,</span><span class="s1">&#39;ridge&#39;</span><span class="p">,</span><span class="s1">&#39;lasso&#39;</span><span class="p">]:</span>
+        <span class="n">frames_coef</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">fit_model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="mf">0.2</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># juntar resultados: metricas</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">frames_metrics</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mae</th>
+      <th>mse</th>
+      <th>rmse</th>
+      <th>mape</th>
+      <th>maape</th>
+      <th>wmape</th>
+      <th>mmape</th>
+      <th>smape</th>
+      <th>r2</th>
+      <th>model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3.1891</td>
+      <td>24.2911</td>
+      <td>4.9286</td>
+      <td>0.1687</td>
+      <td>0.1538</td>
+      <td>0.1484</td>
+      <td>0.1579</td>
+      <td>0.1790</td>
+      <td>0.6688</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>3.1493</td>
+      <td>24.3776</td>
+      <td>4.9374</td>
+      <td>0.1668</td>
+      <td>0.1516</td>
+      <td>0.1466</td>
+      <td>0.1562</td>
+      <td>0.1769</td>
+      <td>0.6676</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>3.1452</td>
+      <td>25.1556</td>
+      <td>5.0155</td>
+      <td>0.1675</td>
+      <td>0.1512</td>
+      <td>0.1464</td>
+      <td>0.1569</td>
+      <td>0.1765</td>
+      <td>0.6570</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>3.6639</td>
+      <td>25.8601</td>
+      <td>5.0853</td>
+      <td>0.1889</td>
+      <td>0.1789</td>
+      <td>0.1705</td>
+      <td>0.1769</td>
+      <td>0.1777</td>
+      <td>0.6474</td>
+      <td>knn</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>3.1251</td>
+      <td>24.6471</td>
+      <td>4.9646</td>
+      <td>0.1654</td>
+      <td>0.1496</td>
+      <td>0.1454</td>
+      <td>0.1550</td>
+      <td>0.1748</td>
+      <td>0.6639</td>
+      <td>bayesian</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>2.3082</td>
+      <td>8.5539</td>
+      <td>2.9247</td>
+      <td>0.1309</td>
+      <td>0.1242</td>
+      <td>0.1074</td>
+      <td>0.1219</td>
+      <td>0.1233</td>
+      <td>0.8834</td>
+      <td>decision_tree</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>3.1404</td>
+      <td>29.4359</td>
+      <td>5.4255</td>
+      <td>0.1677</td>
+      <td>0.1496</td>
+      <td>0.1461</td>
+      <td>0.1568</td>
+      <td>0.1847</td>
+      <td>0.5986</td>
+      <td>svm</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Basados en los distintos estadísticos, el mejor modelo corresponde al modelo de <strong>decision_tree</strong>. Por otro lado, podemos analizar los coeficientes de los modelos líneales ordinarios,Ridge y Lasso.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># juntar resultados: coeficientes</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">frames_coef</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>coef</th>
+      <th>value</th>
+      <th>model</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>beta_0</td>
+      <td>30.246751</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>beta_1</td>
+      <td>-0.110000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>beta_2</td>
+      <td>0.030000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>beta_3</td>
+      <td>0.040000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>beta_4</td>
+      <td>2.780000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>beta_5</td>
+      <td>-17.200000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>beta_6</td>
+      <td>4.440000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>beta_7</td>
+      <td>-0.010000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>beta_8</td>
+      <td>-1.450000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>beta_9</td>
+      <td>0.260000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>beta_10</td>
+      <td>-0.010000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>beta_11</td>
+      <td>-0.920000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>beta_12</td>
+      <td>0.010000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>beta_13</td>
+      <td>-0.510000</td>
+      <td>lineal</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>beta_0</td>
+      <td>26.891132</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>beta_1</td>
+      <td>-0.110000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>beta_2</td>
+      <td>0.030000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>beta_3</td>
+      <td>0.020000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>beta_4</td>
+      <td>2.640000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>beta_5</td>
+      <td>-12.270000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>beta_6</td>
+      <td>4.460000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>beta_7</td>
+      <td>-0.010000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>beta_8</td>
+      <td>-1.380000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>beta_9</td>
+      <td>0.250000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>beta_10</td>
+      <td>-0.010000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>beta_11</td>
+      <td>-0.860000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>beta_12</td>
+      <td>0.010000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>beta_13</td>
+      <td>-0.520000</td>
+      <td>ridge</td>
+    </tr>
+    <tr>
+      <th>0</th>
+      <td>beta_0</td>
+      <td>19.859769</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>beta_1</td>
+      <td>-0.100000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>beta_2</td>
+      <td>0.030000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>beta_3</td>
+      <td>-0.020000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>beta_4</td>
+      <td>0.920000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>beta_5</td>
+      <td>-0.000000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>beta_6</td>
+      <td>4.310000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>beta_7</td>
+      <td>-0.020000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>beta_8</td>
+      <td>-1.150000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>beta_9</td>
+      <td>0.240000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>beta_10</td>
+      <td>-0.010000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>beta_11</td>
+      <td>-0.730000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>beta_12</td>
+      <td>0.010000</td>
+      <td>lasso</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>beta_13</td>
+      <td>-0.560000</td>
+      <td>lasso</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Al comparar los resultados entre ambos modelos, se observa que hay coeficientes en la regresión Lasso que se van a cero directamente, pudiendo eliminar estas variables del modelo. Por otro lado, queda como tarea para el lector, hacer una eliminación de outliers del modelo y probar estos modelos lineales para ver si existe algún tipo de diferencia.</p>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusión<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Existen distintos modelos de regresión lineal: normal, Ridge y Lasso. Cada uno con sus respectivs ventajas y desventajas.</p></li>
+<li><p>Existen otros tipos de modelos de regresión (bayesiano, knn, arboles de decisión, svm, entre otros). Por ahora, nos interesa saber como funcionan, para poder configurar los hiperparámetros de los modelos ocupados en python (principalmente de la librería <em>sklearn</em>).</p></li>
+<li><p>En el mundo del machine learning se estará interesado más en predecir con el menor error posible (siempre tomando como referencia alguna de las métricas mencionadas) que hacer un análisis exhaustivo de la confiabilidad del modelo. Siendo este el caso y si la capacidad computacional lo permite, lo ideal es probar varios modelos al mismo tiempo y poder discriminar bajo un determinado criterio (a menudo el <strong>error cuadrático medio (rmse)</strong> o el <strong>mape</strong>).</p></li>
+</ul>
+</div>
+<div class="section" id="referencia">
+<h2>Referencia<a class="headerlink" href="#referencia" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://scikit-learn.org/stable/supervised_learning.html">Supervised learning</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/lectures/ml/analisis_supervisado_regresion"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="02_regresion_lineal.html" title="previous page">Modelos de regressión lineal</a>
+    <a class='right-next' id="next-link" href="../analisis_supervisado_clasificacion/intro.html" title="next page">Aprendizaje supervisado - Clasificación</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

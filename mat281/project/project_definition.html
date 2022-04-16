@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto Final &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/basic_tools/lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_013_ide.html">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_014_jupyter.html">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/pandas/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/modulos_pandas/groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/modulos_pandas/merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/modulos_pandas/pivot.html">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/sqlalchemy/sqlalchemy.html">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/ml/introduccion_ml/introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/analisis_supervisado_regresion/intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_supervisado_regresion/02_regresion_lineal.html">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_supervisado_regresion/02_modelos_regresion.html">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/introduccion_ml/no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/ml/time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/mat281/project/project_definition.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rubrica">
+   Rúbrica
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#proyectos">
+   Proyectos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#regression">
+     Regression
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#classification">
+     Classification
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#recommender-systems">
+     Recommender Systems
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#time-series-analysis">
+     Time Series Analysis
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seleccion-de-los-grupos-al-azar">
+   Selección de los grupos (al azar)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definicion-de-grupos-con-tema">
+   Definición de grupos con tema
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="proyecto-final">
+<h1>Proyecto Final<a class="headerlink" href="#proyecto-final" title="Permalink to this headline">¶</a></h1>
+<p>La finalidad de este proyecto es enfrentar a los estudiantes a problemas de Machine Learning con todas las etapas (típicas) que eso implica, basándose en cada uno de los módulos aprendidos a lo largo del curso, dando pie a la investigación y a la solución de problemas operacionales del mundo real.</p>
+<p>Información importante del proyecto:</p>
+<ul class="simple">
+<li><p><em>Fecha</em>: 28 de diciembre del 2021 a las 14:30 pm</p></li>
+<li><p>Grupos de 5 alumnos (se escogen de manera aleatoria)</p></li>
+<li><p>La presentación consta de 15-20 minutos. Luego, hay un espacio de preguntas de 10 minutos.</p></li>
+<li><p>Se tienen 4 grandes temas de trabajo: regresión,clasificación, sistema de recomendación y series temporales. Dentro de cada tema, hay 2-3 conjunto de datos. Cada grupo de escoger un conjunto de datos para cada tema con su respectiva prioridad (1 mayor prioridad y 4 menor prioridad). Para inscribir su grupo deben enviar un correo a <strong><a class="reference external" href="mailto:francisco&#46;alfaro&#46;496&#37;&#52;&#48;gmail&#46;com">francisco<span>&#46;</span>alfaro<span>&#46;</span>496<span>&#64;</span>gmail<span>&#46;</span>com</a></strong> indicando nombre de los integrantes con el tema y conjuntos de datos a trabajar. En caso de que el tema de ambos grupos sea el mismo:</p>
+<ul>
+<li><p>El grupo con menos de 5 alumnos, tendrá prioridad en escoger el tema.</p></li>
+<li><p>Se escogerá al azar el grupo con el tema objetivo.</p></li>
+</ul>
+</li>
+<li><p>Utilizar diapositivas con <a class="reference external" href="https://rise.readthedocs.io/en/stable/">RISE</a>. Se deja el siguiente el siguiente <a class="reference external" href="https://fralfaro.github.io/ds_blog/jupyter/2021/08/05/rise.html">tutorial</a> a modo de ejemplo.</p></li>
+<li><p>Al comienzo de la presentación, se escoge a un miembro del grupo para que de inicio la presentación, luego, durante el transcurso de la presentación se le pedirá a otro miembro que siga la presentación hasta que se presenten al menos 3 estudiantes.</p></li>
+</ul>
+<p>El comite de evaluación estará conformado por:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.linkedin.com/in/faam/">Francisco Alfaro Medina</a></p></li>
+<li><p><a class="reference external" href="https://www.linkedin.com/in/sebasti%C3%A1n-torres-5827b21b/">Sebastian Torres</a></p></li>
+<li><p><a class="reference external" href="https://www.linkedin.com/in/aoguedaoliva/">Alonso Ogueda Oliva</a></p></li>
+<li><p><a class="reference external" href="https://www.linkedin.com/in/arubiosu/">Alberto Rubio Suazo</a></p></li>
+<li><p><a class="reference external" href="https://www.linkedin.com/in/eric-zepeda-3b6b9897/">Eric Zepeda</a></p></li>
+</ul>
+<div class="section" id="rubrica">
+<h2>Rúbrica<a class="headerlink" href="#rubrica" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Definición del problema (5 puntos)</p></li>
+<li><p>Estadística descriptiva (5 puntos)</p></li>
+<li><p>Visualización descriptiva (10 puntos)</p></li>
+<li><p>Preprocesamiento (20 puntos</p></li>
+<li><p>Selección de modelo (35 puntos)</p>
+<ol class="simple">
+<li><p>Por lo menos debe comparar cuatro modelos</p></li>
+<li><p>Al menos tres de estos modelos tienen que tener hiperparámetros.</p></li>
+<li><p>Realizar optimización de hiperparámetros.</p></li>
+</ol>
+</li>
+<li><p>Métricas y análisis de resultados (10 puntos)</p></li>
+<li><p>Visualizaciones del modelo (10 puntos)</p></li>
+<li><p>Conclusiones (5 puntos)</p></li>
+</ol>
+<blockquote>
+<div><p><strong>Observación</strong>: Tendrá una mejor puntación si también incorpora modelos de redes neuronales. Se deja un <a class="reference external" href="https://www.tensorflow.org/tutorials?hl=es-419">tutorial de tensorflow</a> a modo de ejemplo.</p>
+</div></blockquote>
+</div>
+<div class="section" id="proyectos">
+<h2>Proyectos<a class="headerlink" href="#proyectos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="regression">
+<h3>Regression<a class="headerlink" href="#regression" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.kaggle.com/mirichoi0218/insurance">Medical Cost Personal Datasets</a> — Insurance Forecast by using Linear Regression.</p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/kumarajarshi/life-expectancy-who">Life Expectancy</a> — Good one for experimenting with your EDA skills also.</p></li>
+</ul>
+</div>
+<div class="section" id="classification">
+<h3>Classification<a class="headerlink" href="#classification" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.kaggle.com/pavansubhasht/ibm-hr-analytics-attrition-dataset">IBM HR Analytics Employee Attrition &amp; Performance</a>: Predict attrition of your valuable employees.</p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/benroshan/factors-affecting-campus-placement">Campus Recruitment</a> — Determine if a student gets placed based on various features.</p></li>
+</ul>
+</div>
+<div class="section" id="recommender-systems">
+<h3>Recommender Systems<a class="headerlink" href="#recommender-systems" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.kaggle.com/grouplens/movielens-20m-dataset">MovieLens Dataset</a> — A classic one for starting out, predict which movie to recommend.</p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/jealousleopard/goodreadsbooks">Goodreads Books</a> — Detailed information about books through numerous columns for building a book recommender engine. This is my personal favourite for getting a hang out of actually attempting the recommendation task.</p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/shivamb/netflix-shows/tasks">Netflix Data</a> — collection of movies + TV shows details until 2019, also a great one for some practical exposure to a real world application.</p></li>
+</ul>
+</div>
+<div class="section" id="time-series-analysis">
+<h3>Time Series Analysis<a class="headerlink" href="#time-series-analysis" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.kaggle.com/carrie1/ecommerce-data">E-Commerse Sales</a> — For predicting sales/transaction for a store. The classic time series forecasting job.</p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/paulbrabban/daily-minimum-temperatures-in-melbourne">Minimum Daily Temperatures</a> — This dataset describes the minimum daily temperatures over 10 years in the city Melbourne, Australia.</p></li>
+<li><p><a class="reference external" href="https://www.kaggle.com/uciml/electric-power-consumption-data-set">Household Electric Power Consumption</a> — Has measurements of electric power consumption in one household with a one-minute sampling rate over a period of 4 years.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="seleccion-de-los-grupos-al-azar">
+<h2>Selección de los grupos (al azar)<a class="headerlink" href="#seleccion-de-los-grupos-al-azar" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">281</span><span class="p">)</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">5</span> 
+<span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">&quot;matias.barra.14@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;francisca.burgos@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;eduardo.carriel@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jose.ceav@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;javiera.cerdac@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;javiera.gonzalezri@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;felipe.leiva.13@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;cristobal.lobos@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;maryon.morales@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ana.morenop@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;gabriel.moya@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;diego.pintos@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;jasmin.quiero@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;nicolas.riverag@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;danny.sanchez@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ariadne.sandoval@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;sergio.suarezp@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;felix.vergarap@sansano.usm.cl&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;tomas.werth@sansano.usm.cl&quot;</span><span class="p">,</span>
+
+<span class="p">]</span>
+
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">l_temp</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<span class="k">while</span> <span class="nb">len</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span><span class="o">&gt;</span><span class="mi">0</span><span class="p">:</span>
+    <span class="n">count</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">alumnos</span><span class="p">)</span><span class="o">&lt;</span><span class="n">n</span><span class="p">:</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">alumnos</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="n">l_temp</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+        <span class="k">break</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">temp</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">alumnos</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">l_temp</span><span class="p">[</span><span class="n">count</span><span class="p">]</span> <span class="o">=</span> <span class="n">temp</span>
+        <span class="n">alumnos</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">alumnos</span> <span class="k">if</span> <span class="n">x</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">temp</span> <span class="p">]</span>
+        
+        
+<span class="k">for</span> <span class="n">k</span><span class="p">,</span><span class="n">v</span> <span class="ow">in</span> <span class="n">l_temp</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;grupo </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">v</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>grupo 1: [&#39;matias.barra.14@sansano.usm.cl&#39;, &#39;ana.morenop@sansano.usm.cl&#39;, &#39;maryon.morales@sansano.usm.cl&#39;, &#39;jose.ceav@sansano.usm.cl&#39;, &#39;cristobal.lobos@sansano.usm.cl&#39;]
+
+grupo 2: [&#39;jasmin.quiero@sansano.usm.cl&#39;, &#39;nicolas.riverag@sansano.usm.cl&#39;, &#39;javiera.gonzalezri@sansano.usm.cl&#39;, &#39;francisca.burgos@sansano.usm.cl&#39;, &#39;felix.vergarap@sansano.usm.cl&#39;]
+
+grupo 3: [&#39;diego.pintos@sansano.usm.cl&#39;, &#39;felipe.leiva.13@sansano.usm.cl&#39;, &#39;eduardo.carriel@sansano.usm.cl&#39;, &#39;gabriel.moya@sansano.usm.cl&#39;, &#39;ariadne.sandoval@sansano.usm.cl&#39;]
+
+grupo 4: [&#39;javiera.cerdac@sansano.usm.cl&#39;, &#39;danny.sanchez@sansano.usm.cl&#39;, &#39;sergio.suarezp@sansano.usm.cl&#39;, &#39;tomas.werth@sansano.usm.cl&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="definicion-de-grupos-con-tema">
+<h2>Definición de grupos con tema<a class="headerlink" href="#definicion-de-grupos-con-tema" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Grupo 01</strong>: Recommender Systems - Netflix data</p>
+<ul>
+<li><p>Matias Barra</p></li>
+<li><p>Ana Moreno</p></li>
+<li><p>Cristobal Lobos</p></li>
+<li><p>Maryon Morales</p></li>
+<li><p>José Cea</p></li>
+</ul>
+</li>
+<li><p><strong>Grupo 02</strong>: Regression - Life Expectancy</p>
+<ul>
+<li><p>Jasmin Quiero</p></li>
+<li><p>Javiera Gonzalez</p></li>
+<li><p>Nicolas Rivera</p></li>
+<li><p>Felix Vergara</p></li>
+<li><p>Francisca Burgos</p></li>
+</ul>
+</li>
+<li><p><strong>Grupo 03</strong>: Classification - Campus Recruitment</p>
+<ul>
+<li><p>Eduardo Cariel</p></li>
+<li><p>Felipe Leiva</p></li>
+<li><p>Gabriel Moya</p></li>
+<li><p>Diego Pinto</p></li>
+<li><p>Ariadne Sandoval</p></li>
+</ul>
+</li>
+<li><p><strong>Grupo 04</strong>: Time Series Analysis - E-Commerse Sales</p>
+<ul>
+<li><p>Javiera Cerda</p></li>
+<li><p>Danny Sanchez</p></li>
+<li><p>Sergio Suarez</p></li>
+<li><p>Tomas Werth</p></li>
+</ul>
+</li>
+<li><p><strong>Grupo Civil</strong>:</p>
+<ul>
+<li><p>Belén Llanquilef</p></li>
+<li><p>Diego Mera</p></li>
+<li><p>Alvaro Aravena</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/project"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

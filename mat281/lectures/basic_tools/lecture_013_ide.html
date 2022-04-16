@@ -1,0 +1,751 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IDE’s &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Virtual Environment" href="lecture_016_venv.html" />
+    <link rel="prev" title="Git" href="lecture_015_git.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      <img src="../../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture_014_jupyter.html">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/data_manipulation/base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_manipulation/data_manipulation/pandas/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_manipulation/data_manipulation/modulos_pandas/groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_manipulation/data_manipulation/modulos_pandas/merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_manipulation/data_manipulation/modulos_pandas/pivot.html">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/data_manipulation/sqlalchemy/sqlalchemy.html">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_manipulation/visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_manipulation/visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_manipulation/visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_manipulation/visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/introduccion_ml/introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/analisis_supervisado_regresion/intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/analisis_supervisado_regresion/02_regresion_lineal.html">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/analisis_supervisado_regresion/02_modelos_regresion.html">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/introduccion_ml/no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/mat281/lectures/basic_tools/lecture_013_ide.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduccion">
+   Introducción
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#herramientas">
+   Herramientas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#text-editor">
+     Text Editor
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#project-editor">
+     Project Editor
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#output-terminal">
+     Output Terminal
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#toolbar">
+     Toolbar
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#la-necesidad-de-un-ide">
+   La necesidad de un IDE
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#autocompletar">
+     Autocompletar
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#debugging">
+     Debugging
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gestion-de-archivos">
+     Gestión de archivos
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tipos-de-ide">
+   Tipos de IDE
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ide-para-varios-lenguajes">
+     IDE para varios lenguajes
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#netbeans">
+       NetBeans
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#eclipse">
+       Eclipse
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#aptana">
+       Aptana
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ide-de-desarrollo-movil">
+     IDE de desarrollo móvil
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ide-para-lenguajes-particulares">
+     IDE para lenguajes particulares
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencia">
+   Referencia
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="ides">
+<h1>IDE’s<a class="headerlink" href="#ides" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="https://cdn-images.visual-paradigm.com/features/v12/ide-image.png"><img alt="" class="align-center" src="https://cdn-images.visual-paradigm.com/features/v12/ide-image.png" style="width: 200px; height: 300px;" /></a>
+<div class="section" id="introduccion">
+<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h2>
+<p>Un IDE (Integrated Development Environment) es un software que ayuda a los desarrolladores a escribir códigos para desarrollar aplicaciones. Tiene una interfaz fácil de usar que consta de un editor y un compilador. Podemos escribir el código en la ventana del editor y compilarlo usando el compilador. En consecuencia, podemos ejecutarlo para verificar la salida del programa en el terminal de salida.</p>
+<img alt="../../../_images/code-01.jpg" src="../../../_images/code-01.jpg" />
+<p>Un IDE facilita a los desarrolladores con muchas funcionalidades programar en varios idiomas. Así, se ha convertido en una de las herramientas imprescindibles para el desarrollo de diversas aplicaciones.</p>
+</div>
+<div class="section" id="herramientas">
+<h2>Herramientas<a class="headerlink" href="#herramientas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="text-editor">
+<h3>Text Editor<a class="headerlink" href="#text-editor" title="Permalink to this headline">¶</a></h3>
+<p>Escribimos programas en la ventana del editor de texto. Aquí podemos editar, depurar y comentar nuestros programas. También proporciona funciones como el predictor de texto que ayuda a corregir errores.</p>
+<img alt="../../../_images/p1.png" src="../../../_images/p1.png" />
+</div>
+<div class="section" id="project-editor">
+<h3>Project Editor<a class="headerlink" href="#project-editor" title="Permalink to this headline">¶</a></h3>
+<p>Un proyecto consta de diferentes archivos para diversas funcionalidades. Almacenamos estos archivos esenciales de un proyecto de software en la ventana del Editor de proyectos.</p>
+<img alt="../../../_images/p2.png" src="../../../_images/p2.png" />
+</div>
+<div class="section" id="output-terminal">
+<h3>Output Terminal<a class="headerlink" href="#output-terminal" title="Permalink to this headline">¶</a></h3>
+<p>El terminal de salida en un IDE muestra el resultado del programa.</p>
+<img alt="../../../_images/p3.png" src="../../../_images/p3.png" />
+</div>
+<div class="section" id="toolbar">
+<h3>Toolbar<a class="headerlink" href="#toolbar" title="Permalink to this headline">¶</a></h3>
+<p>Una barra de herramientas es un conjunto de opciones que están vinculadas a funcionalidades específicas como ver, ejecutar, debugging, etc. Ayuda a realizar varias operaciones en el programa que creamos.</p>
+<img alt="../../../_images/p4.png" src="../../../_images/p4.png" />
+</div>
+</div>
+<div class="section" id="la-necesidad-de-un-ide">
+<h2>La necesidad de un IDE<a class="headerlink" href="#la-necesidad-de-un-ide" title="Permalink to this headline">¶</a></h2>
+<p>La velocidad y la eficiencia son los dos factores que afectan a todas las industrias. En esta era competitiva, se ha convertido en un desafío crear software rápido y escalable para los clientes. Aquí es donde un IDE inteligente gana el juego. Un IDE nos ayuda con las siguientes características:</p>
+<div class="section" id="autocompletar">
+<h3>Autocompletar<a class="headerlink" href="#autocompletar" title="Permalink to this headline">¶</a></h3>
+<p>Esta función nos ayuda a corregir errores de sintaxis de inmediato. Sugiere las variables, palabras clave, funciones, bibliotecas y paquetes correctos para usar al escribir el código. Además, el esquema de color de un IDE resulta ser un gran activo. Ayuda a comprender el flujo de un programa. Podemos distinguir fácilmente entre variables y texto y entre funciones y clases, y así comprender la lógica del código.</p>
+</div>
+<div class="section" id="debugging">
+<h3>Debugging<a class="headerlink" href="#debugging" title="Permalink to this headline">¶</a></h3>
+<p>El debugging  es el paso más importante para crear un software exitoso. El debugging del código implica probar y borrar todos los errores para que nuestro programa no se bloquee.</p>
+</div>
+<div class="section" id="gestion-de-archivos">
+<h3>Gestión de archivos<a class="headerlink" href="#gestion-de-archivos" title="Permalink to this headline">¶</a></h3>
+<p>Un proyecto consta de diferentes archivos con diferentes funcionalidades. Se convierte en una tarea necesaria colocar estos archivos en ubicaciones adecuadas para la ejecución del programa. Un IDE hace que la ubicación de todos los archivos de recursos de un proyecto sea más visible</p>
+</div>
+</div>
+<div class="section" id="tipos-de-ide">
+<h2>Tipos de IDE<a class="headerlink" href="#tipos-de-ide" title="Permalink to this headline">¶</a></h2>
+<p>La creación de aplicaciones utilizando diferentes lenguajes de programación requiere varios tipos de IDE compatibles con los respectivos lenguajes de programación. En esta sección, veremos los diferentes tipos de IDE utilizados para el desarrollo en varios lenguajes.</p>
+<p>Existen diferentes categorías de IDE, por ejemplo, usamos IDE para múltiples lenguajes de programación, desarrollo móvil y para lenguajes de programación particulares.</p>
+<div class="section" id="ide-para-varios-lenguajes">
+<h3>IDE para varios lenguajes<a class="headerlink" href="#ide-para-varios-lenguajes" title="Permalink to this headline">¶</a></h3>
+<p>Hay muchos IDE disponibles que ayudan a programar en diferentes lenguajes. Podemos utilizar un único IDE para programar en varios lenguajes como C, C ++ o Java. Algunos de estos IDE se mencionan a continuación:</p>
+<div class="section" id="netbeans">
+<h4>NetBeans<a class="headerlink" href="#netbeans" title="Permalink to this headline">¶</a></h4>
+<p>Es un IDE de código abierto que consta de varios paquetes y módulos útiles para el desarrollo. NetBeans admite varios idiomas como se indica a continuación:</p>
+<ul class="simple">
+<li><p>C/C++</p></li>
+<li><p>Java</p></li>
+<li><p>Python</p></li>
+<li><p>Ruby</p></li>
+<li><p>PHP</p></li>
+<li><p>JavaScript</p></li>
+<li><p>Groovy</p></li>
+</ul>
+</div>
+<div class="section" id="eclipse">
+<h4>Eclipse<a class="headerlink" href="#eclipse" title="Permalink to this headline">¶</a></h4>
+<p>También es un software de código abierto utilizado para varios marcos de desarrollo. Se utiliza principalmente para el desarrollo de aplicaciones con Java. Los idiomas admitidos por Eclipse son:</p>
+<ul class="simple">
+<li><p>Java</p></li>
+<li><p>Python</p></li>
+<li><p>C/C++</p></li>
+<li><p>PHP</p></li>
+<li><p>Perl</p></li>
+<li><p>Ruby</p></li>
+<li><p>COBOL</p></li>
+<li><p>Haskell</p></li>
+<li><p>Fortran</p></li>
+</ul>
+</div>
+<div class="section" id="aptana">
+<h4>Aptana<a class="headerlink" href="#aptana" title="Permalink to this headline">¶</a></h4>
+<p>Es un IDE popular utilizado para el desarrollo de aplicaciones web. Los lenguajes de programación admitidos por Aptana son:</p>
+<ul class="simple">
+<li><p>Python</p></li>
+<li><p>Ruby on Rails</p></li>
+<li><p>Ajax</p></li>
+<li><p>HTML</p></li>
+<li><p>CSS</p></li>
+<li><p>JavaScript</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="ide-de-desarrollo-movil">
+<h3>IDE de desarrollo móvil<a class="headerlink" href="#ide-de-desarrollo-movil" title="Permalink to this headline">¶</a></h3>
+<p>Hay varios IDE que se utilizan para el desarrollo de aplicaciones móviles. Algunos de ellos se enumeran a continuación:</p>
+<ul class="simple">
+<li><p>PhoneGap</p></li>
+<li><p>Android Studio</p></li>
+<li><p>IntelliJ IDEA</p></li>
+<li><p>Visual Studio</p></li>
+<li><p>Appcelerator</p></li>
+</ul>
+</div>
+<div class="section" id="ide-para-lenguajes-particulares">
+<h3>IDE para lenguajes particulares<a class="headerlink" href="#ide-para-lenguajes-particulares" title="Permalink to this headline">¶</a></h3>
+<p>Para programar exclusivamente en un idioma específico, hay varios IDE disponibles. Son los siguientes:</p>
+<ul class="simple">
+<li><p>Java: JCreator</p></li>
+<li><p>Python: IDLE</p></li>
+<li><p>C/C++: CodeLite</p></li>
+<li><p>R: RStudio</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="referencia">
+<h2>Referencia<a class="headerlink" href="#referencia" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://intellipaat.com/blog/tutorial/pycharm-tutorial/what-is-ide/">What is an IDE?</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/lectures/basic_tools"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="lecture_015_git.html" title="previous page">Git</a>
+    <a class='right-next' id="next-link" href="lecture_016_venv.html" title="next page">Virtual Environment</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

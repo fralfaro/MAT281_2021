@@ -1,0 +1,1499 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modelos de regressión lineal &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+    <script src="../../../../_static/jquery.js"></script>
+    <script src="../../../../_static/underscore.js"></script>
+    <script src="../../../../_static/doctools.js"></script>
+    <script src="../../../../_static/togglebutton.js"></script>
+    <script src="../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../../../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="next" title="Modelos de regressión multiple" href="02_modelos_regresion.html" />
+    <link rel="prev" title="Aprendizaje supervisado - Regresión" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../index.html">
+      
+      <img src="../../../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../basic_tools/lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basic_tools/lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_013_ide.html">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../basic_tools/lecture_014_jupyter.html">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/data_manipulation/base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_manipulation/data_manipulation/pandas/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/data_manipulation/modulos_pandas/groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/data_manipulation/modulos_pandas/merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/data_manipulation/modulos_pandas/pivot.html">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/data_manipulation/sqlalchemy/sqlalchemy.html">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../data_manipulation/visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../data_manipulation/eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../introduccion_ml/introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="02_modelos_regresion.html">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../introduccion_ml/no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../_sources/mat281/lectures/ml/analisis_supervisado_regresion/02_regresion_lineal.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definicion">
+   Definición
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#mejores-paremetros-metodo-de-minimos-cudrados">
+   Mejores parémetros: Método de minimos cudrados
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#seleccion-de-modelos">
+   Selección de modelos
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criterio-de-informacion-de-akaike-aic">
+     Criterio de información de Akaike (AIC)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#criterio-de-informacion-bayesiano-bic">
+     Criterio de información bayesiano (BIC)
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#r-cuadrado">
+     R-cuadrado
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#error-de-un-modelo">
+   Error de un modelo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Definición
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formas-de-medir-el-error-de-un-modelo">
+     Formas de medir el error de un modelo
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#otros-estadisticos-interesantes-del-modelo">
+   Otros estadísticos interesantes del modelo
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-f">
+     Test F
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-omnibus">
+     Test Omnibus
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-durbin-watson">
+     Test Durbin-Watson
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#test-jarque-bera">
+     Test Jarque-Bera
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aplicacion-con-python">
+   Aplicación con python
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ejemplo-sencillo">
+     Ejemplo sencillo
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#ejemplo-con-statsmodel">
+       Ejemplo con Statsmodel
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis-del-error">
+     Análisis del error
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#predicciones">
+       Predicciones
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#normalidad-de-los-residuos">
+       Normalidad de los residuos
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#outliers">
+   Outliers
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#que-hacer-ante-la-presencia-de-outliers">
+     ¿ Qué hacer ante la presencia de outliers?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusión
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencia">
+   Referencia
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="modelos-de-regression-lineal">
+<h1>Modelos de regressión lineal<a class="headerlink" href="#modelos-de-regression-lineal" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="definicion">
+<h2>Definición<a class="headerlink" href="#definicion" title="Permalink to this headline">¶</a></h2>
+<p>El <strong>modelo de regresión lineal general</strong> o <strong>modelo de regresión multiple</strong>,  supone que,
+<span class="math notranslate nohighlight">\(\boldsymbol{Y} =  \boldsymbol{X}\boldsymbol{\beta} + \boldsymbol{\epsilon},\)</span> donde:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\boldsymbol{X} = (x_1,...,x_n)^{T}\)</span>: variable explicativa</p></li>
+<li><p><span class="math notranslate nohighlight">\(\boldsymbol{Y} = (y_1,...,y_n)^{T}\)</span>: variable respuesta</p></li>
+<li><p><span class="math notranslate nohighlight">\(\boldsymbol{\epsilon} = (\epsilon_1,...,\epsilon_n)^{T}\)</span>: error se asume un ruido blanco, es decir, <span class="math notranslate nohighlight">\(\epsilon \sim \mathcal{N}( \boldsymbol{0},\sigma^2I)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\boldsymbol{\beta} = (\beta_1,...,\beta_n)^{T}\)</span>: coeficientes de regresión.</p></li>
+</ul>
+<p>La idea es tratar de establecer la relación entre las variables independientes y dependientes por medio de ajustar el mejor hyper plano con respecto a los puntos.</p>
+<p>Por ejemplo, para el caso de la <strong>regresión lineal simple</strong>, se tiene la siguiente estructura: <span class="math notranslate nohighlight">\(y_i=\beta_0+\beta_1x_i+\epsilon_i.\)</span> En este caso, la regresión lineal corresponderá a la recta que mejor pasa por los puntos observados.</p>
+<a class="reference internal image-reference" href="../../../../_images/lr.webp"><img alt="../../../../_images/lr.webp" class="align-center" src="../../../../_images/lr.webp" style="width: 560px; height: 480px;" /></a>
+<p>Existen algunas situaciones donde los modelos lineales no son apropiados:</p>
+<ul class="simple">
+<li><p>El rango de valores de <span class="math notranslate nohighlight">\(Y\)</span> está restringido (ejemplo: datos binarios o de conteos).</p></li>
+<li><p>La varianza de <span class="math notranslate nohighlight">\(Y\)</span> depende de la media.</p></li>
+</ul>
+</div>
+<div class="section" id="mejores-paremetros-metodo-de-minimos-cudrados">
+<h2>Mejores parémetros: Método de minimos cudrados<a class="headerlink" href="#mejores-paremetros-metodo-de-minimos-cudrados" title="Permalink to this headline">¶</a></h2>
+<p>El <strong>método de mínimos cudrados</strong> es un método de optimización que busca encontrar la mejor aproximación mediante la minimización de los residuos al cuadrado, es decir, se buscar encontrar:</p>
+<div class="math notranslate nohighlight">
+\[(P)\ \min \sum_{i=1}^n e_{i}^2 =\sum_{i=1}^n (y_{i}-f_{i}(x;\beta))^2   \]</div>
+<p>Para el caso de la regresión lineal simple, se busca una función $<span class="math notranslate nohighlight">\(f(x;\beta) = \beta_{0} + \beta_{1}x,\)</span>$</p>
+<p>por lo tanto el problema que se debe resolver es el siguiente:</p>
+<div class="math notranslate nohighlight">
+\[(P)\ \min \sum_{i=1}^n e_{i}^2 =\dfrac{1}{n}\sum_{i=1}^{n}\left ( y_{i}-(\beta_{0} + \beta_{1}x_{i})\right )^2\]</div>
+<p>Lo que significa, que para este problema, se debe encontrar <span class="math notranslate nohighlight">\(\beta = (\beta_{0},\beta_{1})\)</span> que minimicen el problema de optimización. En este caso la solución viene dada por:</p>
+<div class="math notranslate nohighlight">
+\[\hat{\beta}_{1} = \dfrac{\sum(x-\bar{x})(y-\bar{y})}{\sum(x-\bar{x})^2} = \rho (x,y)\ ; \  \hat{\beta}_{0} = \bar{y}-\hat{\beta}_{1} \bar{x} \]</div>
+<p>La metodología para encontrar los parámetros <span class="math notranslate nohighlight">\(\beta\)</span> para el caso de la regresión lineal multiple se extienden de manera natural del modelo de regresión lineal multiple, cuya solución viene dada por:</p>
+<div class="math notranslate nohighlight">
+\[\beta = (XX^{\top})^{-1}X^{\top}y\]</div>
+</div>
+<div class="section" id="seleccion-de-modelos">
+<h2>Selección de modelos<a class="headerlink" href="#seleccion-de-modelos" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="criterio-de-informacion-de-akaike-aic">
+<h3>Criterio de información de Akaike (AIC)<a class="headerlink" href="#criterio-de-informacion-de-akaike-aic" title="Permalink to this headline">¶</a></h3>
+<p>El <a class="reference external" href="https://en.wikipedia.org/wiki/Akaike_information_criterion">criterio de información de Akaike</a> (AIC) es una medida de la calidad relativa de un modelo estadístico, para un conjunto dado de datos. Como tal, el AIC proporciona un medio para la selección del modelo.</p>
+<p>AIC maneja un trade-off entre la bondad de ajuste del modelo y la complejidad del modelo. Se basa en la entropía de información: se ofrece una estimación relativa de la información perdida cuando se utiliza un modelo determinado para representar el proceso que genera los datos.</p>
+<p>AIC no proporciona una prueba de un modelo en el sentido de probar una hipótesis nula, es decir AIC no puede decir nada acerca de la calidad del modelo en un sentido absoluto. Si todos los modelos candidatos encajan mal, AIC no dará ningún aviso de ello.</p>
+<p>En el caso general, el AIC es</p>
+<div class="math notranslate nohighlight">
+\[AIC = 2k-2\ln(L)\]</div>
+<p>donde <span class="math notranslate nohighlight">\(k\)</span> es el número de parámetros en el modelo estadístico , y <span class="math notranslate nohighlight">\(L\)</span> es el máximo valor de la función de verosimilitud para el modelo estimado.</p>
+</div>
+<div class="section" id="criterio-de-informacion-bayesiano-bic">
+<h3>Criterio de información bayesiano (BIC)<a class="headerlink" href="#criterio-de-informacion-bayesiano-bic" title="Permalink to this headline">¶</a></h3>
+<p>En estadística, el <a class="reference external" href="https://en.wikipedia.org/wiki/Bayesian_information_criterion">criterio de información bayesiano</a> (BIC) o el más general criterio de Schwarz (SBC también, SBIC) es un criterio para la selección de modelos entre un conjunto finito de modelos. Se basa, en parte, de la función de probabilidad y que está estrechamente relacionado con el Criterio de Información de Akaike (AIC).</p>
+<p>Cuando el ajuste de modelos, es posible aumentar la probabilidad mediante la adición de parámetros, pero si lo hace puede resultar en sobreajuste. Tanto el BIC y AIC resuelven este problema mediante la introducción de un término de penalización para el número de parámetros en el modelo, el término de penalización es mayor en el BIC que en el AIC.</p>
+<p>El BIC fue desarrollado por Gideon E. Schwarz, quien dio un argumento bayesiano a favor de su adopción.1​ Akaike también desarrolló su propio formalismo Bayesiano, que ahora se conoce como la ABIC por Criterio de Información Bayesiano de Akaike “</p>
+<p>En el caso general, el BIC es</p>
+<div class="math notranslate nohighlight">
+\[BIC =k\ln(n)-2\ln(L)\]</div>
+<p>donde <span class="math notranslate nohighlight">\(k\)</span> es el número de parámetros en el modelo estadístico, <span class="math notranslate nohighlight">\(n\)</span> es la cantidad de datos disponibles y <span class="math notranslate nohighlight">\(L\)</span> es el máximo valor de la función de verosimilitud para el modelo estimado.</p>
+</div>
+<div class="section" id="r-cuadrado">
+<h3>R-cuadrado<a class="headerlink" href="#r-cuadrado" title="Permalink to this headline">¶</a></h3>
+<p>El <a class="reference external" href="https://en.wikipedia.org/wiki/Coefficient_of_determination">coeficiente de determinación</a> o <strong>R-cuadrado</strong> (<span class="math notranslate nohighlight">\(r^2\)</span> ) , es un estadístico usado en el contexto de un modelo estadístico cuyo principal propósito es predecir futuros resultados o probar una hipótesis. El coeficiente determina la calidad del modelo para replicar los resultados, y la proporción de variación de los resultados que puede explicarse por el modelo.</p>
+<p>El valor del <span class="math notranslate nohighlight">\(r^2\)</span> habitualmente entre 0 y 1, donde 0 significa una mala calidad de ajuste en el modelo y 1 corresponde a un ajuste lineal perfecto. A menudo, este estadístico es ocupado para modelos lineales.</p>
+<p>Se define por la fórmula:</p>
+<div class="math notranslate nohighlight">
+\[r^2 = \dfrac{SS_{reg}}{SS_{tot}} = 1 - \dfrac{SS_{res}}{SS_{tot}},\]</div>
+<p>donde:</p>
+<ul class="simple">
+<li><p><strong><span class="math notranslate nohighlight">\(SS_{reg}\)</span></strong> ( suma explicada de cuadrados (ESS)): <span class="math notranslate nohighlight">\(\sum_{i}(\hat{y}-\bar{y})^2\)</span></p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(SS_{res}\)</span></strong>: ( suma residual de cuadrados (RSS)): <span class="math notranslate nohighlight">\(\sum_{i}(y_{i}-\hat{y})^2 = \sum_{i}e_{i}^2\)</span></p></li>
+<li><p><strong><span class="math notranslate nohighlight">\(SS_{tot}\)</span></strong>: ( varianza): <span class="math notranslate nohighlight">\(\sum_{i}(y_{i}-\bar{y})\)</span>, donde: <span class="math notranslate nohighlight">\(SS_{tot}=SS_{reg}+SS_{res}\)</span></p></li>
+</ul>
+<p>En una forma general, se puede ver que <span class="math notranslate nohighlight">\(r^2\)</span> está relacionado con la fracción de varianza inexplicada (FVU), ya que el segundo término compara la varianza inexplicada (varianza de los errores del modelo) con la varianza total (de los datos).</p>
+<ul class="simple">
+<li><p>Las áreas de los cuadrados azules representan los residuos cuadrados con respecto a la regresión lineal (<span class="math notranslate nohighlight">\(SS_{tot}\)</span>).</p></li>
+<li><p>Las áreas de los cuadrados rojos representan los residuos al cuadrado con respecto al valor promedio (<span class="math notranslate nohighlight">\(SS_{res}\)</span>).</p></li>
+</ul>
+<p>Por otro lado, a medida que más variables explicativas se agregan al modelo, el <span class="math notranslate nohighlight">\(r^2\)</span> aumenta de forma automática, es decir, entre más variables explicativas se agreguen, mejor será la calidad será el ajuste (un falso argumento).</p>
+<p>Es por ello que se define el <strong>R cuadrado ajustado</strong>, que viene a ser  una modificación del <span class="math notranslate nohighlight">\(r^2\)</span>, ajustando por el número de variables explicativas en un modelo (<span class="math notranslate nohighlight">\(p\)</span>) en relación con el número de puntos de datos (<span class="math notranslate nohighlight">\(n\)</span>).</p>
+<div class="math notranslate nohighlight">
+\[r^2_{ajustado} = 1-(1-r^2)\dfrac{n-1}{n-p-1} ,\]</div>
+</div>
+</div>
+<div class="section" id="error-de-un-modelo">
+<h2>Error de un modelo<a class="headerlink" href="#error-de-un-modelo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Definición<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>El <strong>error</strong> corresponde a la diferencia entre el valor original y el valor predicho,es decir:</p>
+<div class="math notranslate nohighlight">
+\[e_{i}=y_{i}-\hat{y}_{i} \]</div>
+</div>
+<div class="section" id="formas-de-medir-el-error-de-un-modelo">
+<h3>Formas de medir el error de un modelo<a class="headerlink" href="#formas-de-medir-el-error-de-un-modelo" title="Permalink to this headline">¶</a></h3>
+<p>Para medir el ajuste de un modelo se ocupan las denominadas <strong>funciones de distancias</strong> o <strong>métricas</strong>. Existen varias métricas, dentro de las cuales encontramos:</p>
+<ol>
+<li><p><strong>Métricas absolutas</strong>: Las métricas absolutas o no escalada miden el error sin escalar los valores. Las métrica absolutas más ocupadas son:</p>
+<ul class="simple">
+<li><p><strong>Mean Absolute Error</strong> (MAE)</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\textrm{MAE}(y,\hat{y}) = \dfrac{1}{n}\sum_{t=1}^{n}\left | y_{t}-\hat{y}_{t}\right |\]</div>
+<ul class="simple">
+<li><p><strong>Mean squared error</strong> (MSE):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\textrm{MSE}(y,\hat{y}) =\dfrac{1}{n}\sum_{t=1}^{n}\left ( y_{t}-\hat{y}_{t}\right )^2\]</div>
+</li>
+</ol>
+<ol>
+<li><p><strong>Métricas Porcentuales</strong>: Las métricas porcentuales o escaladas miden el error de manera escalada, es decir, se busca acotar el error entre valores de 0 a 1, donde 0 significa que el ajuste es perfecto, mientras que 1 sería un mal ajuste. Cabe destacar que muchas veces las métricas porcentuales puden tener valores mayores a 1.Las métrica Porcentuales más ocupadas son:</p>
+<ul class="simple">
+<li><p><strong>Mean absolute percentage error</strong> (MAPE):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\textrm{MAPE}(y,\hat{y}) = \dfrac{1}{n}\sum_{t=1}^{n}\left | \frac{y_{t}-\hat{y}_{t}}{y_{t}} \right |\]</div>
+<ul class="simple">
+<li><p><strong>Symmetric mean absolute percentage error</strong> (sMAPE):</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\textrm{sMAPE}(y,\hat{y}) = \dfrac{1}{n}\sum_{t=1}^{n} \frac{\left |y_{t}-\hat{y}_{t}\right |}{(\left | y_{t} \right |^2+\left | \hat{y}_{t} \right |^2)/2}\]</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="otros-estadisticos-interesantes-del-modelo">
+<h2>Otros estadísticos interesantes del modelo<a class="headerlink" href="#otros-estadisticos-interesantes-del-modelo" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="test-f">
+<h3>Test F<a class="headerlink" href="#test-f" title="Permalink to this headline">¶</a></h3>
+<p>EL <a class="reference external" href="http://facweb.cs.depaul.edu/sjost/csc423/documents/f-test-reg.htm">test F</a> para regresión lineal prueba si alguna de las variables independientes en un modelo de regresión lineal múltiple es significativa.</p>
+<p>En términos de test de hipótesis, se quiere contrastar lo siguiente:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(H_0: \beta_1 = \beta_2 = ... = \beta_{p-1} = 0\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(H_1: \beta_j ≠ 0\)</span>, para al menos un valor de <span class="math notranslate nohighlight">\(j\)</span></p></li>
+</ul>
+</div>
+<div class="section" id="test-omnibus">
+<h3>Test Omnibus<a class="headerlink" href="#test-omnibus" title="Permalink to this headline">¶</a></h3>
+<p>EL <a class="reference external" href="https://en.wikipedia.org/wiki/Omnibus_test">test Omnibus</a>esta relacionado con la simetría y curtosis del resido. Se espera ver un valor cercano a cero que indicaría normalidad. El Prob (Omnibus) realiza una prueba estadística que indica la probabilidad de que los residuos se distribuyan normalmente.</p>
+</div>
+<div class="section" id="test-durbin-watson">
+<h3>Test Durbin-Watson<a class="headerlink" href="#test-durbin-watson" title="Permalink to this headline">¶</a></h3>
+<p>El <a class="reference external" href="https://www.statisticshowto.com/durbin-watson-test-coefficient/">Test Durbin-Watson</a> es un test de homocedasticidad. Para ver los límites relacionados de este test, se puede consultar la siguiente <a class="reference external" href="https://support.minitab.com/es-mx/minitab/18/help-and-how-to/modeling-statistics/regression/supporting-topics/model-assumptions/test-for-autocorrelation-by-using-the-durbin-watson-statistic/">tablas de valores</a>.</p>
+</div>
+<div class="section" id="test-jarque-bera">
+<h3>Test Jarque-Bera<a class="headerlink" href="#test-jarque-bera" title="Permalink to this headline">¶</a></h3>
+<p>Como el <a class="reference external" href="https://en.wikipedia.org/wiki/Jarque%E2%80%93Bera_test">test Omnibus</a> en que prueba tanto el sesgo como la curtosis. Esperamos ver en esta prueba una confirmación de la prueba Omnibus.</p>
+<p><strong>IMPORTANTE</strong>:</p>
+<ul class="simple">
+<li><p>Cabe destacar que el coeficiente <span class="math notranslate nohighlight">\(r^2\)</span> funciona bien en el contexto del mundo de las regresiones lineales. Para el análisis de <strong>modelos no lineales</strong>, esto coeficiente pierde su interpretación.</p></li>
+<li><p>Se deja la siguiente <a class="reference external" href="http://reliawiki.org/index.php/Simple_Linear_Regression_Analysis">refrerencia</a> para comprender conceptos claves de test de hipótesis, intervalos de confianza, p-valor. Estos términos son escenciales para comprender la significancia del ajuste realizado.</p></li>
+<li><p>Existen muchas más métricas, pero estas son las más usulaes de encontrar. En el archivo <strong><a class="reference external" href="http://metrics.py">metrics.py</a></strong> se definen las distintas métricas presentadas, las cuales serpan de utilidad más adelante.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="aplicacion-con-python">
+<h2>Aplicación con python<a class="headerlink" href="#aplicacion-con-python" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ejemplo-sencillo">
+<h3>Ejemplo sencillo<a class="headerlink" href="#ejemplo-sencillo" title="Permalink to this headline">¶</a></h3>
+<p>Para comprender los modelos de regresión lineal, mostraremos un caso sencillo de uso. Para ello realizaremos un simulación de una recta, en el cual le agregaremos un ruido blanco.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># librerias</span>
+ 
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span> 
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="mi">500</span><span class="p">)</span>  <span class="c1"># Ver más columnas de los dataframes</span>
+
+<span class="c1"># Ver gráficos de matplotlib en jupyter notebook/lab</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ejemplo sencillo</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">100</span> 
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># coeficientes</span>
+<span class="n">x</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1"># variable independiente</span>
+
+<span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span> <span class="c1"># media y desviacion estandar</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="c1"># ruido blanco</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="n">x</span><span class="p">]</span>  <span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">+</span> <span class="n">epsilon</span> <span class="c1"># variables dependientes</span>
+
+<span class="c1"># generar dataframe</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="n">x</span><span class="p">,</span>
+    <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">y</span>
+<span class="p">})</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>x</th>
+      <th>y</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.543405</td>
+      <td>1.612417</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.278369</td>
+      <td>1.347058</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>0.424518</td>
+      <td>1.267849</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>0.844776</td>
+      <td>1.935274</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>0.004719</td>
+      <td>1.082601</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Grafiquemos los puntos en el plano cartesiano.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># grafico de puntos</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">)})</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+<span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/02_regresion_lineal_15_0.png" src="../../../../_images/02_regresion_lineal_15_0.png" />
+</div>
+</div>
+<p>Lo primero que debemos hacer es separar nuestro datos en los conjuntos de <strong>training set</strong> y <strong>test set</strong>.
+<strong>Concepto de  Train set y Test set</strong></p>
+<p>Al momento de entrenar los modelos de machine leraning, se debe tener un conjunto para poder entrenar el modelo y otro conjunto para poder evaluar el modelo. Es por esto que el conjunto de datos se separá en dos conjuntos:</p>
+<ul class="simple">
+<li><p><strong>Train set</strong>: Conjunto de entrenamiento con el cual se entrenarán los algoritmos de machine learning.</p></li>
+<li><p><strong>Test set</strong>: Conjunto de testeo para averiguar la confiabilidad del modelo, es decir, cuan bueno es el ajuste del modelo.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../../../../_images/train.png"><img alt="../../../../_images/train.png" class="align-center" src="../../../../_images/train.png" style="width: 360px; height: 240px;" /></a>
+<p><strong>Tamaño ideal de cada conjunto</strong></p>
+<p>La respuesta depende fuertemente del tamaño del conjunto de datos. A modo de regla empírica, se considerará el tamaño óptimo basado en la siguiente tabla:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>número de filas</p></th>
+<th class="head"><p>train set</p></th>
+<th class="head"><p>test set</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>entre 100-1000</p></td>
+<td><p>67%</p></td>
+<td><p>33%</p></td>
+</tr>
+<tr class="row-odd"><td><p>entre 1.000- 100.000</p></td>
+<td><p>80%</p></td>
+<td><p>20%</p></td>
+</tr>
+<tr class="row-even"><td><p>mayor a 100.000</p></td>
+<td><p>99%</p></td>
+<td><p>1%</p></td>
+</tr>
+</tbody>
+</table>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">datasets</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+
+<span class="c1"># import some data to play with</span>
+
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;x&#39;</span><span class="p">]]</span> <span class="c1"># we only take the first two features.</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
+
+<span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># print rows train and test sets</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Separando informacion:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;numero de filas data original : &#39;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;numero de filas train set     : &#39;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;numero de filas test set      : &#39;</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Separando informacion:
+
+numero de filas data original :  100
+numero de filas train set     :  80
+numero de filas test set      :  20
+</pre></div>
+</div>
+</div>
+</div>
+<p>Existen varias librerías para poder aplicar modelos de regresión, de los cuales la atención estará enfocada en las librerías de <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> y <code class="docutils literal notranslate"><span class="pre">sklearn</span></code>.</p>
+<div class="section" id="ejemplo-con-statsmodel">
+<h4>Ejemplo con Statsmodel<a class="headerlink" href="#ejemplo-con-statsmodel" title="Permalink to this headline">¶</a></h4>
+<p>Para trabajar los modelos de <code class="docutils literal notranslate"><span class="pre">statsmodel</span></code>, basta con instanciar el comando <code class="docutils literal notranslate"><span class="pre">OLS</span></code>. El modelo <strong>no considera intercepto</strong>, por lo tanto, para agregar el intercepto, a las variables independientes se le debe agregar un vector de unos (tanto para el conjunto de entranamiento como de testeo).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+
+<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X_train</span><span class="p">))</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En <code class="docutils literal notranslate"><span class="pre">statsmodel</span></code> existe un comando para ver información del modelo en estudio mediante el comando <code class="docutils literal notranslate"><span class="pre">summary</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># resultados del modelo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">summary</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                      y   R-squared:                       0.894
+Model:                            OLS   Adj. R-squared:                  0.893
+Method:                 Least Squares   F-statistic:                     658.4
+Date:                Sat, 16 Apr 2022   Prob (F-statistic):           8.98e-40
+Time:                        02:06:51   Log-Likelihood:                 69.472
+No. Observations:                  80   AIC:                            -134.9
+Df Residuals:                      78   BIC:                            -130.2
+Df Model:                           1                                         
+Covariance Type:            nonrobust                                         
+==============================================================================
+                 coef    std err          t      P&gt;|t|      [0.025      0.975]
+------------------------------------------------------------------------------
+const          0.9805      0.021     46.338      0.000       0.938       1.023
+x              1.0099      0.039     25.659      0.000       0.932       1.088
+==============================================================================
+Omnibus:                        0.424   Durbin-Watson:                   1.753
+Prob(Omnibus):                  0.809   Jarque-Bera (JB):                0.587
+Skew:                           0.102   Prob(JB):                        0.746
+Kurtosis:                       2.633   Cond. No.                         4.17
+==============================================================================
+
+Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+</pre></div>
+</div>
+</div>
+</div>
+<p>A continuación se dara una interpretación de esta tabla:</p>
+<p><strong>Descripción del Modelo</strong></p>
+<p>Estos son estadísticas relacionadas a la ejecución del modelo.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Descripión</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Dep. Variable</p></td>
+<td><p>Nombre de la variables dependiente</p></td>
+</tr>
+<tr class="row-odd"><td><p>Model</p></td>
+<td><p>Nombre del modelo ocupado</p></td>
+</tr>
+<tr class="row-even"><td><p>Method</p></td>
+<td><p>Método para encontrar los parámetros óptimos</p></td>
+</tr>
+<tr class="row-odd"><td><p>Date</p></td>
+<td><p>Fecha de ejecución</p></td>
+</tr>
+<tr class="row-even"><td><p>No. Observations</p></td>
+<td><p>Número de observaciones</p></td>
+</tr>
+<tr class="row-odd"><td><p>Df Residuals</p></td>
+<td><p>Grados de libertas de los residuos</p></td>
+</tr>
+<tr class="row-even"><td><p>Df Model</p></td>
+<td><p>Grados de libertad del modelo</p></td>
+</tr>
+<tr class="row-odd"><td><p>Covariance Type</p></td>
+<td><p>Tipo de covarianza</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ajustes del Modelo</strong></p>
+<p>Estos son estadísticas relacionadas con la verosimilitud y la confiabilidad del modelo.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Descripión</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>R-squared</p></td>
+<td><p>Valor del R-cuadrado</p></td>
+</tr>
+<tr class="row-odd"><td><p>Adj. R-squared</p></td>
+<td><p>Valor del R-cuadrado ajustado</p></td>
+</tr>
+<tr class="row-even"><td><p>F-statistic</p></td>
+<td><p>Test para ver si todos los parámetros son iguales a cero</p></td>
+</tr>
+<tr class="row-odd"><td><p>Prob (F-statistic)</p></td>
+<td><p>Probabilidad Asociada al test</p></td>
+</tr>
+<tr class="row-even"><td><p>Log-Likelihood</p></td>
+<td><p>Logaritmo de la función de verosimilitud</p></td>
+</tr>
+<tr class="row-odd"><td><p>AIC</p></td>
+<td><p>Valor del estadístico AIC</p></td>
+</tr>
+<tr class="row-even"><td><p>BIC</p></td>
+<td><p>Valor del estadístico BIC</p></td>
+</tr>
+</tbody>
+</table>
+<p>En este caso, tanto el <strong>r-cuadrado</strong> como el <strong>r-cuadrado</strong> ajustado están cerca del 0.9, se tiene un buen ajuste lineal de los datos. Además, el <strong>test F</strong> nos da una probabilidad menor al 0.05, se rechaza la hipótess nula que los coeficientes son iguales de cero.</p>
+<p><strong>Parámetros del modelo</strong></p>
+<p>La tabla muestra los valores asociados a los parámetros del modelo</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p>coef</p></th>
+<th class="head"><p>std err</p></th>
+<th class="head"><p>t</p></th>
+<th class="head"><p>P&gt;|t|</p></th>
+<th class="head"><p>[0.025</p></th>
+<th class="head"><p>0.975]</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>const</p></td>
+<td><p>0.9805</p></td>
+<td><p>0.021</p></td>
+<td><p>46.338</p></td>
+<td><p>0.000</p></td>
+<td><p>0.938</p></td>
+<td><p>1.023</p></td>
+</tr>
+<tr class="row-odd"><td><p>x</p></td>
+<td><p>1.0099</p></td>
+<td><p>0.039</p></td>
+<td><p>25.659</p></td>
+<td><p>0.000</p></td>
+<td><p>0.932</p></td>
+<td><p>1.088</p></td>
+</tr>
+</tbody>
+</table>
+<p>Acá se tiene:</p>
+<ul class="simple">
+<li><p><strong>Variables</strong>: Las variables en estudio son <code class="docutils literal notranslate"><span class="pre">const</span></code> (intercepto) y <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p></li>
+<li><p><strong>coef</strong>: Valor estimado del coeficiente.</p></li>
+<li><p><strong>std err</strong>: Desviación estandar del estimador.</p></li>
+<li><p><strong>t</strong>: t = estimate/std error.</p></li>
+<li><p><strong>P&gt;|t|</strong>:p-valor individual para cada parámetro para aceptar o rechazar hipótesis nula (parámetros significativamente distinto de cero).</p></li>
+<li><p><strong>[0.025 | 0.975]</strong>: Intervalo de confianza de los parámetros</p></li>
+</ul>
+<p>En este caso, los valores estimados son cercanos a 1 (algo esperable debido a la simulación realizadas), además, se observa que cada uno de los parámetros es significativamente distinto de cero.</p>
+<p><strong>Estadísticos interesantes del modelo</strong></p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Omnibus</p></td>
+<td><p>Prueba de la asimetría y curtosis de los residuos</p></td>
+</tr>
+<tr class="row-odd"><td><p>Prob(Omnibus)</p></td>
+<td><p>Probabilidad de que los residuos se distribuyan normalmente</p></td>
+</tr>
+<tr class="row-even"><td><p>Skew</p></td>
+<td><p>Medida de simetría de los datos</p></td>
+</tr>
+<tr class="row-odd"><td><p>Kurtosis</p></td>
+<td><p>Medida de curvatura de los datos</p></td>
+</tr>
+<tr class="row-even"><td><p>Durbin-Watson</p></td>
+<td><p>Pruebas de homocedasticidad</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jarque-Bera (JB)</p></td>
+<td><p>Como la prueba Omnibus, prueba tanto el sesgo como la curtosis.</p></td>
+</tr>
+<tr class="row-even"><td><p>Prob(JB)</p></td>
+<td><p>Probabilidad de que los residuos se distribuyan normalmente</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cond. No.</p></td>
+<td><p>Número de condición. Mide la sensibilidad de la salida de una función en comparación con su entrada</p></td>
+</tr>
+</tbody>
+</table>
+<p>En este caso:</p>
+<ul class="simple">
+<li><p>Tanto el test de Omnibus como el test  Jarque-Bera nos arroja una probabilidad cercana a uno, lo cual confirma la hipótesis que los residuos se distribuyen de manera normal.</p></li>
+<li><p>Para el test de Durbin-Watson, basados en la <a class="reference external" href="https://support.minitab.com/es-mx/minitab/18/help-and-how-to/modeling-statistics/regression/supporting-topics/model-assumptions/test-for-autocorrelation-by-using-the-durbin-watson-statistic/">tablas de valores</a>(tamaño de la muestra 80 y número de variables 2), se tiene que los límites para asumir que no existe correlación en los residuos es de: <span class="math notranslate nohighlight">\([d_u,4-d_u]=[1.66,2.34]\)</span>, dado que el valor obtenido (1.753) se encuentra dentro de este rango, se concluye que no hay autocorrelación de los residuos.</p></li>
+<li><p>El <a class="reference external" href="https://en.wikipedia.org/wiki/Condition_number">número de condición</a> es pequeño (podemos asumir que menor a 30 es un buen resultado) por lo que podemos asumir que no hay colinealidad de los datos.</p></li>
+</ul>
+<p>Ahora, para convencernos de manera visual de los resultados, realicemos un gráfico con el ajuste lineal:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># grafico de puntos</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+<span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/02_regresion_lineal_31_0.png" src="../../../../_images/02_regresion_lineal_31_0.png" />
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="analisis-del-error">
+<h3>Análisis del error<a class="headerlink" href="#analisis-del-error" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="predicciones">
+<h4>Predicciones<a class="headerlink" href="#predicciones" title="Permalink to this headline">¶</a></h4>
+<p>Ahora que ya se tiene el modelo entrenado y se ha analizado sus principales características, se pueden realizar predicciones de los valores que se desconocen, de la siguiente manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># predicciones</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X_test</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora, analizaremos las métricas de error asociado a las predicciones del modelo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">metrics_regression</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">r2_score</span>
+
+<span class="c1"># ejemplo </span>
+<span class="n">df_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">y_test</span><span class="p">,</span>
+        <span class="s1">&#39;yhat&#39;</span><span class="p">:</span> <span class="n">y_pred</span>
+        <span class="p">}</span>
+<span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Metricas para el regresor consumo_litros_milla:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">summary_metrics</span><span class="p">(</span><span class="n">df_temp</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Metricas para el regresor consumo_litros_milla:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>mae</th>
+      <th>mse</th>
+      <th>rmse</th>
+      <th>mape</th>
+      <th>maape</th>
+      <th>wmape</th>
+      <th>mmape</th>
+      <th>smape</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.1028</td>
+      <td>0.0171</td>
+      <td>0.1309</td>
+      <td>0.0677</td>
+      <td>0.0674</td>
+      <td>0.0666</td>
+      <td>0.0406</td>
+      <td>0.068</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="normalidad-de-los-residuos">
+<h4>Normalidad de los residuos<a class="headerlink" href="#normalidad-de-los-residuos" title="Permalink to this headline">¶</a></h4>
+<p>Basados en los distintos test (Durbin-Watson,Omnibus,Jarque-Bera ) se concluye que los residuos del modelo son un ruido blanco. Para convencernos de esto de manera gráfica, se realizan los siguientes gráficos de interés.</p>
+<p><strong>Función de Autocorrelación</strong></p>
+<p>La función de autocorrelación muestra que los residuos se encuentra dentro de la banda de valores críticos <span class="math notranslate nohighlight">\((-0.2,0.2)\)</span>, concluyendo que no existe correlación entre los residuos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.graphics.tsaplots</span> <span class="kn">import</span> <span class="n">plot_acf</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">12</span><span class="p">,</span><span class="mi">8</span><span class="p">)})</span>
+
+<span class="c1"># funcion de autocorrelation</span>
+<span class="n">plot_acf</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">resid</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/02_regresion_lineal_38_0.png" src="../../../../_images/02_regresion_lineal_38_0.png" />
+</div>
+</div>
+<p><strong>QQ-plot</strong></p>
+<p>La gráfica de <strong>qq-plot</strong> nos muestra una comparación en las distribución de los residuos respecto a una población con una distribución normal. En este caso, los puntos (que representan la distribución de los errores) se encuentran cercana a la recta (distribución normal), concluyendo que la distribución de los residuos sigue una distribución normal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.stats</span> <span class="k">as</span> <span class="nn">stats</span>
+<span class="n">fig</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">qqplot</span><span class="p">(</span><span class="n">results</span><span class="o">.</span><span class="n">resid</span><span class="p">,</span> <span class="n">stats</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="n">fit</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">line</span><span class="o">=</span><span class="s2">&quot;45&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/02_regresion_lineal_40_0.png" src="../../../../_images/02_regresion_lineal_40_0.png" />
+</div>
+</div>
+<p><strong>Histograma</strong></p>
+<p>Esta es una comparación directa enntre la distribución de los residuos versus la distribución de una variable normal mediante un histograma.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_hist</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;error&#39;</span><span class="p">:</span><span class="n">results</span><span class="o">.</span><span class="n">resid</span><span class="p">})</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;error&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df_hist</span><span class="p">,</span>
+    <span class="n">kde</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+     <span class="n">bins</span><span class="o">=</span><span class="mi">15</span>
+<span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/02_regresion_lineal_42_0.png" src="../../../../_images/02_regresion_lineal_42_0.png" />
+</div>
+</div>
+<p>A modo de conclusión, es correcto asumir que los errores siguen la distribución de un ruido blanco, cumpliendo correctamente con los supuestos de la regresión lineal.</p>
+</div>
+</div>
+</div>
+<div class="section" id="outliers">
+<h2>Outliers<a class="headerlink" href="#outliers" title="Permalink to this headline">¶</a></h2>
+<p>Un outlier (o valor atípico) una observación que es numéricamente distante del resto de los datos. Las estadísticas derivadas de los conjuntos de datos que incluyen valores atípicos serán frecuentemente engañosas. Estos valores pueden afectar fuertemente al modelo de regresión logística. Veamos un ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ejemplo sencillo</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">100</span> 
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+
+<span class="n">beta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span> <span class="c1"># coeficientes</span>
+<span class="n">x</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="c1"># variable independiente</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.1</span> <span class="c1"># media y desviacion estandar</span>
+<span class="n">epsilon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="n">mu</span><span class="p">,</span> <span class="n">sigma</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="c1"># ruido blanco</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">c_</span><span class="p">[</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="n">n</span><span class="p">),</span><span class="n">x</span><span class="p">]</span>  <span class="p">,</span> <span class="n">beta</span><span class="p">)</span> <span class="o">+</span> <span class="n">epsilon</span> <span class="c1"># variables dependientes</span>
+
+<span class="n">y</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mf">3.1</span> <span class="c1"># contaminacion</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">x</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">+</span><span class="mi">1</span>
+<span class="n">y</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="mi">11</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+
+<span class="c1"># etiqueta</span>
+<span class="n">outlier</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<span class="n">outlier</span><span class="p">[:</span><span class="mi">10</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">outlier</span><span class="p">[</span><span class="mi">10</span><span class="p">:</span><span class="mi">12</span><span class="p">]</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># generar dataframe</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;x&#39;</span><span class="p">:</span><span class="n">x</span><span class="p">,</span>
+    <span class="s1">&#39;y&#39;</span><span class="p">:</span><span class="n">y</span><span class="p">,</span>
+    <span class="s1">&#39;outlier&#39;</span><span class="p">:</span><span class="n">outlier</span>
+<span class="p">})</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># grafico de puntos</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">rc</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">:(</span><span class="mi">10</span><span class="p">,</span><span class="mi">8</span><span class="p">)})</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
+    <span class="n">hue</span><span class="o">=</span><span class="s1">&#39;outlier&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">palette</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span><span class="s1">&#39;red&#39;</span><span class="p">,</span><span class="s1">&#39;black&#39;</span><span class="p">]</span>
+<span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/02_regresion_lineal_47_0.png" src="../../../../_images/02_regresion_lineal_47_0.png" />
+</div>
+</div>
+<p>En este caso, se tiene dos tipos de outliers en este caso:</p>
+<ul class="simple">
+<li><p><strong>Significativos</strong>: Aquellos outliers que afectan la regresión cambiando la tendencia a este grupo de outliers (puntos rojos).</p></li>
+<li><p><strong>No significativo</strong>: Si bien son datos atípicos  puesto que se encuentran fuera de la nube de puntos, el ajuste de la regresión lineal no se ve afectado (puntos negros).</p></li>
+</ul>
+<p>Veamos el ajuste lineal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># grafico de puntos</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">lmplot</span><span class="p">(</span>
+    <span class="n">x</span><span class="o">=</span><span class="s1">&#39;x&#39;</span><span class="p">,</span>
+    <span class="n">y</span><span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span>
+    <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">,</span>
+    <span class="n">height</span> <span class="o">=</span> <span class="mi">8</span><span class="p">,</span>
+<span class="p">)</span>  
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/02_regresion_lineal_49_0.png" src="../../../../_images/02_regresion_lineal_49_0.png" />
+</div>
+</div>
+<p>Otro gráfico de interés, es el <a class="reference external" href="https://songhuiming.github.io/pages/2016/11/27/linear-regression-in-python-outliers-leverage-detect/">gráfico de influencia</a>, que analiza la distancia de Cook de los residuos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># modelos de influencia</span>
+<span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;x&#39;</span><span class="p">]]</span> <span class="c1"># we only take the first two features.</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;y&#39;</span><span class="p">]</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">OLS</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">X</span><span class="p">))</span>
+<span class="n">results</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
+<span class="n">sm</span><span class="o">.</span><span class="n">graphics</span><span class="o">.</span><span class="n">influence_plot</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../../_images/02_regresion_lineal_51_0.png" src="../../../../_images/02_regresion_lineal_51_0.png" />
+</div>
+</div>
+<p>Los puntos <strong>grandes</strong> se interpretan como puntos que tienen una alta influencia sobre la regresión lineal, mientras aquellos puntos <strong>pequeños</strong> tienen una influencia menor.</p>
+<div class="section" id="que-hacer-ante-la-presencia-de-outliers">
+<h3>¿ Qué hacer ante la presencia de outliers?<a class="headerlink" href="#que-hacer-ante-la-presencia-de-outliers" title="Permalink to this headline">¶</a></h3>
+<p>En este caso, la recta se ve fuertemente afectadas por estos valores. Para estos casos se pueden hacer varias cosas:</p>
+<ul class="simple">
+<li><p><strong>Eliminación de los outliers</strong>: Una vez identificado los outliers (algo que no es tan trivial de identificar para datos multivariables), se puden eliminar y seguir con el paso de modelado.</p>
+<ul>
+<li><p><strong>Ventajas</strong>: Fácil de trabajar la data para los modelos que dependen fuertemente de la media de los datos.</p></li>
+<li><p><strong>Desventajas</strong>: Para el caso multivariables no es tán trivial encontrar outliers.</p></li>
+</ul>
+</li>
+<li><p><strong>Modelos más robustos a outliers</strong>: Se pueden aplicar otros modelos de regresión cuya estimación de los parámetros, no se vea afectado por los valores de outliers.</p>
+<ul>
+<li><p><strong>Ventajas</strong>: El análisis se vuelve independiente de los datos.</p></li>
+<li><p><strong>Desventajas</strong>: Modelos más costoso computacionalmente y/o más complejos de implementar.</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="conclusion">
+<h2>Conclusión<a class="headerlink" href="#conclusion" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Los modelos de regresión lineal son una gran herramienta para realizar predicciones.</p></li>
+<li><p>Los outliers afectan considerablemente a la regresión lineal, por lo que se debn buscar estrategias para abordar esta problemática.</p></li>
+<li><p>En esta oportunidad se hizo un detalle técnico de disntintos estádisticos asociados a la regresión líneal (apuntando a un análisis inferencial ), no obstante, en los próximos modelos, se estará interesado en analizar las predicciones del modelo y los errores asociados a ella, por lo cual los aspectos técnico quedarán como lecturas complementarias.</p></li>
+<li><p>Existen varios casos donde los modelos de regresión líneal no realizan un correcto ajuste de los datos, pero es una gran herramienta para comenzar.</p></li>
+</ul>
+</div>
+<div class="section" id="referencia">
+<h2>Referencia<a class="headerlink" href="#referencia" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://realpython.com/linear-regression-in-python/">Linear Regression in Python</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/lectures/ml/analisis_supervisado_regresion"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Aprendizaje supervisado - Regresión</a>
+    <a class='right-next' id="next-link" href="02_modelos_regresion.html" title="next page">Modelos de regressión multiple</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

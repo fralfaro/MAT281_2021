@@ -1,0 +1,2860 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pandas &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/togglebutton.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="Groupby" href="../modulos_pandas/groupby.html" />
+    <link rel="prev" title="Base de datos" href="../base_datos.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../../index.html">
+      
+      <img src="../../../../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../basic_tools/lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../basic_tools/lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_013_ide.html">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_014_jupyter.html">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
+   Pandas
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modulos_pandas/groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modulos_pandas/merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modulos_pandas/pivot.html">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sqlalchemy/sqlalchemy.html">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ml/introduccion_ml/introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/analisis_supervisado_regresion/intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_supervisado_regresion/02_regresion_lineal.html">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_supervisado_regresion/02_modelos_regresion.html">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/introduccion_ml/no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ml/time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../../_sources/mat281/lectures/data_manipulation/data_manipulation/pandas/pandas.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pandas-series">
+   Pandas Series
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trabajando-con-pandas-series">
+     Trabajando con  pandas.Series
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operaciones-matematicas">
+     Operaciones matemáticas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#masking">
+     Masking
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#valores-nulos-o-datos-perdidos">
+     Valores Nulos o datos perdidos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manejo-de-fechas">
+     Manejo de Fechas
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pandas-dataframes">
+   Pandas Dataframes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#trabajando-con-pandas-dataframes">
+     Trabajando  con pandas.DataFrames
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#creacion-de-dataframes">
+     Creación de dataframes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lectura-de-datos-con-dataframes">
+     Lectura de datos con dataframes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#modulos-basicos">
+     Módulos básicos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operando-sobre-dataframes">
+     Operando sobre Dataframes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencia">
+   Referencia
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="pandas">
+<h1>Pandas<a class="headerlink" href="#pandas" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://colab.research.google.com/drive/1chFWQf718_JVnD3w3Zl3CwVf9JejBwLP"><img alt="Open In Colab" src="https://colab.research.google.com/assets/colab-badge.svg" /></a></p>
+<a class="reference internal image-reference" href="../../../../../_images/pandas.jpeg"><img alt="../../../../../_images/pandas.jpeg" class="align-center" src="../../../../../_images/pandas.jpeg" style="width: 360px; height: 240px;" /></a>
+<p><a class="reference external" href="https://pandas.pydata.org/">Pandas</a> es un paquete de Python que proporciona estructuras de datos rápidas, flexibles y expresivas diseñadas para que trabajar con datos “relacionales” o “etiquetados” sea fácil e intuitivo.</p>
+<p>Su objetivo es ser el bloque de construcción fundamental de alto nivel para hacer análisis de datos prácticos del mundo real en Python. Además, tiene el objetivo más amplio de convertirse en la herramienta de análisis/manipulación de datos de código abierto más potente y flexible disponible en cualquier idioma. Ya está en camino hacia este objetivo.</p>
+<p><strong>Series y DataFrames</strong></p>
+<ul class="simple">
+<li><p>Las <strong>series</strong> son  arreglos unidimensionales con etiquetas. Se puede pensar como una generalización de los diccionarios de Python.</p></li>
+<li><p>Los <strong>dataframe</strong> son arreglos bidimensionales y una extensión natural de las series. Se puede pensar como la generalización de un numpy.array.</p></li>
+</ul>
+<div class="section" id="pandas-series">
+<h2>Pandas Series<a class="headerlink" href="#pandas-series" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="trabajando-con-pandas-series">
+<h3>Trabajando con  pandas.Series<a class="headerlink" href="#trabajando-con-pandas-series" title="Permalink to this headline">¶</a></h3>
+<img alt="../../../../../_images/series.png" class="align-center" src="../../../../../_images/series.png" />
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># importar libreria: pandas, os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># crear serie</span>
+<span class="n">my_serie</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span>
+    <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+    <span class="n">index</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;abcdefghij&#39;</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># imprimir serie</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;serie:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">my_serie</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>serie:
+a     3
+b     6
+c     9
+d    12
+e    15
+f    18
+g    21
+h    24
+i    27
+j    30
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tipo </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;type:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">my_serie</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>type:
+&lt;class &#39;pandas.core.series.Series&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># valores </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;values:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_serie</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>values:
+[ 3  6  9 12 15 18 21 24 27 30]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># indice</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;index:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_serie</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>index:
+Index([&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;, &#39;f&#39;, &#39;g&#39;, &#39;h&#39;, &#39;i&#39;, &#39;j&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># acceder al valor de la serie: directo</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;direct:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_serie</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>direct:
+6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># acceder al valor de la serie: loc</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;loc:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_serie</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>loc:
+6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># acceder al valor de la serie: iloc</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;iloc:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_serie</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>iloc:
+6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># editar valores</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;edit:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">old &#39;d&#39;:&quot;</span><span class="p">,</span><span class="n">my_serie</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="p">)</span>
+<span class="n">my_serie</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;new &#39;d&#39;:&quot;</span><span class="p">,</span><span class="n">my_serie</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>edit:
+
+old &#39;d&#39;: 12
+new &#39;d&#39;: 1000
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ordenar valores</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;order:&quot;</span><span class="p">)</span>
+<span class="n">my_serie</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>order:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>a       3
+b       6
+c       9
+e      15
+f      18
+g      21
+h      24
+i      27
+j      30
+d    1000
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="operaciones-matematicas">
+<h3>Operaciones matemáticas<a class="headerlink" href="#operaciones-matematicas" title="Permalink to this headline">¶</a></h3>
+<p>Al igual que numpy, las series de pandas pueden realizar operaciones matemáticas similares (mientrás los arreglos a operar sean del tipo numérico). Por otro lado existen otras funciones de utilidad.</p>
+<p><strong>Básicas</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">])</span>
+
+<span class="c1"># suma</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;suma: </span><span class="se">\n</span><span class="si">{</span><span class="n">s1</span><span class="o">+</span><span class="n">s2</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># multiplicacion</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;multiplicacion: </span><span class="se">\n</span><span class="si">{</span><span class="n">s1</span><span class="o">*</span><span class="n">s2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>suma: 
+0    2
+1    3
+2    5
+3    6
+4    7
+dtype: int64
+
+multiplicacion: 
+0     1
+1     2
+2     6
+3     8
+4    10
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Estadísticas</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># crear serie</span>
+<span class="n">s1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;max:    </span><span class="si">{</span><span class="n">s1</span><span class="o">.</span><span class="n">max</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># maximo</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;min:    </span><span class="si">{</span><span class="n">s1</span><span class="o">.</span><span class="n">min</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># minimo</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;mean:   </span><span class="si">{</span><span class="n">s1</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># promedio</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;median: </span><span class="si">{</span><span class="n">s1</span><span class="o">.</span><span class="n">median</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span> <span class="c1"># mediana</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>max:    5
+min:    1
+mean:   3.0
+median: 3.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># funcion describe</span>
+<span class="n">s1</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>count    14.000000
+mean      3.000000
+std       1.568929
+min       1.000000
+25%       2.000000
+50%       3.000000
+75%       4.750000
+max       5.000000
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Conteos</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># funcion count_values</span>
+<span class="n">s2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;a&quot;</span><span class="p">,</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;c&quot;</span><span class="p">,</span><span class="s2">&quot;d&quot;</span><span class="p">,])</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Conteo:</span><span class="se">\n</span><span class="si">{</span><span class="n">s2</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Conteo:
+c    4
+a    2
+b    1
+d    1
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="masking">
+<h3>Masking<a class="headerlink" href="#masking" title="Permalink to this headline">¶</a></h3>
+<p>Existen módulos para acceder a valores que queremos que cumplan una determinada regla. Por ejemplo, acceder al valor máximo de una serie. En este caso a esta regla la denominaremos <em>mask</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 1. definir valor maximo </span>
+<span class="n">n_max</span> <span class="o">=</span> <span class="n">s1</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2.- definir &quot;mask&quot; que busca el valor objetivo</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="p">(</span><span class="n">s1</span> <span class="o">==</span> <span class="n">n_max</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3.- aplicar mask sobre la serie</span>
+<span class="n">s1</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10    5
+11    5
+12    5
+13    5
+dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="valores-nulos-o-datos-perdidos">
+<h3>Valores Nulos o datos perdidos<a class="headerlink" href="#valores-nulos-o-datos-perdidos" title="Permalink to this headline">¶</a></h3>
+<p>En algunas ocaciones, los arreglos no tienen información en una determinada posición, lo cual puede ser perjudicial si no se tiene control sobre estos valores.</p>
+<p><strong>Encontrar valores nulos</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># crear serie</span>
+<span class="n">s_null</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+<span class="n">s_null</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    1.0
+1    2.0
+2    NaN
+3    4.0
+4    5.0
+5    6.0
+6    7.0
+7    NaN
+8    9.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mask valores nulos</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;is null?:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s_null</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>is null?:
+
+0    False
+1    False
+2     True
+3    False
+4    False
+5    False
+6    False
+7     True
+8    False
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># filtrar valores nulos</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;null serie: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s_null</span><span class="p">[</span><span class="n">s_null</span><span class="o">.</span><span class="n">isnull</span><span class="p">()]</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>null serie: 
+
+2   NaN
+7   NaN
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Encontrar valores no nulos</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imprimir serie</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;serie:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">s_null</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>serie:
+0    1.0
+1    2.0
+2    NaN
+3    4.0
+4    5.0
+5    6.0
+6    7.0
+7    NaN
+8    9.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># mask valores no nulos</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">is not null?:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s_null</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>is not null?:
+0     True
+1     True
+2    False
+3     True
+4     True
+5     True
+6     True
+7    False
+8     True
+dtype: bool
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># filtrar valores no nulos</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">serie with not null values&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s_null</span><span class="p">[</span><span class="n">s_null</span><span class="o">.</span><span class="n">notnull</span><span class="p">()]</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>serie with not null values
+0    1.0
+1    2.0
+3    4.0
+4    5.0
+5    6.0
+6    7.0
+8    9.0
+dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>La pregunta que nos queda hacer es: ¿ Qué se debe hacer con los valores nulos ?, la respuesta es <strong>depende</strong>.</p>
+<ul class="simple">
+<li><p>Si tenemos muchos datos, lo más probable es que se puedan eliminar estos datos sin culpa.</p></li>
+<li><p>Si se tienen poco datos, lo más probable es que se necesite inputar un valor por defecto a los valores nulos (<strong>ejemplo</strong>: el promedio).</p></li>
+</ul>
+</div>
+<div class="section" id="manejo-de-fechas">
+<h3>Manejo de Fechas<a class="headerlink" href="#manejo-de-fechas" title="Permalink to this headline">¶</a></h3>
+<p>Pandas también trae módulos para trabajar el formato de fechas.</p>
+<p><strong>Crear Serie de fechas</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># crear serie de fechas</span>
+<span class="n">date_rng</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="s1">&#39;1/1/2019&#39;</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s1">&#39;1/03/2019&#39;</span><span class="p">,</span> <span class="n">freq</span><span class="o">=</span><span class="s1">&#39;4H&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># imprimir serie</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;serie:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">date_rng</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>serie:
+DatetimeIndex([&#39;2019-01-01 00:00:00&#39;, &#39;2019-01-01 04:00:00&#39;,
+               &#39;2019-01-01 08:00:00&#39;, &#39;2019-01-01 12:00:00&#39;,
+               &#39;2019-01-01 16:00:00&#39;, &#39;2019-01-01 20:00:00&#39;,
+               &#39;2019-01-02 00:00:00&#39;, &#39;2019-01-02 04:00:00&#39;,
+               &#39;2019-01-02 08:00:00&#39;, &#39;2019-01-02 12:00:00&#39;,
+               &#39;2019-01-02 16:00:00&#39;, &#39;2019-01-02 20:00:00&#39;,
+               &#39;2019-01-03 00:00:00&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=&#39;4H&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tipo </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;type:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="nb">type</span><span class="p">(</span><span class="n">date_rng</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>type:
+
+&lt;class &#39;pandas.core.indexes.datetimes.DatetimeIndex&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Atributos de las fechas</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># obtener fechas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;date:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">date_rng</span><span class="o">.</span><span class="n">date</span><span class="p">)</span>
+
+<span class="c1"># obtener tiempo</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">hour:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">date_rng</span><span class="o">.</span><span class="n">time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>date:
+
+[datetime.date(2019, 1, 1) datetime.date(2019, 1, 1)
+ datetime.date(2019, 1, 1) datetime.date(2019, 1, 1)
+ datetime.date(2019, 1, 1) datetime.date(2019, 1, 1)
+ datetime.date(2019, 1, 2) datetime.date(2019, 1, 2)
+ datetime.date(2019, 1, 2) datetime.date(2019, 1, 2)
+ datetime.date(2019, 1, 2) datetime.date(2019, 1, 2)
+ datetime.date(2019, 1, 3)]
+
+hour:
+
+[datetime.time(0, 0) datetime.time(4, 0) datetime.time(8, 0)
+ datetime.time(12, 0) datetime.time(16, 0) datetime.time(20, 0)
+ datetime.time(0, 0) datetime.time(4, 0) datetime.time(8, 0)
+ datetime.time(12, 0) datetime.time(16, 0) datetime.time(20, 0)
+ datetime.time(0, 0)]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Fechas y string</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># elementos de datetime a string </span>
+<span class="n">string_date_rng</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">date_rng</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;datetime to string: </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">string_date_rng</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>datetime to string: 
+
+[&#39;2019-01-01 00:00:00&#39; &#39;2019-01-01 04:00:00&#39; &#39;2019-01-01 08:00:00&#39;
+ &#39;2019-01-01 12:00:00&#39; &#39;2019-01-01 16:00:00&#39; &#39;2019-01-01 20:00:00&#39;
+ &#39;2019-01-02 00:00:00&#39; &#39;2019-01-02 04:00:00&#39; &#39;2019-01-02 08:00:00&#39;
+ &#39;2019-01-02 12:00:00&#39; &#39;2019-01-02 16:00:00&#39; &#39;2019-01-02 20:00:00&#39;
+ &#39;2019-01-03 00:00:00&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># elementos de string a datetime </span>
+<span class="n">timestamp_date_rng</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">string_date_rng</span><span class="p">,</span> <span class="n">infer_datetime_format</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;string to datetime:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span> <span class="n">timestamp_date_rng</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>string to datetime:
+
+DatetimeIndex([&#39;2019-01-01 00:00:00&#39;, &#39;2019-01-01 04:00:00&#39;,
+               &#39;2019-01-01 08:00:00&#39;, &#39;2019-01-01 12:00:00&#39;,
+               &#39;2019-01-01 16:00:00&#39;, &#39;2019-01-01 20:00:00&#39;,
+               &#39;2019-01-02 00:00:00&#39;, &#39;2019-01-02 04:00:00&#39;,
+               &#39;2019-01-02 08:00:00&#39;, &#39;2019-01-02 12:00:00&#39;,
+               &#39;2019-01-02 16:00:00&#39;, &#39;2019-01-02 20:00:00&#39;,
+               &#39;2019-01-03 00:00:00&#39;],
+              dtype=&#39;datetime64[ns]&#39;, freq=None)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pandas-dataframes">
+<h2>Pandas Dataframes<a class="headerlink" href="#pandas-dataframes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="trabajando-con-pandas-dataframes">
+<h3>Trabajando  con pandas.DataFrames<a class="headerlink" href="#trabajando-con-pandas-dataframes" title="Permalink to this headline">¶</a></h3>
+<img alt="../../../../../_images/dataframe.png" class="align-center" src="../../../../../_images/dataframe.png" />
+<p>Como se mencina anteriormente, los dataframes son arreglos de series, los cuales pueden ser de distintos tipos (numéricos, string, etc.). En esta parte mostraremos un ejemplo aplicado de las distintas funcionalidades de los dataframes.</p>
+</div>
+<div class="section" id="creacion-de-dataframes">
+<h3>Creación de dataframes<a class="headerlink" href="#creacion-de-dataframes" title="Permalink to this headline">¶</a></h3>
+<p>La creación se puede hacer de variadas formas con listas, dictionarios , numpy array , entre otros.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># empty dataframe</span>
+<span class="n">df_empty</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+<span class="n">df_empty</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dataframe with list</span>
+<span class="n">df_list</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;nombre_01&quot;</span><span class="p">,</span> <span class="s2">&quot;apellido_01&quot;</span><span class="p">,</span> <span class="mi">60</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;nombre_02&quot;</span><span class="p">,</span> <span class="s2">&quot;apellido_02&quot;</span><span class="p">,</span> <span class="mi">14</span><span class="p">]</span>
+    <span class="p">],</span>
+    
+    <span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nombre&quot;</span><span class="p">,</span> <span class="s2">&quot;apellido&quot;</span><span class="p">,</span> <span class="s2">&quot;edad&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+<span class="n">df_list</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>nombre</th>
+      <th>apellido</th>
+      <th>edad</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>nombre_01</td>
+      <td>apellido_01</td>
+      <td>60</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>nombre_02</td>
+      <td>apellido_02</td>
+      <td>14</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dataframe with dct</span>
+<span class="n">df_dct</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;nombre&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;nombre_01&quot;</span><span class="p">,</span> <span class="s2">&quot;nombre_02&quot;</span><span class="p">,],</span>
+        <span class="s2">&quot;apellido&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;apellido_01&quot;</span><span class="p">,</span> <span class="s2">&quot;apellido_02&quot;</span><span class="p">],</span>
+        <span class="s2">&quot;edad&quot;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">60</span><span class="p">,</span><span class="mi">14</span><span class="p">]),</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="lectura-de-datos-con-dataframes">
+<h3>Lectura de datos con dataframes<a class="headerlink" href="#lectura-de-datos-con-dataframes" title="Permalink to this headline">¶</a></h3>
+<p>En general, cuando se trabajan con datos, estos se almacenan en algún lugar y en algún tipo de formato, por ejemplo:</p>
+<ul class="simple">
+<li><p>.txt</p></li>
+<li><p>.csv</p></li>
+<li><p>.xlsx</p></li>
+<li><p>.db</p></li>
+<li><p>etc.</p></li>
+</ul>
+<p>Para cada formato, existe un módulo para realizar la lectura de datos. En este caso, se analiza el conjunto de datos ‘player_data.csv’, el cual muestra informacion básica de algunos jugadores de la NBA.</p>
+<a class="reference internal image-reference" href="../../../../../_images/nba_logo.jpg"><img alt="../../../../../_images/nba_logo.jpg" class="align-center" src="../../../../../_images/nba_logo.jpg" style="width: 360px; height: 240px;" /></a>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span>  <span class="s2">&quot;https://drive.google.com/file/d/1jt6I2GfU-fCyTEC_PTk0YxBvuog7-zw-/view?usp=sharing&quot;</span>
+<span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://drive.google.com/uc?id=&#39;</span> <span class="o">+</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="n">player_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span> <span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">player_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>birth_date</th>
+      <th>college</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alaa Abdelnaby</td>
+      <td>1991</td>
+      <td>1995</td>
+      <td>F-C</td>
+      <td>6-10</td>
+      <td>240.0</td>
+      <td>June 24, 1968</td>
+      <td>Duke University</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Zaid Abdul-Aziz</td>
+      <td>1969</td>
+      <td>1978</td>
+      <td>C-F</td>
+      <td>6-9</td>
+      <td>235.0</td>
+      <td>April 7, 1946</td>
+      <td>Iowa State University</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kareem Abdul-Jabbar</td>
+      <td>1970</td>
+      <td>1989</td>
+      <td>C</td>
+      <td>7-2</td>
+      <td>225.0</td>
+      <td>April 16, 1947</td>
+      <td>University of California, Los Angeles</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mahmoud Abdul-Rauf</td>
+      <td>1991</td>
+      <td>2001</td>
+      <td>G</td>
+      <td>6-1</td>
+      <td>162.0</td>
+      <td>March 9, 1969</td>
+      <td>Louisiana State University</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Tariq Abdul-Wahad</td>
+      <td>1998</td>
+      <td>2003</td>
+      <td>F</td>
+      <td>6-6</td>
+      <td>223.0</td>
+      <td>November 3, 1974</td>
+      <td>San Jose State University</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4545</th>
+      <td>Ante Zizic</td>
+      <td>2018</td>
+      <td>2018</td>
+      <td>F-C</td>
+      <td>6-11</td>
+      <td>250.0</td>
+      <td>January 4, 1997</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4546</th>
+      <td>Jim Zoet</td>
+      <td>1983</td>
+      <td>1983</td>
+      <td>C</td>
+      <td>7-1</td>
+      <td>240.0</td>
+      <td>December 20, 1953</td>
+      <td>Kent State University</td>
+    </tr>
+    <tr>
+      <th>4547</th>
+      <td>Bill Zopf</td>
+      <td>1971</td>
+      <td>1971</td>
+      <td>G</td>
+      <td>6-1</td>
+      <td>170.0</td>
+      <td>June 7, 1948</td>
+      <td>Duquesne University</td>
+    </tr>
+    <tr>
+      <th>4548</th>
+      <td>Ivica Zubac</td>
+      <td>2017</td>
+      <td>2018</td>
+      <td>C</td>
+      <td>7-1</td>
+      <td>265.0</td>
+      <td>March 18, 1997</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4549</th>
+      <td>Matt Zunic</td>
+      <td>1949</td>
+      <td>1949</td>
+      <td>G-F</td>
+      <td>6-3</td>
+      <td>195.0</td>
+      <td>December 19, 1919</td>
+      <td>George Washington University</td>
+    </tr>
+  </tbody>
+</table>
+<p>4550 rows × 8 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># load data</span>
+<span class="n">player_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span>
+    <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;player_data.csv&#39;</span><span class="p">),</span> <span class="c1"># path</span>
+    <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span> <span class="c1"># separation</span>
+<span class="p">)</span>
+<span class="n">player_data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>birth_date</th>
+      <th>college</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alaa Abdelnaby</td>
+      <td>1991</td>
+      <td>1995</td>
+      <td>F-C</td>
+      <td>6-10</td>
+      <td>240.0</td>
+      <td>June 24, 1968</td>
+      <td>Duke University</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Zaid Abdul-Aziz</td>
+      <td>1969</td>
+      <td>1978</td>
+      <td>C-F</td>
+      <td>6-9</td>
+      <td>235.0</td>
+      <td>April 7, 1946</td>
+      <td>Iowa State University</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kareem Abdul-Jabbar</td>
+      <td>1970</td>
+      <td>1989</td>
+      <td>C</td>
+      <td>7-2</td>
+      <td>225.0</td>
+      <td>April 16, 1947</td>
+      <td>University of California, Los Angeles</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mahmoud Abdul-Rauf</td>
+      <td>1991</td>
+      <td>2001</td>
+      <td>G</td>
+      <td>6-1</td>
+      <td>162.0</td>
+      <td>March 9, 1969</td>
+      <td>Louisiana State University</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Tariq Abdul-Wahad</td>
+      <td>1998</td>
+      <td>2003</td>
+      <td>F</td>
+      <td>6-6</td>
+      <td>223.0</td>
+      <td>November 3, 1974</td>
+      <td>San Jose State University</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>4545</th>
+      <td>Ante Zizic</td>
+      <td>2018</td>
+      <td>2018</td>
+      <td>F-C</td>
+      <td>6-11</td>
+      <td>250.0</td>
+      <td>January 4, 1997</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4546</th>
+      <td>Jim Zoet</td>
+      <td>1983</td>
+      <td>1983</td>
+      <td>C</td>
+      <td>7-1</td>
+      <td>240.0</td>
+      <td>December 20, 1953</td>
+      <td>Kent State University</td>
+    </tr>
+    <tr>
+      <th>4547</th>
+      <td>Bill Zopf</td>
+      <td>1971</td>
+      <td>1971</td>
+      <td>G</td>
+      <td>6-1</td>
+      <td>170.0</td>
+      <td>June 7, 1948</td>
+      <td>Duquesne University</td>
+    </tr>
+    <tr>
+      <th>4548</th>
+      <td>Ivica Zubac</td>
+      <td>2017</td>
+      <td>2018</td>
+      <td>C</td>
+      <td>7-1</td>
+      <td>265.0</td>
+      <td>March 18, 1997</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4549</th>
+      <td>Matt Zunic</td>
+      <td>1949</td>
+      <td>1949</td>
+      <td>G-F</td>
+      <td>6-3</td>
+      <td>195.0</td>
+      <td>December 19, 1919</td>
+      <td>George Washington University</td>
+    </tr>
+  </tbody>
+</table>
+<p>4550 rows × 8 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="modulos-basicos">
+<h3>Módulos básicos<a class="headerlink" href="#modulos-basicos" title="Permalink to this headline">¶</a></h3>
+<p>Existen módulos para comprender rápidamente la naturaleza del dataframe.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># primeras silas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;first 5 rows:&quot;</span><span class="p">)</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>first 5 rows:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>birth_date</th>
+      <th>college</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alaa Abdelnaby</td>
+      <td>1991</td>
+      <td>1995</td>
+      <td>F-C</td>
+      <td>6-10</td>
+      <td>240.0</td>
+      <td>June 24, 1968</td>
+      <td>Duke University</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Zaid Abdul-Aziz</td>
+      <td>1969</td>
+      <td>1978</td>
+      <td>C-F</td>
+      <td>6-9</td>
+      <td>235.0</td>
+      <td>April 7, 1946</td>
+      <td>Iowa State University</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kareem Abdul-Jabbar</td>
+      <td>1970</td>
+      <td>1989</td>
+      <td>C</td>
+      <td>7-2</td>
+      <td>225.0</td>
+      <td>April 16, 1947</td>
+      <td>University of California, Los Angeles</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mahmoud Abdul-Rauf</td>
+      <td>1991</td>
+      <td>2001</td>
+      <td>G</td>
+      <td>6-1</td>
+      <td>162.0</td>
+      <td>March 9, 1969</td>
+      <td>Louisiana State University</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Tariq Abdul-Wahad</td>
+      <td>1998</td>
+      <td>2003</td>
+      <td>F</td>
+      <td>6-6</td>
+      <td>223.0</td>
+      <td>November 3, 1974</td>
+      <td>San Jose State University</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ultimas filas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">last 5 rows:&quot;</span><span class="p">)</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>last 5 rows:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>birth_date</th>
+      <th>college</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>4545</th>
+      <td>Ante Zizic</td>
+      <td>2018</td>
+      <td>2018</td>
+      <td>F-C</td>
+      <td>6-11</td>
+      <td>250.0</td>
+      <td>January 4, 1997</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4546</th>
+      <td>Jim Zoet</td>
+      <td>1983</td>
+      <td>1983</td>
+      <td>C</td>
+      <td>7-1</td>
+      <td>240.0</td>
+      <td>December 20, 1953</td>
+      <td>Kent State University</td>
+    </tr>
+    <tr>
+      <th>4547</th>
+      <td>Bill Zopf</td>
+      <td>1971</td>
+      <td>1971</td>
+      <td>G</td>
+      <td>6-1</td>
+      <td>170.0</td>
+      <td>June 7, 1948</td>
+      <td>Duquesne University</td>
+    </tr>
+    <tr>
+      <th>4548</th>
+      <td>Ivica Zubac</td>
+      <td>2017</td>
+      <td>2018</td>
+      <td>C</td>
+      <td>7-1</td>
+      <td>265.0</td>
+      <td>March 18, 1997</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4549</th>
+      <td>Matt Zunic</td>
+      <td>1949</td>
+      <td>1949</td>
+      <td>G-F</td>
+      <td>6-3</td>
+      <td>195.0</td>
+      <td>December 19, 1919</td>
+      <td>George Washington University</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tipo</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">type of dataframe:&quot;</span><span class="p">)</span>
+<span class="nb">type</span><span class="p">(</span><span class="n">player_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>type of dataframe:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas.core.frame.DataFrame
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tipo por columnas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">type of columns:&quot;</span><span class="p">)</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">dtypes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>type of columns:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name           object
+year_start      int64
+year_end        int64
+position       object
+height         object
+weight        float64
+birth_date     object
+college        object
+dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># dimension</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">shape:&quot;</span><span class="p">)</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>shape:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(4550, 8)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># nombre de las columnas</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">cols:&quot;</span><span class="p">)</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cols:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;name&#39;, &#39;year_start&#39;, &#39;year_end&#39;, &#39;position&#39;, &#39;height&#39;, &#39;weight&#39;,
+       &#39;birth_date&#39;, &#39;college&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># indice</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">index:&quot;</span><span class="p">)</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>index:
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RangeIndex(start=0, stop=4550, step=1)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># acceder a la columna posicion</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">column &#39;position&#39;: &quot;</span><span class="p">)</span>
+<span class="n">player_data</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>column &#39;position&#39;: 
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    F-C
+1    C-F
+2      C
+3      G
+4      F
+Name: position, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># cambiar nombre de una o varias columnas</span>
+<span class="n">player_data</span> <span class="o">=</span> <span class="n">player_data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;birth_date&quot;</span><span class="p">:</span> <span class="s2">&quot;Birth&quot;</span><span class="p">,</span> <span class="s2">&quot;college&quot;</span><span class="p">:</span> <span class="s2">&quot;College&quot;</span><span class="p">})</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>Birth</th>
+      <th>College</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Alaa Abdelnaby</td>
+      <td>1991</td>
+      <td>1995</td>
+      <td>F-C</td>
+      <td>6-10</td>
+      <td>240.0</td>
+      <td>June 24, 1968</td>
+      <td>Duke University</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Zaid Abdul-Aziz</td>
+      <td>1969</td>
+      <td>1978</td>
+      <td>C-F</td>
+      <td>6-9</td>
+      <td>235.0</td>
+      <td>April 7, 1946</td>
+      <td>Iowa State University</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Kareem Abdul-Jabbar</td>
+      <td>1970</td>
+      <td>1989</td>
+      <td>C</td>
+      <td>7-2</td>
+      <td>225.0</td>
+      <td>April 16, 1947</td>
+      <td>University of California, Los Angeles</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Mahmoud Abdul-Rauf</td>
+      <td>1991</td>
+      <td>2001</td>
+      <td>G</td>
+      <td>6-1</td>
+      <td>162.0</td>
+      <td>March 9, 1969</td>
+      <td>Louisiana State University</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Tariq Abdul-Wahad</td>
+      <td>1998</td>
+      <td>2003</td>
+      <td>F</td>
+      <td>6-6</td>
+      <td>223.0</td>
+      <td>November 3, 1974</td>
+      <td>San Jose State University</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># fijar columna especifica como indice</span>
+<span class="n">player_data</span> <span class="o">=</span> <span class="n">player_data</span><span class="o">.</span><span class="n">set_index</span><span class="p">([</span><span class="s2">&quot;name&quot;</span><span class="p">])</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>Birth</th>
+      <th>College</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Alaa Abdelnaby</th>
+      <td>1991</td>
+      <td>1995</td>
+      <td>F-C</td>
+      <td>6-10</td>
+      <td>240.0</td>
+      <td>June 24, 1968</td>
+      <td>Duke University</td>
+    </tr>
+    <tr>
+      <th>Zaid Abdul-Aziz</th>
+      <td>1969</td>
+      <td>1978</td>
+      <td>C-F</td>
+      <td>6-9</td>
+      <td>235.0</td>
+      <td>April 7, 1946</td>
+      <td>Iowa State University</td>
+    </tr>
+    <tr>
+      <th>Kareem Abdul-Jabbar</th>
+      <td>1970</td>
+      <td>1989</td>
+      <td>C</td>
+      <td>7-2</td>
+      <td>225.0</td>
+      <td>April 16, 1947</td>
+      <td>University of California, Los Angeles</td>
+    </tr>
+    <tr>
+      <th>Mahmoud Abdul-Rauf</th>
+      <td>1991</td>
+      <td>2001</td>
+      <td>G</td>
+      <td>6-1</td>
+      <td>162.0</td>
+      <td>March 9, 1969</td>
+      <td>Louisiana State University</td>
+    </tr>
+    <tr>
+      <th>Tariq Abdul-Wahad</th>
+      <td>1998</td>
+      <td>2003</td>
+      <td>F</td>
+      <td>6-6</td>
+      <td>223.0</td>
+      <td>November 3, 1974</td>
+      <td>San Jose State University</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ordenar dataframe por columna especifica</span>
+<span class="n">player_data</span> <span class="o">=</span> <span class="n">player_data</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="s2">&quot;weight&quot;</span><span class="p">)</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>Birth</th>
+      <th>College</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Penny Early</th>
+      <td>1969</td>
+      <td>1969</td>
+      <td>G</td>
+      <td>5-3</td>
+      <td>114.0</td>
+      <td>May 30, 1943</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>Spud Webb</th>
+      <td>1986</td>
+      <td>1998</td>
+      <td>G</td>
+      <td>5-6</td>
+      <td>133.0</td>
+      <td>July 13, 1963</td>
+      <td>North Carolina State University</td>
+    </tr>
+    <tr>
+      <th>Earl Boykins</th>
+      <td>1999</td>
+      <td>2012</td>
+      <td>G</td>
+      <td>5-5</td>
+      <td>135.0</td>
+      <td>June 2, 1976</td>
+      <td>Eastern Michigan University</td>
+    </tr>
+    <tr>
+      <th>Muggsy Bogues</th>
+      <td>1988</td>
+      <td>2001</td>
+      <td>G</td>
+      <td>5-3</td>
+      <td>136.0</td>
+      <td>January 9, 1965</td>
+      <td>Wake Forest University</td>
+    </tr>
+    <tr>
+      <th>Chet Aubuchon</th>
+      <td>1947</td>
+      <td>1947</td>
+      <td>G</td>
+      <td>5-10</td>
+      <td>137.0</td>
+      <td>May 18, 1916</td>
+      <td>Michigan State University</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># resumen de la información </span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">)</span> <span class="c1"># player_data.describe()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>Birth</th>
+      <th>College</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>count</th>
+      <td>4550.000000</td>
+      <td>4550.000000</td>
+      <td>4549</td>
+      <td>4549</td>
+      <td>4544.000000</td>
+      <td>4519</td>
+      <td>4248</td>
+    </tr>
+    <tr>
+      <th>unique</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7</td>
+      <td>28</td>
+      <td>NaN</td>
+      <td>4161</td>
+      <td>473</td>
+    </tr>
+    <tr>
+      <th>top</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>G</td>
+      <td>6-7</td>
+      <td>NaN</td>
+      <td>June 26, 1984</td>
+      <td>University of Kentucky</td>
+    </tr>
+    <tr>
+      <th>freq</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1574</td>
+      <td>473</td>
+      <td>NaN</td>
+      <td>3</td>
+      <td>99</td>
+    </tr>
+    <tr>
+      <th>mean</th>
+      <td>1985.076264</td>
+      <td>1989.272527</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>208.908011</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>std</th>
+      <td>20.974188</td>
+      <td>21.874761</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>26.268662</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>min</th>
+      <td>1947.000000</td>
+      <td>1947.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>114.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25%</th>
+      <td>1969.000000</td>
+      <td>1973.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>190.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>1986.000000</td>
+      <td>1992.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>210.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>2003.000000</td>
+      <td>2009.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>225.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>2018.000000</td>
+      <td>2018.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>360.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="operando-sobre-dataframes">
+<h3>Operando sobre Dataframes<a class="headerlink" href="#operando-sobre-dataframes" title="Permalink to this headline">¶</a></h3>
+<p>Cuando se trabaja con un conjunto de datos, se crea una dinámica de preguntas y respuestas, en donde a medida que necesito información, se va accediendo al dataframe. En algunas ocaciones es directo, basta un simple módulo, aunque en otras será necesaria realizar operaciones un poco más complejas.</p>
+<p>Por ejemplo, del conjunto de datos en estudio, se esta interesado en responder las siguientes preguntas:</p>
+<p><strong>a) Determine si el dataframe tiene valores nulos</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ocupar comando .notnull().all(axis=1)</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>name
+Penny Early        False
+Spud Webb           True
+Earl Boykins        True
+Muggsy Bogues       True
+Chet Aubuchon       True
+Greg Grant          True
+Angelo Musi         True
+Ernie Calverley     True
+Tyler Ulis          True
+Lionel Malamed      True
+dtype: bool
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>b) Elimine los valores nulos del dataframe</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># ocupar masking</span>
+<span class="n">mask</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">df</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">notnull</span><span class="p">()</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">player_data</span> <span class="o">=</span> <span class="n">player_data</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>Birth</th>
+      <th>College</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Spud Webb</th>
+      <td>1986</td>
+      <td>1998</td>
+      <td>G</td>
+      <td>5-6</td>
+      <td>133.0</td>
+      <td>July 13, 1963</td>
+      <td>North Carolina State University</td>
+    </tr>
+    <tr>
+      <th>Earl Boykins</th>
+      <td>1999</td>
+      <td>2012</td>
+      <td>G</td>
+      <td>5-5</td>
+      <td>135.0</td>
+      <td>June 2, 1976</td>
+      <td>Eastern Michigan University</td>
+    </tr>
+    <tr>
+      <th>Muggsy Bogues</th>
+      <td>1988</td>
+      <td>2001</td>
+      <td>G</td>
+      <td>5-3</td>
+      <td>136.0</td>
+      <td>January 9, 1965</td>
+      <td>Wake Forest University</td>
+    </tr>
+    <tr>
+      <th>Chet Aubuchon</th>
+      <td>1947</td>
+      <td>1947</td>
+      <td>G</td>
+      <td>5-10</td>
+      <td>137.0</td>
+      <td>May 18, 1916</td>
+      <td>Michigan State University</td>
+    </tr>
+    <tr>
+      <th>Greg Grant</th>
+      <td>1990</td>
+      <td>1996</td>
+      <td>G</td>
+      <td>5-7</td>
+      <td>140.0</td>
+      <td>August 29, 1966</td>
+      <td>Trenton State University</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>c) Determinar el tiempo (en años) de cada jugador en su posición</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">player_data</span><span class="p">[</span><span class="s1">&#39;duration&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">player_data</span><span class="p">[</span><span class="s1">&#39;year_end&#39;</span><span class="p">]</span> <span class="o">-</span> <span class="n">player_data</span><span class="p">[</span><span class="s1">&#39;year_start&#39;</span><span class="p">]</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>Birth</th>
+      <th>College</th>
+      <th>duration</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Spud Webb</th>
+      <td>1986</td>
+      <td>1998</td>
+      <td>G</td>
+      <td>5-6</td>
+      <td>133.0</td>
+      <td>July 13, 1963</td>
+      <td>North Carolina State University</td>
+      <td>12</td>
+    </tr>
+    <tr>
+      <th>Earl Boykins</th>
+      <td>1999</td>
+      <td>2012</td>
+      <td>G</td>
+      <td>5-5</td>
+      <td>135.0</td>
+      <td>June 2, 1976</td>
+      <td>Eastern Michigan University</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>Muggsy Bogues</th>
+      <td>1988</td>
+      <td>2001</td>
+      <td>G</td>
+      <td>5-3</td>
+      <td>136.0</td>
+      <td>January 9, 1965</td>
+      <td>Wake Forest University</td>
+      <td>13</td>
+    </tr>
+    <tr>
+      <th>Chet Aubuchon</th>
+      <td>1947</td>
+      <td>1947</td>
+      <td>G</td>
+      <td>5-10</td>
+      <td>137.0</td>
+      <td>May 18, 1916</td>
+      <td>Michigan State University</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>Greg Grant</th>
+      <td>1990</td>
+      <td>1996</td>
+      <td>G</td>
+      <td>5-7</td>
+      <td>140.0</td>
+      <td>August 29, 1966</td>
+      <td>Trenton State University</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>d) Castear la fecha de str a objeto datetime</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">player_data</span><span class="p">[</span><span class="s1">&#39;birth_date_dt&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">player_data</span><span class="p">[</span><span class="s1">&#39;Birth&#39;</span><span class="p">],</span> <span class="nb">format</span><span class="o">=</span><span class="s2">&quot;%B </span><span class="si">%d</span><span class="s2">, %Y&quot;</span><span class="p">)</span>
+<span class="n">player_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>year_start</th>
+      <th>year_end</th>
+      <th>position</th>
+      <th>height</th>
+      <th>weight</th>
+      <th>Birth</th>
+      <th>College</th>
+      <th>duration</th>
+      <th>birth_date_dt</th>
+    </tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Spud Webb</th>
+      <td>1986</td>
+      <td>1998</td>
+      <td>G</td>
+      <td>5-6</td>
+      <td>133.0</td>
+      <td>July 13, 1963</td>
+      <td>North Carolina State University</td>
+      <td>12</td>
+      <td>1963-07-13</td>
+    </tr>
+    <tr>
+      <th>Earl Boykins</th>
+      <td>1999</td>
+      <td>2012</td>
+      <td>G</td>
+      <td>5-5</td>
+      <td>135.0</td>
+      <td>June 2, 1976</td>
+      <td>Eastern Michigan University</td>
+      <td>13</td>
+      <td>1976-06-02</td>
+    </tr>
+    <tr>
+      <th>Muggsy Bogues</th>
+      <td>1988</td>
+      <td>2001</td>
+      <td>G</td>
+      <td>5-3</td>
+      <td>136.0</td>
+      <td>January 9, 1965</td>
+      <td>Wake Forest University</td>
+      <td>13</td>
+      <td>1965-01-09</td>
+    </tr>
+    <tr>
+      <th>Chet Aubuchon</th>
+      <td>1947</td>
+      <td>1947</td>
+      <td>G</td>
+      <td>5-10</td>
+      <td>137.0</td>
+      <td>May 18, 1916</td>
+      <td>Michigan State University</td>
+      <td>0</td>
+      <td>1916-05-18</td>
+    </tr>
+    <tr>
+      <th>Greg Grant</th>
+      <td>1990</td>
+      <td>1996</td>
+      <td>G</td>
+      <td>5-7</td>
+      <td>140.0</td>
+      <td>August 29, 1966</td>
+      <td>Trenton State University</td>
+      <td>6</td>
+      <td>1966-08-29</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>e) Determinar todas las posiciones</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">positions</span> <span class="o">=</span> <span class="n">player_data</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">positions</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;G&#39;, &#39;G-F&#39;, &#39;F-G&#39;, &#39;F&#39;, &#39;F-C&#39;, &#39;C-F&#39;, &#39;C&#39;], dtype=object)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>f) Iterar sobre cada posición y encontrar el mayor valor asociado a la columna <code class="docutils literal notranslate"><span class="pre">weight</span></code></strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Iterar sobre cada posición y encontrar el mayor valor.</span>
+<span class="n">nba_position_duration</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="c1"># iterar</span>
+<span class="k">for</span> <span class="n">position</span> <span class="ow">in</span> <span class="n">positions</span><span class="p">:</span>
+    
+    <span class="c1"># filtrar </span>
+    <span class="n">df_aux</span> <span class="o">=</span> <span class="n">player_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="s1">&#39;position&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">position</span><span class="p">]</span>
+    
+    <span class="c1"># encontrar maximo de la columna objetivo</span>
+    <span class="n">max_duration</span> <span class="o">=</span> <span class="n">df_aux</span><span class="p">[</span><span class="s1">&#39;weight&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    
+    <span class="c1"># guardar en pd.Series</span>
+    <span class="n">nba_position_duration</span><span class="p">[</span><span class="n">position</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_duration</span>
+    
+<span class="c1"># retornar serie</span>
+<span class="n">nba_position_duration</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;G&#39;: 235.0,
+ &#39;G-F&#39;: 240.0,
+ &#39;F-G&#39;: 245.0,
+ &#39;F&#39;: 284.0,
+ &#39;F-C&#39;: 290.0,
+ &#39;C-F&#39;: 280.0,
+ &#39;C&#39;: 360.0}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="referencia">
+<h2>Referencia<a class="headerlink" href="#referencia" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://www.learndatasci.com/tutorials/python-pandas-tutorial-complete-introduction-for-beginners/">Python Pandas Tutorial: A Complete Introduction for Beginners</a></p></li>
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/reference/general_functions.html">General functions</a></p></li>
+</ol>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/lectures/data_manipulation/data_manipulation/pandas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../base_datos.html" title="previous page">Base de datos</a>
+    <a class='right-next' id="next-link" href="../modulos_pandas/groupby.html" title="next page">Groupby</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

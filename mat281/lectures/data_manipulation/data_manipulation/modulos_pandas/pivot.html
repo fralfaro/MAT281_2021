@@ -1,0 +1,1792 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pivot &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/togglebutton.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="SQLAlchemy" href="../sqlalchemy/sqlalchemy.html" />
+    <link rel="prev" title="Merge &amp; Concat" href="merge_concat.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../../index.html">
+      
+      <img src="../../../../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../basic_tools/lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../basic_tools/lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_013_ide.html">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_014_jupyter.html">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../pandas/pandas.html">
+   Pandas
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../sqlalchemy/sqlalchemy.html">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ml/introduccion_ml/introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/analisis_supervisado_regresion/intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_supervisado_regresion/02_regresion_lineal.html">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_supervisado_regresion/02_modelos_regresion.html">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/introduccion_ml/no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ml/time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../../_sources/mat281/lectures/data_manipulation/data_manipulation/modulos_pandas/pivot.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formato-wide-y-formato-long">
+   Formato Wide y Formato Long
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pivotear-y-despivotear-tablas">
+   Pivotear y despivotear tablas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Pivot
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#despivotear-un-tabla">
+     Despivotear un tabla
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#metodos">
+       Métodos
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencia">
+   Referencia
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="pivot">
+<h1>Pivot<a class="headerlink" href="#pivot" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="formato-wide-y-formato-long">
+<h2>Formato Wide y Formato Long<a class="headerlink" href="#formato-wide-y-formato-long" title="Permalink to this headline">¶</a></h2>
+<p>Dentro del mundo de los dataframe (o datos tabulares) existen dos formas de presentar la naturaleza de los datos: formato wide y formato long.</p>
+<p>Por ejemplo, el conjunto de datos <a class="reference external" href="http://archive.ics.uci.edu/ml/datasets/zoo">Zoo Data Set</a> presenta las características de diversos animales, de los cuales presentamos las primeras 5 columnas.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>animal_name</p></th>
+<th class="head"><p>hair</p></th>
+<th class="head"><p>feathers</p></th>
+<th class="head"><p>eggs</p></th>
+<th class="head"><p>milk</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>antelope</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>bear</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>buffalo</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>catfish</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>1</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>La tabla así presentada se encuentra en <strong>wide format</strong>, es decir, donde los valores se extienden a través de las columnas.</p>
+<p>Sería posible representar el mismo contenido anterior en <strong>long format</strong>, es decir, donde los mismos valores se indicaran a través de las filas:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>animal_name</p></th>
+<th class="head"><p>characteristic</p></th>
+<th class="head"><p>value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>antelope</p></td>
+<td><p>hair</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>antelope</p></td>
+<td><p>feathers</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>antelope</p></td>
+<td><p>eggs</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>antelope</p></td>
+<td><p>milk</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>…</p></td>
+<td><p>…</p></td>
+<td><p>…</p></td>
+</tr>
+<tr class="row-odd"><td><p>catfish</p></td>
+<td><p>hair</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-even"><td><p>catfish</p></td>
+<td><p>feathers</p></td>
+<td><p>0</p></td>
+</tr>
+<tr class="row-odd"><td><p>catfish</p></td>
+<td><p>eggs</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>catfish</p></td>
+<td><p>milk</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<img alt="../../../../../_images/wide_and_long.png" class="align-center" src="../../../../../_images/wide_and_long.png" />
+<p>En python existen maneras de pasar del formato <strong>wide</strong> al formato <strong>long</strong> y viceversa.</p>
+</div>
+<div class="section" id="pivotear-y-despivotear-tablas">
+<h2>Pivotear y despivotear tablas<a class="headerlink" href="#pivotear-y-despivotear-tablas" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Pivot<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>El pivoteo de una tabla corresponde al paso de una tabla desde el formato <strong>long</strong> al formato <strong>wide</strong>. Típicamente esto se realiza para poder comparar los valores que se obtienen para algún registro en particular, o para utilizar algunas herramientas de visualización básica que requieren dicho formato.</p>
+<p>Para ejemplificar estos resultados, ocupemos el conjunto de datos <strong>terremotos.csv</strong>, con contiene los registros de  terremotos de distintos paises desde el año 2000 al 2011.</p>
+<a class="reference internal image-reference" href="../../../../../_images/logo_terremoto.png"><img alt="" class="align-center" src="../../../../../_images/logo_terremoto.png" style="width: 300px;" /></a>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">os</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># formato long</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span><span class="s2">&quot;terremotos.csv&quot;</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Año</th>
+      <th>Pais</th>
+      <th>Magnitud</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2011</td>
+      <td>Turkey</td>
+      <td>7.1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2011</td>
+      <td>India</td>
+      <td>6.9</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2011</td>
+      <td>Japan</td>
+      <td>7.1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2011</td>
+      <td>Burma</td>
+      <td>6.8</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2011</td>
+      <td>Japan</td>
+      <td>9.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Por ejemplo,  se quiere saber el terremoto de mayor magnitud a nivel de país año. Tenemos dos formas de mostrar la información.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># formato long</span>
+<span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;Pais&#39;</span><span class="p">,</span><span class="s1">&#39;Año&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th></th>
+      <th>Magnitud</th>
+    </tr>
+    <tr>
+      <th>Pais</th>
+      <th>Año</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th rowspan="5" valign="top">Afghanistan</th>
+      <th>2000</th>
+      <td>6.3</td>
+    </tr>
+    <tr>
+      <th>2001</th>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <th>2002</th>
+      <td>5.8</td>
+    </tr>
+    <tr>
+      <th>2003</th>
+      <td>5.8</td>
+    </tr>
+    <tr>
+      <th>2004</th>
+      <td>6.5</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Turkmenistan</th>
+      <th>2000</th>
+      <td>7.0</td>
+    </tr>
+    <tr>
+      <th rowspan="2" valign="top">United States</th>
+      <th>2001</th>
+      <td>6.8</td>
+    </tr>
+    <tr>
+      <th>2003</th>
+      <td>6.6</td>
+    </tr>
+    <tr>
+      <th>Venezuela</th>
+      <th>2006</th>
+      <td>5.5</td>
+    </tr>
+    <tr>
+      <th>Vietnam</th>
+      <th>2005</th>
+      <td>5.3</td>
+    </tr>
+  </tbody>
+</table>
+<p>154 rows × 1 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># formato wide</span>
+<span class="n">df</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="s2">&quot;Pais&quot;</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="s2">&quot;Año&quot;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s2">&quot;Magnitud&quot;</span><span class="p">,</span> <span class="n">fill_value</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;ipython-input-4-733c3b7cbafb&gt;:2: FutureWarning: The pandas.np module is deprecated and will be removed from pandas in a future version. Import numpy directly instead
+  df.pivot_table(index=&quot;Pais&quot;, columns=&quot;Año&quot;, values=&quot;Magnitud&quot;, fill_value=&#39;&#39;, aggfunc=pd.np.max)
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Año</th>
+      <th>2000</th>
+      <th>2001</th>
+      <th>2002</th>
+      <th>2003</th>
+      <th>2004</th>
+      <th>2005</th>
+      <th>2006</th>
+      <th>2007</th>
+      <th>2008</th>
+      <th>2009</th>
+      <th>2010</th>
+      <th>2011</th>
+    </tr>
+    <tr>
+      <th>Pais</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Afghanistan</th>
+      <td>6.3</td>
+      <td>5.0</td>
+      <td>5.8</td>
+      <td>5.8</td>
+      <td>6.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Afghanistan</th>
+      <td></td>
+      <td></td>
+      <td>7.3</td>
+      <td></td>
+      <td></td>
+      <td>6.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Algeria</th>
+      <td>5.7</td>
+      <td></td>
+      <td></td>
+      <td>5.7</td>
+      <td></td>
+      <td></td>
+      <td>5.2</td>
+      <td></td>
+      <td>5.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Algeria</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.8</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Argentina</th>
+      <td>7.2</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.1</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>Turkey</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.3</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>6.1</td>
+      <td>7.1</td>
+    </tr>
+    <tr>
+      <th>Turkmenistan</th>
+      <td>7.0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>United States</th>
+      <td></td>
+      <td>6.8</td>
+      <td></td>
+      <td>6.6</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Venezuela</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.5</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>Vietnam</th>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>5.3</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+<p>72 rows × 12 columns</p>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="despivotear-un-tabla">
+<h3>Despivotear un tabla<a class="headerlink" href="#despivotear-un-tabla" title="Permalink to this headline">¶</a></h3>
+<p>El despivotear una tabla corresponde al paso de una tabla desde el formato <strong>wide</strong> al formato <strong>long</strong>.</p>
+<p>Se reconocen dos situaciones:</p>
+<ol class="simple">
+<li><p>El valor indicado para la columna es único, y sólo se requiere definir correctamente las columnas.</p></li>
+<li><p>El valor indicado por la columna no es único o requiere un procesamiento adicional, y se requiere una iteración más profunda.</p></li>
+</ol>
+<p>Para ejemplificar esto, crearemos un conjunto de datos con los horarios de los ramos que se tiene que dictar en un determinado día, hora y lugar.</p>
+<a class="reference internal image-reference" href="../../../../../_images/logo_classroom.png"><img alt="" class="align-center" src="../../../../../_images/logo_classroom.png" style="width: 400px;" /></a>
+<p><strong>a) El valor indicado para la columna es único</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sala&quot;</span><span class="p">,</span><span class="s2">&quot;dia&quot;</span><span class="p">,</span><span class="s2">&quot;08:00&quot;</span><span class="p">,</span><span class="s2">&quot;09:00&quot;</span><span class="p">,</span><span class="s2">&quot;10:00&quot;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;C201&quot;</span><span class="p">,</span><span class="s2">&quot;Lu&quot;</span><span class="p">,</span> <span class="s2">&quot;mat1&quot;</span><span class="p">,</span><span class="s2">&quot;mat1&quot;</span><span class="p">,</span>    <span class="s2">&quot;&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;C201&quot;</span><span class="p">,</span><span class="s2">&quot;Ma&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;C202&quot;</span><span class="p">,</span><span class="s2">&quot;Lu&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;C202&quot;</span><span class="p">,</span><span class="s2">&quot;Ma&quot;</span><span class="p">,</span> <span class="s2">&quot;mat1&quot;</span><span class="p">,</span><span class="s2">&quot;mat1&quot;</span><span class="p">,</span>    <span class="s2">&quot;&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;C203&quot;</span><span class="p">,</span><span class="s2">&quot;Lu&quot;</span><span class="p">,</span> <span class="s2">&quot;fis1&quot;</span><span class="p">,</span><span class="s2">&quot;fis1&quot;</span><span class="p">,</span><span class="s2">&quot;fis1&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;C203&quot;</span><span class="p">,</span><span class="s2">&quot;Ma&quot;</span><span class="p">,</span> <span class="s2">&quot;fis1&quot;</span><span class="p">,</span><span class="s2">&quot;fis1&quot;</span><span class="p">,</span><span class="s2">&quot;fis1&quot;</span><span class="p">],</span>
+       <span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sala</th>
+      <th>dia</th>
+      <th>08:00</th>
+      <th>09:00</th>
+      <th>10:00</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>C201</td>
+      <td>Lu</td>
+      <td>mat1</td>
+      <td>mat1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>C201</td>
+      <td>Ma</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C202</td>
+      <td>Lu</td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>C202</td>
+      <td>Ma</td>
+      <td>mat1</td>
+      <td>mat1</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C203</td>
+      <td>Lu</td>
+      <td>fis1</td>
+      <td>fis1</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C203</td>
+      <td>Ma</td>
+      <td>fis1</td>
+      <td>fis1</td>
+      <td>fis1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Despivotear incorrectamente la tabla</span>
+<span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sala&quot;</span><span class="p">],</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;hora&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;curso&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sala</th>
+      <th>hora</th>
+      <th>curso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>C201</td>
+      <td>dia</td>
+      <td>Lu</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>C201</td>
+      <td>dia</td>
+      <td>Ma</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C202</td>
+      <td>dia</td>
+      <td>Lu</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>C202</td>
+      <td>dia</td>
+      <td>Ma</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C203</td>
+      <td>dia</td>
+      <td>Lu</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C203</td>
+      <td>dia</td>
+      <td>Ma</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>C201</td>
+      <td>08:00</td>
+      <td>mat1</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>C201</td>
+      <td>08:00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>C202</td>
+      <td>08:00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>C202</td>
+      <td>08:00</td>
+      <td>mat1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>C203</td>
+      <td>08:00</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>C203</td>
+      <td>08:00</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>C201</td>
+      <td>09:00</td>
+      <td>mat1</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>C201</td>
+      <td>09:00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>C202</td>
+      <td>09:00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>C202</td>
+      <td>09:00</td>
+      <td>mat1</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>C203</td>
+      <td>09:00</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>C203</td>
+      <td>09:00</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>C201</td>
+      <td>10:00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>C201</td>
+      <td>10:00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>C202</td>
+      <td>10:00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>C202</td>
+      <td>10:00</td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>C203</td>
+      <td>10:00</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>C203</td>
+      <td>10:00</td>
+      <td>fis1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Despivotear correctamente la tabla</span>
+<span class="n">df_melt</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sala&quot;</span><span class="p">,</span> <span class="s2">&quot;dia&quot;</span><span class="p">],</span> <span class="n">var_name</span><span class="o">=</span><span class="s2">&quot;hora&quot;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s2">&quot;curso&quot;</span><span class="p">)</span>
+<span class="n">df_melt</span><span class="p">[</span><span class="n">df_melt</span><span class="o">.</span><span class="n">curso</span><span class="o">!=</span><span class="s2">&quot;&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sort_values</span><span class="p">([</span><span class="s2">&quot;sala&quot;</span><span class="p">,</span><span class="s2">&quot;dia&quot;</span><span class="p">,</span><span class="s2">&quot;hora&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sala</th>
+      <th>dia</th>
+      <th>hora</th>
+      <th>curso</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>C201</td>
+      <td>Lu</td>
+      <td>08:00</td>
+      <td>mat1</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>C201</td>
+      <td>Lu</td>
+      <td>09:00</td>
+      <td>mat1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>C202</td>
+      <td>Ma</td>
+      <td>08:00</td>
+      <td>mat1</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>C202</td>
+      <td>Ma</td>
+      <td>09:00</td>
+      <td>mat1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>C203</td>
+      <td>Lu</td>
+      <td>08:00</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>C203</td>
+      <td>Lu</td>
+      <td>09:00</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>C203</td>
+      <td>Lu</td>
+      <td>10:00</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>C203</td>
+      <td>Ma</td>
+      <td>08:00</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>C203</td>
+      <td>Ma</td>
+      <td>09:00</td>
+      <td>fis1</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>C203</td>
+      <td>Ma</td>
+      <td>10:00</td>
+      <td>fis1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>b) Relaciones no únicas</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sala&quot;</span><span class="p">,</span><span class="s2">&quot;curso&quot;</span><span class="p">,</span><span class="s2">&quot;Lu&quot;</span><span class="p">,</span><span class="s2">&quot;Ma&quot;</span><span class="p">,</span><span class="s2">&quot;hora&quot;</span><span class="p">]</span>
+<span class="n">data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">[</span><span class="s2">&quot;C201&quot;</span><span class="p">,</span><span class="s2">&quot;mat1&quot;</span><span class="p">,</span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;8:00-10:00&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;C202&quot;</span><span class="p">,</span><span class="s2">&quot;mat1&quot;</span><span class="p">,</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="s2">&quot;8:00-10:00&quot;</span><span class="p">],</span>
+        <span class="p">[</span><span class="s2">&quot;C203&quot;</span><span class="p">,</span><span class="s2">&quot;fis1&quot;</span><span class="p">,</span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="s2">&quot;X&quot;</span><span class="p">,</span><span class="s2">&quot;8:00-11:00&quot;</span><span class="p">],</span>
+       <span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sala</th>
+      <th>curso</th>
+      <th>Lu</th>
+      <th>Ma</th>
+      <th>hora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>C201</td>
+      <td>mat1</td>
+      <td>X</td>
+      <td></td>
+      <td>8:00-10:00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>C202</td>
+      <td>mat1</td>
+      <td></td>
+      <td>X</td>
+      <td>8:00-10:00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C203</td>
+      <td>fis1</td>
+      <td>X</td>
+      <td>X</td>
+      <td>8:00-11:00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="section" id="metodos">
+<h4>Métodos<a class="headerlink" href="#metodos" title="Permalink to this headline">¶</a></h4>
+<p><strong>método 01:  Despivotear manualmente y generar un nuevo dataframe</strong></p>
+<ul class="simple">
+<li><p><strong>Ventajas</strong>: Si se puede es una solución directa y rápida.</p></li>
+<li><p><strong>Desventaja</strong>: requiere programación explícita de la tarea, no es reutilizable.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtener el día lunes</span>
+<span class="n">df_Lu</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Lu</span><span class="o">==</span><span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;sala&quot;</span><span class="p">,</span><span class="s2">&quot;curso&quot;</span><span class="p">,</span><span class="s2">&quot;hora&quot;</span><span class="p">]]</span>
+<span class="n">df_Lu</span><span class="p">[</span><span class="s2">&quot;dia&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Lu&quot;</span>
+<span class="n">df_Lu</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sala</th>
+      <th>curso</th>
+      <th>hora</th>
+      <th>dia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>C201</td>
+      <td>mat1</td>
+      <td>8:00-10:00</td>
+      <td>Lu</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C203</td>
+      <td>fis1</td>
+      <td>8:00-11:00</td>
+      <td>Lu</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtener el día martes</span>
+<span class="n">df_Ma</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">Ma</span><span class="o">==</span><span class="s2">&quot;X&quot;</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;sala&quot;</span><span class="p">,</span><span class="s2">&quot;curso&quot;</span><span class="p">,</span><span class="s2">&quot;hora&quot;</span><span class="p">]]</span>
+<span class="n">df_Ma</span><span class="p">[</span><span class="s2">&quot;dia&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;Ma&quot;</span>
+<span class="n">df_Ma</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sala</th>
+      <th>curso</th>
+      <th>hora</th>
+      <th>dia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>C202</td>
+      <td>mat1</td>
+      <td>8:00-10:00</td>
+      <td>Ma</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C203</td>
+      <td>fis1</td>
+      <td>8:00-11:00</td>
+      <td>Ma</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Juntar</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df_Lu</span><span class="p">,</span><span class="n">df_Ma</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sala</th>
+      <th>curso</th>
+      <th>hora</th>
+      <th>dia</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>C201</td>
+      <td>mat1</td>
+      <td>8:00-10:00</td>
+      <td>Lu</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C203</td>
+      <td>fis1</td>
+      <td>8:00-11:00</td>
+      <td>Lu</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>C202</td>
+      <td>mat1</td>
+      <td>8:00-10:00</td>
+      <td>Ma</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C203</td>
+      <td>fis1</td>
+      <td>8:00-11:00</td>
+      <td>Ma</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p><strong>método 02: Iterar sobre las filas y generar contenido para un nuevo dataframe</strong></p>
+<ul class="simple">
+<li><p><strong>Ventajas</strong>: En general, fácil de codificar.</p></li>
+<li><p><strong>Desventaja</strong>: puede ser lento, es ineficiente.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sala&quot;</span><span class="p">,</span><span class="s2">&quot;curso&quot;</span><span class="p">,</span><span class="s2">&quot;dia&quot;</span><span class="p">,</span><span class="s2">&quot;hora&quot;</span><span class="p">]</span>
+<span class="n">my_data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">df_row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="c1"># Procesar cada fila</span>
+    <span class="k">if</span> <span class="n">df_row</span><span class="o">.</span><span class="n">Lu</span><span class="o">==</span><span class="s2">&quot;X&quot;</span><span class="p">:</span>
+        <span class="n">my_row</span> <span class="o">=</span> <span class="p">[</span><span class="n">df_row</span><span class="o">.</span><span class="n">sala</span><span class="p">,</span> <span class="n">df_row</span><span class="o">.</span><span class="n">curso</span><span class="p">,</span> <span class="s2">&quot;Lu&quot;</span><span class="p">,</span> <span class="n">df_row</span><span class="o">.</span><span class="n">hora</span><span class="p">]</span>
+        <span class="n">my_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">my_row</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">df_row</span><span class="o">.</span><span class="n">Ma</span><span class="o">==</span><span class="s2">&quot;X&quot;</span><span class="p">:</span>
+        <span class="n">my_row</span> <span class="o">=</span> <span class="p">[</span><span class="n">df_row</span><span class="o">.</span><span class="n">sala</span><span class="p">,</span> <span class="n">df_row</span><span class="o">.</span><span class="n">curso</span><span class="p">,</span> <span class="s2">&quot;Ma&quot;</span><span class="p">,</span> <span class="n">df_row</span><span class="o">.</span><span class="n">hora</span><span class="p">]</span>
+        <span class="n">my_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">my_row</span><span class="p">)</span>
+<span class="n">new_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">my_data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">my_columns</span><span class="p">)</span>
+<span class="n">new_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>sala</th>
+      <th>curso</th>
+      <th>dia</th>
+      <th>hora</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>C201</td>
+      <td>mat1</td>
+      <td>Lu</td>
+      <td>8:00-10:00</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>C202</td>
+      <td>mat1</td>
+      <td>Ma</td>
+      <td>8:00-10:00</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>C203</td>
+      <td>fis1</td>
+      <td>Lu</td>
+      <td>8:00-11:00</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>C203</td>
+      <td>fis1</td>
+      <td>Ma</td>
+      <td>8:00-11:00</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="referencia">
+<h2>Referencia<a class="headerlink" href="#referencia" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/reshaping.html">Reshaping and pivot tables</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/lectures/data_manipulation/data_manipulation/modulos_pandas"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="merge_concat.html" title="previous page">Merge &amp; Concat</a>
+    <a class='right-next' id="next-link" href="../sqlalchemy/sqlalchemy.html" title="next page">SQLAlchemy</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

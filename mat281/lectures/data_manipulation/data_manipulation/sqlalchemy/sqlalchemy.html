@@ -1,0 +1,2490 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SQLAlchemy &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../../../" src="../../../../../_static/documentation_options.js"></script>
+    <script src="../../../../../_static/jquery.js"></script>
+    <script src="../../../../../_static/underscore.js"></script>
+    <script src="../../../../../_static/doctools.js"></script>
+    <script src="../../../../../_static/togglebutton.js"></script>
+    <script src="../../../../../_static/clipboard.min.js"></script>
+    <script src="../../../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../../../_static/sphinx-thebe.js"></script>
+    <link rel="shortcut icon" href="../../../../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="next" title="Introducción" href="../../visualization/visualizacion/introduction.html" />
+    <link rel="prev" title="Pivot" href="../modulos_pandas/pivot.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../../../index.html">
+      
+      <img src="../../../../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../basic_tools/lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../basic_tools/lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_013_ide.html">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../basic_tools/lecture_014_jupyter.html">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../pandas/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modulos_pandas/groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modulos_pandas/merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../modulos_pandas/pivot.html">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ml/introduccion_ml/introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/analisis_supervisado_regresion/intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_supervisado_regresion/02_regresion_lineal.html">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_supervisado_regresion/02_modelos_regresion.html">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/introduccion_ml/no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../../ml/overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../../ml/overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../ml/time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../../../_sources/mat281/lectures/data_manipulation/data_manipulation/sqlalchemy/sqlalchemy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#coneccion-a-bases-de-datos">
+   Conección a bases de datos
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comandos-en-sql">
+   Comandos en SQL
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manipulacion-de-datos">
+     Manipulación de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clausulas">
+     Clausulas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#operadores">
+     Operadores
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operadores-logicos">
+       Operadores Lógicos
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#operadores-de-comparacion">
+       Operadores de comparación
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#funciones-de-agregado">
+       Funciones de agregado
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#consultas">
+   Consultas
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#consultas-basicas">
+     Consultas básicas
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cosultas-mediante-group-by">
+     Cosultas mediante GROUP BY
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#cosultas-mediante-join">
+     Cosultas mediante JOIN
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencias">
+   Referencias
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="sqlalchemy">
+<h1>SQLAlchemy<a class="headerlink" href="#sqlalchemy" title="Permalink to this headline">¶</a></h1>
+<p>SQLAlchemy es una librería para Python que facilita el acceso a una base de datos relacional, así como las operaciones a realizar sobre la misma.</p>
+<p>Es independiente del motor de base de datos a utilizar, es decir, en principio, es compatible con la mayoría de bases de datos relacionales conocidas: PostgreSQL, MySQL, Oracle, Microsoft SQL Server, Sqlite, …</p>
+<div class="section" id="coneccion-a-bases-de-datos">
+<h2>Conección a bases de datos<a class="headerlink" href="#coneccion-a-bases-de-datos" title="Permalink to this headline">¶</a></h2>
+<p>Lo primero que hay que hacer para trabajar con SQLAlchemy es crear un <code class="docutils literal notranslate"><span class="pre">engine</span></code>. El <code class="docutils literal notranslate"><span class="pre">engine</span></code> es el punto de entrada a la base de datos, es decir, el que permite a SQLAlchemy comunicarse con esta.</p>
+<p>El motor se usa principalmente para manejar dos elementos:</p>
+<ul class="simple">
+<li><p><strong>pools de conexiones</strong>: Cuando se usa una conexión a la base de datos, esta ya está creada previamente y es reutilizada por el programa.</p></li>
+<li><p><strong>dialectos de base de datos</strong>: A pesar de que el lenguaje SQL es universal, cada motor de base de datos introduce ciertas variaciones propietarias sobre dicho lenguaje.</p></li>
+</ul>
+<p>En la carpeta data se encuentra el archivo <code class="docutils literal notranslate"><span class="pre">chinook.db</span></code>, que es básicamente una base de datos sql.</p>
+<img alt="../../../../../_images/sqlite1.jpg" class="align-center" src="../../../../../_images/sqlite1.jpg" />
+<p>Las 11 tablas se definen de la siguiente forma (en inglés):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">employees</span></code> table stores employees data such as employee id, last name, first name, etc. It also has a field named ReportsTo to specify who reports to whom.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">customers</span></code> table stores customers data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">invoices</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">invoice_items</span></code> tables: these two tables store invoice data. The <code class="docutils literal notranslate"><span class="pre">invoices</span></code> table stores invoice header data and the <code class="docutils literal notranslate"><span class="pre">invoice_items</span></code> table stores the invoice line items data.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">artists</span></code> table stores artists data. It is a simple table that contains only artist id and name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">albums</span></code> table stores data about a list of tracks. Each album belongs to one artist. However, one artist may have multiple albums.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">media_types</span></code> table stores media types such as MPEG audio file, ACC audio file, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">genres</span></code> table stores music types such as rock, jazz, metal, etc.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tracks</span></code> table store the data of songs. Each track belongs to one album.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">playlists</span></code> &amp; <code class="docutils literal notranslate"><span class="pre">playlist_track</span> <span class="pre">tables</span></code>: <code class="docutils literal notranslate"><span class="pre">playlists</span></code> table store data about playlists. Each playlist contains a list of tracks. Each track may belong to multiple playlists. The relationship between the <code class="docutils literal notranslate"><span class="pre">playlists</span></code> table and <code class="docutils literal notranslate"><span class="pre">tracks</span></code> table is many-to-many. The <code class="docutils literal notranslate"><span class="pre">playlist_track</span></code> table is used to reflect this relationship.</p></li>
+</ul>
+<p>Nuestra primera consulata consiste en ver todas las tablas de el esquema de datos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sqlalchemy</span> <span class="kn">import</span> <span class="n">create_engine</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">os</span>  
+
+<span class="c1"># Crear conector</span>
+<span class="n">engine</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;sqlite:///&#39;</span><span class="p">,</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;chinook.db&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear query</span>
+<span class="n">query</span> <span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT name </span>
+<span class="s2">FROM sqlite_master </span>
+<span class="s2">WHERE type=&#39;table&#39;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">engine</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>albums</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>sqlite_sequence</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>artists</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>customers</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>employees</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>genres</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>invoices</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>invoice_items</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>media_types</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>playlists</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>playlist_track</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>tracks</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>sqlite_stat1</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="comandos-en-sql">
+<h2>Comandos en SQL<a class="headerlink" href="#comandos-en-sql" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="manipulacion-de-datos">
+<h3>Manipulación de datos<a class="headerlink" href="#manipulacion-de-datos" title="Permalink to this headline">¶</a></h3>
+<p>Los comandos básicos de manipulación de datos son:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Comando</p></th>
+<th class="head"><p>Descripción</p></th>
+<th class="head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>SELECT</p></td>
+<td><p>Utilizado para consultar registros de la base de datos que satisfagan un criterio determinado</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>INSERT</p></td>
+<td><p>Utilizado para cargar lotes de datos en la base de datos en una única operación.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>UPDATE</p></td>
+<td><p>Utilizado para modificar los valores de los campos y registros especificados Utilizado para modificar las tablas agregando campos o cambiando la definición de los campos.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>DELETE</p></td>
+<td><p>Utilizado para eliminar registros de una tabla</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>De estos cuatro comandos, esta seción estará centrada en el comando <code class="docutils literal notranslate"><span class="pre">SELECT</span></code> (útil para hacer consultas en SQL)</p>
+</div>
+<div class="section" id="clausulas">
+<h3>Clausulas<a class="headerlink" href="#clausulas" title="Permalink to this headline">¶</a></h3>
+<p>Las cláusulas son condiciones de modificación utilizadas para definir los datos que desea seleccionar o manipular.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Comando</p></th>
+<th class="head"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>FROM</p></td>
+<td><p>Utilizada para especificar la tabla de la cual se van a seleccionar los registros</p></td>
+</tr>
+<tr class="row-odd"><td><p>GROUP BY</p></td>
+<td><p>Utilizada para separar los registros seleccionados en grupos específicos</p></td>
+</tr>
+<tr class="row-even"><td><p>HAVING</p></td>
+<td><p>Utilizada para expresar condición que debe satisfacer cada grupo</p></td>
+</tr>
+<tr class="row-odd"><td><p>ORDER BY</p></td>
+<td><p>Utilizada para ordenar los registros seleccionados de acuerdo con un orden específico</p></td>
+</tr>
+<tr class="row-even"><td><p>WHERE</p></td>
+<td><p>Utilizada para determinar los registros seleccionados en la clausula FROM</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="operadores">
+<h3>Operadores<a class="headerlink" href="#operadores" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="operadores-logicos">
+<h4>Operadores Lógicos<a class="headerlink" href="#operadores-logicos" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operador</p></th>
+<th class="head"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AND</p></td>
+<td><p>Es el “y” lógico. Evalúa dos condiciones y devuelve un valor de verdad sólo si ambas son ciertas.</p></td>
+</tr>
+<tr class="row-odd"><td><p>OR</p></td>
+<td><p>Es el “o” lógico. Evalúa dos condiciones y devuelve un valor de verdad si alguna de las dos es cierta.</p></td>
+</tr>
+<tr class="row-even"><td><p>NOT</p></td>
+<td><p>Negación lógica. Devuelve el valor contrario de la expresión.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="operadores-de-comparacion">
+<h4>Operadores de comparación<a class="headerlink" href="#operadores-de-comparacion" title="Permalink to this headline">¶</a></h4>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Operador</p></th>
+<th class="head"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>&lt;</p></td>
+<td><p>Menor que</p></td>
+</tr>
+<tr class="row-odd"><td><p>&gt;</p></td>
+<td><p>Mayor que</p></td>
+</tr>
+<tr class="row-even"><td><p>&lt;&gt;</p></td>
+<td><p>Distinto de</p></td>
+</tr>
+<tr class="row-odd"><td><p>&lt;=</p></td>
+<td><p>Menor o igual que</p></td>
+</tr>
+<tr class="row-even"><td><p>&gt;=</p></td>
+<td><p>Mayor o igual que</p></td>
+</tr>
+<tr class="row-odd"><td><p>BETWEEN</p></td>
+<td><p>Intervalo</p></td>
+</tr>
+<tr class="row-even"><td><p>LIKE</p></td>
+<td><p>Comparación</p></td>
+</tr>
+<tr class="row-odd"><td><p>In</p></td>
+<td><p>Especificar</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="funciones-de-agregado">
+<h4>Funciones de agregado<a class="headerlink" href="#funciones-de-agregado" title="Permalink to this headline">¶</a></h4>
+<p>Las funciones de agregado se usan dentro de una cláusula SELECT en grupos de registros para devolver un único valor que se aplica a un grupo de registros.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Comando</p></th>
+<th class="head"><p>Descripción</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>AVG</p></td>
+<td><p>Utilizada para calcular el promedio de los valores de un campo determinado</p></td>
+</tr>
+<tr class="row-odd"><td><p>COUNT</p></td>
+<td><p>Utilizada para devolver el número de registros de la selección</p></td>
+</tr>
+<tr class="row-even"><td><p>SUM</p></td>
+<td><p>Utilizada para devolver la suma de todos los valores de un campo determinado</p></td>
+</tr>
+<tr class="row-odd"><td><p>MAX</p></td>
+<td><p>Utilizada para devolver el valor más alto de un campo especificado</p></td>
+</tr>
+<tr class="row-even"><td><p>MIN</p></td>
+<td><p>Utilizada para devolver el valor más bajo de un campo especificado</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="section" id="consultas">
+<h2>Consultas<a class="headerlink" href="#consultas" title="Permalink to this headline">¶</a></h2>
+<p>Las consultas de selección se utilizan para indicar al motor de datos que devuelva información de las bases de datos, esta información es devuelta en forma de conjunto de registros. Este conjunto de registros es modificable.</p>
+<p>Lo primero es crear una función para poder conectarse a la base de datos y realizar las distintas consultas.</p>
+<div class="section" id="consultas-basicas">
+<h3>Consultas básicas<a class="headerlink" href="#consultas-basicas" title="Permalink to this headline">¶</a></h3>
+<p>Se realizarán distintas consultas ocupando los operadores básicos y de comparación.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># funcion de consultas</span>
+<span class="k">def</span> <span class="nf">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_sql_query</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">con</span><span class="o">=</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crear conector</span>
+<span class="n">conn</span> <span class="o">=</span> <span class="n">create_engine</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s1">&#39;sqlite:///&#39;</span><span class="p">,</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;chinook.db&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># basicas</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT EmployeeId,LastName, FirstName , Title FROM employees</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeId</th>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Adams</td>
+      <td>Andrew</td>
+      <td>General Manager</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Edwards</td>
+      <td>Nancy</td>
+      <td>Sales Manager</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Peacock</td>
+      <td>Jane</td>
+      <td>Sales Support Agent</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Park</td>
+      <td>Margaret</td>
+      <td>Sales Support Agent</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Johnson</td>
+      <td>Steve</td>
+      <td>Sales Support Agent</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Mitchell</td>
+      <td>Michael</td>
+      <td>IT Manager</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>King</td>
+      <td>Robert</td>
+      <td>IT Staff</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>Callahan</td>
+      <td>Laura</td>
+      <td>IT Staff</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ordenar los registros: una columna</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT EmployeeId,LastName, FirstName , Title FROM employees ORDER BY LastName</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeId</th>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Adams</td>
+      <td>Andrew</td>
+      <td>General Manager</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8</td>
+      <td>Callahan</td>
+      <td>Laura</td>
+      <td>IT Staff</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>Edwards</td>
+      <td>Nancy</td>
+      <td>Sales Manager</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5</td>
+      <td>Johnson</td>
+      <td>Steve</td>
+      <td>Sales Support Agent</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7</td>
+      <td>King</td>
+      <td>Robert</td>
+      <td>IT Staff</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Mitchell</td>
+      <td>Michael</td>
+      <td>IT Manager</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>4</td>
+      <td>Park</td>
+      <td>Margaret</td>
+      <td>Sales Support Agent</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3</td>
+      <td>Peacock</td>
+      <td>Jane</td>
+      <td>Sales Support Agent</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ordenar los registros: varias columnas</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT EmployeeId,LastName, FirstName , Title FROM employees ORDER BY LastName,Title</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeId</th>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Adams</td>
+      <td>Andrew</td>
+      <td>General Manager</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8</td>
+      <td>Callahan</td>
+      <td>Laura</td>
+      <td>IT Staff</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>Edwards</td>
+      <td>Nancy</td>
+      <td>Sales Manager</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>5</td>
+      <td>Johnson</td>
+      <td>Steve</td>
+      <td>Sales Support Agent</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>7</td>
+      <td>King</td>
+      <td>Robert</td>
+      <td>IT Staff</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Mitchell</td>
+      <td>Michael</td>
+      <td>IT Manager</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>4</td>
+      <td>Park</td>
+      <td>Margaret</td>
+      <td>Sales Support Agent</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>3</td>
+      <td>Peacock</td>
+      <td>Jane</td>
+      <td>Sales Support Agent</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ordenar los registros: especificar el orden </span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT EmployeeId,LastName, FirstName , Title FROM employees ORDER BY LastName DESC , Title ASC;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeId</th>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>Peacock</td>
+      <td>Jane</td>
+      <td>Sales Support Agent</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4</td>
+      <td>Park</td>
+      <td>Margaret</td>
+      <td>Sales Support Agent</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>6</td>
+      <td>Mitchell</td>
+      <td>Michael</td>
+      <td>IT Manager</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7</td>
+      <td>King</td>
+      <td>Robert</td>
+      <td>IT Staff</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Johnson</td>
+      <td>Steve</td>
+      <td>Sales Support Agent</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2</td>
+      <td>Edwards</td>
+      <td>Nancy</td>
+      <td>Sales Manager</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>8</td>
+      <td>Callahan</td>
+      <td>Laura</td>
+      <td>IT Staff</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1</td>
+      <td>Adams</td>
+      <td>Andrew</td>
+      <td>General Manager</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># operador *</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT * FROM employees;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeId</th>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Title</th>
+      <th>ReportsTo</th>
+      <th>BirthDate</th>
+      <th>HireDate</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>PostalCode</th>
+      <th>Phone</th>
+      <th>Fax</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Adams</td>
+      <td>Andrew</td>
+      <td>General Manager</td>
+      <td>NaN</td>
+      <td>1962-02-18 00:00:00</td>
+      <td>2002-08-14 00:00:00</td>
+      <td>11120 Jasper Ave NW</td>
+      <td>Edmonton</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T5K 2N1</td>
+      <td>+1 (780) 428-9482</td>
+      <td>+1 (780) 428-3457</td>
+      <td>andrew@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Edwards</td>
+      <td>Nancy</td>
+      <td>Sales Manager</td>
+      <td>1.0</td>
+      <td>1958-12-08 00:00:00</td>
+      <td>2002-05-01 00:00:00</td>
+      <td>825 8 Ave SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 2T3</td>
+      <td>+1 (403) 262-3443</td>
+      <td>+1 (403) 262-3322</td>
+      <td>nancy@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Peacock</td>
+      <td>Jane</td>
+      <td>Sales Support Agent</td>
+      <td>2.0</td>
+      <td>1973-08-29 00:00:00</td>
+      <td>2002-04-01 00:00:00</td>
+      <td>1111 6 Ave SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 5M5</td>
+      <td>+1 (403) 262-3443</td>
+      <td>+1 (403) 262-6712</td>
+      <td>jane@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Park</td>
+      <td>Margaret</td>
+      <td>Sales Support Agent</td>
+      <td>2.0</td>
+      <td>1947-09-19 00:00:00</td>
+      <td>2003-05-03 00:00:00</td>
+      <td>683 10 Street SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 5G3</td>
+      <td>+1 (403) 263-4423</td>
+      <td>+1 (403) 263-4289</td>
+      <td>margaret@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Johnson</td>
+      <td>Steve</td>
+      <td>Sales Support Agent</td>
+      <td>2.0</td>
+      <td>1965-03-03 00:00:00</td>
+      <td>2003-10-17 00:00:00</td>
+      <td>7727B 41 Ave</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T3B 1Y7</td>
+      <td>1 (780) 836-9987</td>
+      <td>1 (780) 836-9543</td>
+      <td>steve@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>Mitchell</td>
+      <td>Michael</td>
+      <td>IT Manager</td>
+      <td>1.0</td>
+      <td>1973-07-01 00:00:00</td>
+      <td>2003-10-17 00:00:00</td>
+      <td>5827 Bowness Road NW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T3B 0C5</td>
+      <td>+1 (403) 246-9887</td>
+      <td>+1 (403) 246-9899</td>
+      <td>michael@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>King</td>
+      <td>Robert</td>
+      <td>IT Staff</td>
+      <td>6.0</td>
+      <td>1970-05-29 00:00:00</td>
+      <td>2004-01-02 00:00:00</td>
+      <td>590 Columbia Boulevard West</td>
+      <td>Lethbridge</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T1K 5N8</td>
+      <td>+1 (403) 456-9986</td>
+      <td>+1 (403) 456-8485</td>
+      <td>robert@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>Callahan</td>
+      <td>Laura</td>
+      <td>IT Staff</td>
+      <td>6.0</td>
+      <td>1968-01-09 00:00:00</td>
+      <td>2004-03-04 00:00:00</td>
+      <td>923 7 ST NW</td>
+      <td>Lethbridge</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T1H 1Y8</td>
+      <td>+1 (403) 467-3351</td>
+      <td>+1 (403) 467-8772</td>
+      <td>laura@chinookcorp.com</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># operador LIMIT</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT LastName FROM employees LIMIT 5;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>LastName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adams</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Edwards</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Peacock</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Park</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Johnson</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># operador DISTINCT</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT DISTINCT LastName FROM employees </span>
+<span class="s2">&quot;&quot;&quot;</span>
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>LastName</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Adams</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Edwards</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Peacock</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Park</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Johnson</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Mitchell</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>King</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>Callahan</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># operadores logicos</span>
+
+<span class="n">query1</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT *  FROM employees WHERE ReportsTo&gt;1 AND ReportsTo&lt;4</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">query2</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT *  FROM employees WHERE ReportsTo&gt;1 OR City=&#39;Calgary&#39;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">query3</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT *  FROM employees WHERE NOT City =  &#39;Calgary&#39;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">consulta</span><span class="p">(</span><span class="n">query1</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeId</th>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Title</th>
+      <th>ReportsTo</th>
+      <th>BirthDate</th>
+      <th>HireDate</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>PostalCode</th>
+      <th>Phone</th>
+      <th>Fax</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td>Peacock</td>
+      <td>Jane</td>
+      <td>Sales Support Agent</td>
+      <td>2</td>
+      <td>1973-08-29 00:00:00</td>
+      <td>2002-04-01 00:00:00</td>
+      <td>1111 6 Ave SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 5M5</td>
+      <td>+1 (403) 262-3443</td>
+      <td>+1 (403) 262-6712</td>
+      <td>jane@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4</td>
+      <td>Park</td>
+      <td>Margaret</td>
+      <td>Sales Support Agent</td>
+      <td>2</td>
+      <td>1947-09-19 00:00:00</td>
+      <td>2003-05-03 00:00:00</td>
+      <td>683 10 Street SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 5G3</td>
+      <td>+1 (403) 263-4423</td>
+      <td>+1 (403) 263-4289</td>
+      <td>margaret@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>5</td>
+      <td>Johnson</td>
+      <td>Steve</td>
+      <td>Sales Support Agent</td>
+      <td>2</td>
+      <td>1965-03-03 00:00:00</td>
+      <td>2003-10-17 00:00:00</td>
+      <td>7727B 41 Ave</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T3B 1Y7</td>
+      <td>1 (780) 836-9987</td>
+      <td>1 (780) 836-9543</td>
+      <td>steve@chinookcorp.com</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Operador BETWEEN</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT *  FROM employees WHERE ReportsTo BETWEEN 1 AND 4</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeId</th>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Title</th>
+      <th>ReportsTo</th>
+      <th>BirthDate</th>
+      <th>HireDate</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>PostalCode</th>
+      <th>Phone</th>
+      <th>Fax</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>Edwards</td>
+      <td>Nancy</td>
+      <td>Sales Manager</td>
+      <td>1</td>
+      <td>1958-12-08 00:00:00</td>
+      <td>2002-05-01 00:00:00</td>
+      <td>825 8 Ave SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 2T3</td>
+      <td>+1 (403) 262-3443</td>
+      <td>+1 (403) 262-3322</td>
+      <td>nancy@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>Mitchell</td>
+      <td>Michael</td>
+      <td>IT Manager</td>
+      <td>1</td>
+      <td>1973-07-01 00:00:00</td>
+      <td>2003-10-17 00:00:00</td>
+      <td>5827 Bowness Road NW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T3B 0C5</td>
+      <td>+1 (403) 246-9887</td>
+      <td>+1 (403) 246-9899</td>
+      <td>michael@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Peacock</td>
+      <td>Jane</td>
+      <td>Sales Support Agent</td>
+      <td>2</td>
+      <td>1973-08-29 00:00:00</td>
+      <td>2002-04-01 00:00:00</td>
+      <td>1111 6 Ave SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 5M5</td>
+      <td>+1 (403) 262-3443</td>
+      <td>+1 (403) 262-6712</td>
+      <td>jane@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Park</td>
+      <td>Margaret</td>
+      <td>Sales Support Agent</td>
+      <td>2</td>
+      <td>1947-09-19 00:00:00</td>
+      <td>2003-05-03 00:00:00</td>
+      <td>683 10 Street SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 5G3</td>
+      <td>+1 (403) 263-4423</td>
+      <td>+1 (403) 263-4289</td>
+      <td>margaret@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Johnson</td>
+      <td>Steve</td>
+      <td>Sales Support Agent</td>
+      <td>2</td>
+      <td>1965-03-03 00:00:00</td>
+      <td>2003-10-17 00:00:00</td>
+      <td>7727B 41 Ave</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T3B 1Y7</td>
+      <td>1 (780) 836-9987</td>
+      <td>1 (780) 836-9543</td>
+      <td>steve@chinookcorp.com</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Operador LIKE</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT *  FROM employees WHERE PostalCode LIKE &#39;%T2P%&#39;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeId</th>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Title</th>
+      <th>ReportsTo</th>
+      <th>BirthDate</th>
+      <th>HireDate</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>PostalCode</th>
+      <th>Phone</th>
+      <th>Fax</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>Edwards</td>
+      <td>Nancy</td>
+      <td>Sales Manager</td>
+      <td>1</td>
+      <td>1958-12-08 00:00:00</td>
+      <td>2002-05-01 00:00:00</td>
+      <td>825 8 Ave SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 2T3</td>
+      <td>+1 (403) 262-3443</td>
+      <td>+1 (403) 262-3322</td>
+      <td>nancy@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td>Peacock</td>
+      <td>Jane</td>
+      <td>Sales Support Agent</td>
+      <td>2</td>
+      <td>1973-08-29 00:00:00</td>
+      <td>2002-04-01 00:00:00</td>
+      <td>1111 6 Ave SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 5M5</td>
+      <td>+1 (403) 262-3443</td>
+      <td>+1 (403) 262-6712</td>
+      <td>jane@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4</td>
+      <td>Park</td>
+      <td>Margaret</td>
+      <td>Sales Support Agent</td>
+      <td>2</td>
+      <td>1947-09-19 00:00:00</td>
+      <td>2003-05-03 00:00:00</td>
+      <td>683 10 Street SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 5G3</td>
+      <td>+1 (403) 263-4423</td>
+      <td>+1 (403) 263-4289</td>
+      <td>margaret@chinookcorp.com</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Operador IN</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT *  FROM employees WHERE ReportsTo IN (1,6)</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>EmployeeId</th>
+      <th>LastName</th>
+      <th>FirstName</th>
+      <th>Title</th>
+      <th>ReportsTo</th>
+      <th>BirthDate</th>
+      <th>HireDate</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>PostalCode</th>
+      <th>Phone</th>
+      <th>Fax</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>Edwards</td>
+      <td>Nancy</td>
+      <td>Sales Manager</td>
+      <td>1</td>
+      <td>1958-12-08 00:00:00</td>
+      <td>2002-05-01 00:00:00</td>
+      <td>825 8 Ave SW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T2P 2T3</td>
+      <td>+1 (403) 262-3443</td>
+      <td>+1 (403) 262-3322</td>
+      <td>nancy@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>6</td>
+      <td>Mitchell</td>
+      <td>Michael</td>
+      <td>IT Manager</td>
+      <td>1</td>
+      <td>1973-07-01 00:00:00</td>
+      <td>2003-10-17 00:00:00</td>
+      <td>5827 Bowness Road NW</td>
+      <td>Calgary</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T3B 0C5</td>
+      <td>+1 (403) 246-9887</td>
+      <td>+1 (403) 246-9899</td>
+      <td>michael@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>7</td>
+      <td>King</td>
+      <td>Robert</td>
+      <td>IT Staff</td>
+      <td>6</td>
+      <td>1970-05-29 00:00:00</td>
+      <td>2004-01-02 00:00:00</td>
+      <td>590 Columbia Boulevard West</td>
+      <td>Lethbridge</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T1K 5N8</td>
+      <td>+1 (403) 456-9986</td>
+      <td>+1 (403) 456-8485</td>
+      <td>robert@chinookcorp.com</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>8</td>
+      <td>Callahan</td>
+      <td>Laura</td>
+      <td>IT Staff</td>
+      <td>6</td>
+      <td>1968-01-09 00:00:00</td>
+      <td>2004-03-04 00:00:00</td>
+      <td>923 7 ST NW</td>
+      <td>Lethbridge</td>
+      <td>AB</td>
+      <td>Canada</td>
+      <td>T1H 1Y8</td>
+      <td>+1 (403) 467-3351</td>
+      <td>+1 (403) 467-8772</td>
+      <td>laura@chinookcorp.com</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Operadores matematicos</span>
+
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT SUM(ReportsTo),COUNT(ReportsTo),AVG(ReportsTo)  FROM employees </span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>SUM(ReportsTo)</th>
+      <th>COUNT(ReportsTo)</th>
+      <th>AVG(ReportsTo)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>20</td>
+      <td>7</td>
+      <td>2.857143</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="cosultas-mediante-group-by">
+<h3>Cosultas mediante GROUP BY<a class="headerlink" href="#cosultas-mediante-group-by" title="Permalink to this headline">¶</a></h3>
+<p>Combina los registros con valores idénticos, en la lista de campos especificados, en un único registro:</p>
+<p><strong>Ejemplo</strong>: En la base datos chinook existe la tabla employees. ¿Cómo agrupar por la columna Title?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT Title, SUM(ReportsTo),COUNT(ReportsTo),AVG(ReportsTo)  FROM employees GROUP BY Title</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Title</th>
+      <th>SUM(ReportsTo)</th>
+      <th>COUNT(ReportsTo)</th>
+      <th>AVG(ReportsTo)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>General Manager</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>IT Manager</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>IT Staff</td>
+      <td>12.0</td>
+      <td>2</td>
+      <td>6.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Sales Manager</td>
+      <td>1.0</td>
+      <td>1</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Sales Support Agent</td>
+      <td>6.0</td>
+      <td>3</td>
+      <td>2.0</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+</div>
+<div class="section" id="cosultas-mediante-join">
+<h3>Cosultas mediante JOIN<a class="headerlink" href="#cosultas-mediante-join" title="Permalink to this headline">¶</a></h3>
+<p>La sentencia SQL JOIN se utiliza para relacionar varias tablas. Nos permitirá obtener un listado de los campos que tienen coincidencias en ambas tablas.</p>
+<p><strong>Ejemplo</strong>: En la base datos chinook existen las tablas albums y artists. ¿Cómo agregar el nombre del artista a la tabla de álbumes?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># EJEMPLO 01</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT *  FROM artists JOIN albums ON artists.ArtistId=albums.ArtistId</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ArtistId</th>
+      <th>Name</th>
+      <th>AlbumId</th>
+      <th>Title</th>
+      <th>ArtistId</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>AC/DC</td>
+      <td>1</td>
+      <td>For Those About To Rock We Salute You</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Accept</td>
+      <td>2</td>
+      <td>Balls to the Wall</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>Accept</td>
+      <td>3</td>
+      <td>Restless and Wild</td>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>AC/DC</td>
+      <td>4</td>
+      <td>Let There Be Rock</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>Aerosmith</td>
+      <td>5</td>
+      <td>Big Ones</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>342</th>
+      <td>226</td>
+      <td>Eugene Ormandy</td>
+      <td>343</td>
+      <td>Respighi:Pines of Rome</td>
+      <td>226</td>
+    </tr>
+    <tr>
+      <th>343</th>
+      <td>272</td>
+      <td>Emerson String Quartet</td>
+      <td>344</td>
+      <td>Schubert: The Late String Quartets &amp; String Qu...</td>
+      <td>272</td>
+    </tr>
+    <tr>
+      <th>344</th>
+      <td>273</td>
+      <td>C. Monteverdi, Nigel Rogers - Chiaroscuro; Lon...</td>
+      <td>345</td>
+      <td>Monteverdi: L'Orfeo</td>
+      <td>273</td>
+    </tr>
+    <tr>
+      <th>345</th>
+      <td>274</td>
+      <td>Nash Ensemble</td>
+      <td>346</td>
+      <td>Mozart: Chamber Music</td>
+      <td>274</td>
+    </tr>
+    <tr>
+      <th>346</th>
+      <td>275</td>
+      <td>Philip Glass Ensemble</td>
+      <td>347</td>
+      <td>Koyaanisqatsi (Soundtrack from the Motion Pict...</td>
+      <td>275</td>
+    </tr>
+  </tbody>
+</table>
+<p>347 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># EJEMPLO 02</span>
+<span class="n">query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">SELECT A.ArtistId, A.Name, B.AlbumId,B.Title FROM artists AS A JOIN albums AS B ON A.ArtistId=B.ArtistId</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">consulta</span><span class="p">(</span><span class="n">query</span><span class="p">,</span><span class="n">conn</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ArtistId</th>
+      <th>Name</th>
+      <th>AlbumId</th>
+      <th>Title</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>AC/DC</td>
+      <td>1</td>
+      <td>For Those About To Rock We Salute You</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>Accept</td>
+      <td>2</td>
+      <td>Balls to the Wall</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2</td>
+      <td>Accept</td>
+      <td>3</td>
+      <td>Restless and Wild</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1</td>
+      <td>AC/DC</td>
+      <td>4</td>
+      <td>Let There Be Rock</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>Aerosmith</td>
+      <td>5</td>
+      <td>Big Ones</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>342</th>
+      <td>226</td>
+      <td>Eugene Ormandy</td>
+      <td>343</td>
+      <td>Respighi:Pines of Rome</td>
+    </tr>
+    <tr>
+      <th>343</th>
+      <td>272</td>
+      <td>Emerson String Quartet</td>
+      <td>344</td>
+      <td>Schubert: The Late String Quartets &amp; String Qu...</td>
+    </tr>
+    <tr>
+      <th>344</th>
+      <td>273</td>
+      <td>C. Monteverdi, Nigel Rogers - Chiaroscuro; Lon...</td>
+      <td>345</td>
+      <td>Monteverdi: L'Orfeo</td>
+    </tr>
+    <tr>
+      <th>345</th>
+      <td>274</td>
+      <td>Nash Ensemble</td>
+      <td>346</td>
+      <td>Mozart: Chamber Music</td>
+    </tr>
+    <tr>
+      <th>346</th>
+      <td>275</td>
+      <td>Philip Glass Ensemble</td>
+      <td>347</td>
+      <td>Koyaanisqatsi (Soundtrack from the Motion Pict...</td>
+    </tr>
+  </tbody>
+</table>
+<p>347 rows × 4 columns</p>
+</div></div></div>
+</div>
+</div>
+</div>
+<div class="section" id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://www.w3schools.com/sql/default.asp">SQL Tutorial</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/lectures/data_manipulation/data_manipulation/sqlalchemy"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../modulos_pandas/pivot.html" title="previous page">Pivot</a>
+    <a class='right-next' id="next-link" href="../../visualization/visualizacion/introduction.html" title="next page">Introducción</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

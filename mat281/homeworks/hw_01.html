@@ -1,0 +1,2210 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tarea N°01 &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/basic_tools/lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_013_ide.html">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/basic_tools/lecture_014_jupyter.html">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/pandas/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/modulos_pandas/groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/modulos_pandas/merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/modulos_pandas/pivot.html">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/data_manipulation/sqlalchemy/sqlalchemy.html">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/data_manipulation/visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/data_manipulation/eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/ml/introduccion_ml/introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/analisis_supervisado_regresion/intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_supervisado_regresion/02_regresion_lineal.html">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_supervisado_regresion/02_modelos_regresion.html">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/introduccion_ml/no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../lectures/ml/overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../lectures/ml/overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../lectures/ml/time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/mat281/homeworks/hw_01.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instrucciones">
+   Instrucciones
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#i-imagenception">
+   I.-  Imagenception
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#encontrando-la-imagen-oculta">
+     1.- Encontrando la imagen oculta
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#escondiendo-una-nueva-imagen">
+     2.- Escondiendo una nueva imagen
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ii-analizando-la-felicidad">
+   II.- Analizando la Felicidad
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#context">
+     Context
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#content">
+     Content
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#lectura-de-datos">
+     2.1 Lectura de datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#concatenacion-y-procesado">
+     2.2 Concatenación y procesado
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#analisis">
+     2.3 Análisis
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#agregando-mas-datos">
+     2.4 Agregando más datos
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#iii-learnplatform">
+     III.- LearnPlatform
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#introduccion">
+     Introducción
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#planteamiento-del-problema">
+     Planteamiento del problema
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#desafio">
+     Desafío
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#evaluacion">
+     Evaluación
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#claridad">
+       Claridad
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#precision">
+       Precisión
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#creatividad">
+       Creatividad
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#hints">
+       Hints
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tarea-n01">
+<h1>Tarea N°01<a class="headerlink" href="#tarea-n01" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="instrucciones">
+<h2>Instrucciones<a class="headerlink" href="#instrucciones" title="Permalink to this headline">¶</a></h2>
+<p>1.- Completa tus datos personales (nombre y rol USM) en siguiente celda.</p>
+<ul class="simple">
+<li><p><strong>Nombre</strong>:</p></li>
+<li><p><strong>Rol</strong>:</p></li>
+</ul>
+<p>2.- Debes <em>pushear</em> este archivo con tus cambios a tu repositorio personal del curso, incluyendo datos, imágenes, scripts, etc.</p>
+<p>3.- Se evaluará:
+- Soluciones
+- Código
+- Que Binder esté bien configurado.
+- Al presionar  <code class="docutils literal notranslate"><span class="pre">Kernel</span> <span class="pre">-&gt;</span> <span class="pre">Restart</span> <span class="pre">Kernel</span> <span class="pre">and</span> <span class="pre">Run</span> <span class="pre">All</span> <span class="pre">Cells</span></code> deben ejecutarse todas las celdas sin error.</p>
+</div>
+<div class="section" id="i-imagenception">
+<h2>I.-  Imagenception<a class="headerlink" href="#i-imagenception" title="Permalink to this headline">¶</a></h2>
+<p>Desde <a class="reference external" href="https://es.wikipedia.org/wiki/RGB">Wikipedia</a>, <strong>RGB</strong> (sigla en inglés de red, green, blue) es un modelo de color basado en la síntesis aditiva, con el que es posible representar un color mediante la mezcla por adición de los tres colores de luz primarios. El modelo de color RGB no define por sí mismo lo que significa exactamente rojo, verde o azul, por lo que los mismos valores RGB pueden mostrar colores notablemente diferentes en distintos dispositivos que usen este modelo de color. Aunque utilicen un mismo modelo de color, sus espacios de color pueden variar considerablemente.</p>
+<p>Para indicar con qué proporción es mezclado cada color, se asigna un valor a cada uno de los colores primarios, de manera que el valor “0” significa que no interviene en la mezcla y, a medida que ese valor aumenta, se entiende que aporta más intensidad a la mezcla. Aunque el intervalo de valores podría ser cualquiera (valores reales entre 0 y 1, valores enteros entre 0 y 37, etc.), es frecuente que cada color primario se codifique con un byte (8 bits).</p>
+<p>Así, de manera usual, la intensidad de cada una de las componentes se mide según una escala que va del 0 al 255 y cada color es definido por un conjunto de valores escritos entre paréntesis (correspondientes a valores “R”, “G” y “B”) y separados por comas.</p>
+<p>El conjunto de todos los colores también se puede representar en forma de cubo. Cada color es un punto de la superficie o del interior de éste. La escala de grises estaría situada en la diagonal que une al color blanco con el negro.</p>
+<p><img alt="rgb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Avl3119color4a.svg/800px-Avl3119color4a.svg.png" /></p>
+<p>Para efectos prácticos del curso, es posible representar cada pixel de una imagen con un array de 3 dimensiones, cada valor representa a una de las capas RGB. Por lo tanto, una imagen de <span class="math notranslate nohighlight">\(n \times m\)</span> pixeles se representa como un arreglo de dimension <span class="math notranslate nohighlight">\((n, m , 3)\)</span> En <code class="docutils literal notranslate"><span class="pre">Python</span></code> una de las librerías de procesamiento de imágenes más utilizada es <code class="docutils literal notranslate"><span class="pre">Pillow</span></code>.</p>
+<p>Abrir una imagen es tan fácil como:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># librerias</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gatito</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;images&quot;</span><span class="p">,</span> <span class="s2">&quot;gatito.png&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notar que la variable anterior es de una clase específica de la librería.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">gatito</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PIL.PngImagePlugin.PngImageFile
+</pre></div>
+</div>
+</div>
+</div>
+<p>Para ver la imagen en Jupyter puedes utilizar la misma técnica que con los <code class="docutils literal notranslate"><span class="pre">pd.DataFrames</span></code>, es decir:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gatito</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/hw_01_9_0.png" src="../../_images/hw_01_9_0.png" />
+</div>
+</div>
+<p>Para tener su representación en un array podemos utilizar el constructor <code class="docutils literal notranslate"><span class="pre">np.array</span></code> con argumento la imagen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">gatito_np</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">gatito</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Dimension de la imagen gatito: </span><span class="si">{</span><span class="n">gatito_np</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Al convertir a np.ndarry el tipo de elementos es </span><span class="si">{</span><span class="n">gatito_np</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s2">.</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">gatito_np</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dimension de la imagen gatito: (2160, 1280, 3).
+
+Al convertir a np.ndarry el tipo de elementos es uint8.
+
+[[[179 211 215]
+  [179 211 215]
+  [179 209 215]
+  ...
+  [171 201 209]
+  [171 201 209]
+  [169 199 207]]
+
+ [[181 213 217]
+  [181 213 217]
+  [181 211 217]
+  ...
+  [173 203 211]
+  [173 203 211]
+  [171 201 209]]
+
+ [[179 211 215]
+  [179 211 215]
+  [181 211 217]
+  ...
+  [173 203 211]
+  [173 203 211]
+  [173 203 211]]
+
+ ...
+
+ [[125 179 190]
+  [123 177 188]
+  [129 183 194]
+  ...
+  [ 41  36  33]
+  [ 43  38  35]
+  [ 45  40  37]]
+
+ [[127 181 192]
+  [125 179 190]
+  [127 181 192]
+  ...
+  [ 43  38  37]
+  [ 43  38  37]
+  [ 45  40  37]]
+
+ [[125 179 190]
+  [123 177 188]
+  [123 177 188]
+  ...
+  [ 49  44  43]
+  [ 45  40  37]
+  [ 43  38  35]]]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="encontrando-la-imagen-oculta">
+<h3>1.- Encontrando la imagen oculta<a class="headerlink" href="#encontrando-la-imagen-oculta" title="Permalink to this headline">¶</a></h3>
+<p>La imagen anterior tiene una imagen oculta, el ejercicio corresponde en descifrarlo. Las instrucciones son las siguientes:</p>
+<p>1.1 Crear una lista vacía declarada como <code class="docutils literal notranslate"><span class="pre">secret_list</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">secret_list</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-6-5b6bba2dd86a&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">secret_list</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+                  <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>1.2 Iterar por cada uno de los canales RGB (<code class="docutils literal notranslate"><span class="pre">gatito_np.shape[2]</span></code>) y en cada iteración:</p>
+<ul class="simple">
+<li><p>Crear un arreglo temporal llamado <code class="docutils literal notranslate"><span class="pre">secret_aux</span></code> de dos dimensiones, de la misma dimension de pixeles de la imagen <code class="docutils literal notranslate"><span class="pre">gatito</span></code> y que tenga valores enteros, <code class="docutils literal notranslate"><span class="pre">0</span></code> si el valor de la capa de <code class="docutils literal notranslate"><span class="pre">gatito_np</span></code> es par y <code class="docutils literal notranslate"><span class="pre">1</span></code> si es impar.</p></li>
+</ul>
+<ul class="simple">
+<li><p>No iterar por filas y columnas.</p></li>
+<li><p>Utilizar la operación módulo <code class="docutils literal notranslate"><span class="pre">%</span></code>.</p></li>
+<li><p>En la i-ésima iteración de los canales la capa de <code class="docutils literal notranslate"><span class="pre">gatito_np</span></code> es <code class="docutils literal notranslate"><span class="pre">gatito_np[:,</span> <span class="pre">:,</span> <span class="pre">i]</span></code>.</p></li>
+</ul>
+<ul class="simple">
+<li><p>Escalar <code class="docutils literal notranslate"><span class="pre">secret_aux</span></code> a valores 0 y 255.</p></li>
+<li><p>Cambiar el <code class="docutils literal notranslate"><span class="pre">dtype</span></code> de <code class="docutils literal notranslate"><span class="pre">secret_aux</span></code> a <code class="docutils literal notranslate"><span class="pre">np.uint8</span></code> (utilize el méteodo <code class="docutils literal notranslate"><span class="pre">astype()</span></code>).</p></li>
+<li><p>Agregue <code class="docutils literal notranslate"><span class="pre">secret_aux</span></code> a <code class="docutils literal notranslate"><span class="pre">secret_list</span></code>.</p></li>
+</ul>
+<p>Al final de la iteración <code class="docutils literal notranslate"><span class="pre">secret_list</span></code> debe tener solo tres arreglos.</p>
+<p><strong>Observación:</strong> recuerde que puede aplicar operaciones directo a un arreglo de numpy.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="c1">## FIX ME ##:</span>
+    <span class="n">secret_aux</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+    <span class="n">secret_aux</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+    <span class="n">secret_aux</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+    <span class="n">secret_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">secret_aux</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-7-c2aec0597da4&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="c1">## FIX ME ##:</span>
+                   <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;secret_list tiene </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">secret_list</span><span class="p">)</span><span class="si">}</span><span class="s2"> elementos&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">2865</span><span class="n">b8b24590</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;secret_list tiene </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">secret_list</span><span class="p">)</span><span class="si">}</span><span class="s2"> elementos&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;secret_list&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>1.3 Crear la variable <code class="docutils literal notranslate"><span class="pre">secret_np</span></code> concatenando horizontalmente los elementos de <code class="docutils literal notranslate"><span class="pre">secret_list</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">secret_np</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+<span class="n">secret_np</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-9-b4ffc9d6f7e9&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">secret_np</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+                <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>1.4 Crear el objeto <code class="docutils literal notranslate"><span class="pre">secret_img</span></code> utilizando el arreglo <code class="docutils literal notranslate"><span class="pre">secret_np</span></code>, asegurar que los valores estén entre 0 y 255, y que el dtype sea <code class="docutils literal notranslate"><span class="pre">np.uint8</span></code>, con el método <code class="docutils literal notranslate"><span class="pre">Image.fromarray</span></code> con argumento <code class="docutils literal notranslate"><span class="pre">mode=&quot;L&quot;</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">secret_np</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">10</span><span class="o">-</span><span class="n">bbb256e2b901</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">secret_np</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;secret_np&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">secret_np</span><span class="o">.</span><span class="n">dtype</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">11</span><span class="o">-</span><span class="n">b425d1629790</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">secret_np</span><span class="o">.</span><span class="n">dtype</span>
+
+<span class="ne">NameError</span>: name &#39;secret_np&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">secret_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-12-d52c936ea456&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">secret_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+                                              <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unexpected EOF while parsing
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ahora puedes ver el resultado!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">secret_img</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">13</span><span class="o">-</span><span class="mi">1606</span><span class="n">c48a6609</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">secret_img</span>
+
+<span class="ne">NameError</span>: name &#39;secret_img&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="escondiendo-una-nueva-imagen">
+<h3>2.- Escondiendo una nueva imagen<a class="headerlink" href="#escondiendo-una-nueva-imagen" title="Permalink to this headline">¶</a></h3>
+<p>Es tu turno, ahora tu esconderás una imagen. Las instrucciones son las siguientes:</p>
+<p>2.1 Selecciona una imagen de 2160 x 3840 pixeles (a.k.a resolución 4k), lo importante es que sea solo en blanco y negro, en la carpeta <code class="docutils literal notranslate"><span class="pre">images</span></code> se disponibiliza como ejemplo la imagen <code class="docutils literal notranslate"><span class="pre">black_and_white_example.jpg</span></code> y crea una variable llamada <code class="docutils literal notranslate"><span class="pre">my_img</span></code> leyendo la imagen seleccionada con <code class="docutils literal notranslate"><span class="pre">Image.open()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-14-4efbb1b879a6&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">my_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+                                     <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unexpected EOF while parsing
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.2 Crea un arreglo llamado <code class="docutils literal notranslate"><span class="pre">my_img_np</span></code> utilizando <code class="docutils literal notranslate"><span class="pre">my_img</span></code> y el método <code class="docutils literal notranslate"><span class="pre">np.array()</span></code>.
+* Es importante que <code class="docutils literal notranslate"><span class="pre">my_img_np.shape</span></code> sea <code class="docutils literal notranslate"><span class="pre">(2160,</span> <span class="pre">3840)</span></code>, es decir, que solo sea de dos dimensiones. Esto porque es una imagen en blanco y negro, no necesitando el modelo RGB.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_img_np</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_img_np</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-15-d45491d63116&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">my_img_np</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+                <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.3 Crear la variable <code class="docutils literal notranslate"><span class="pre">my_img_np_aux</span></code> utilizando un <em>umbral</em> con tal de que:
+- 1: Si el valor del pixel es mayor  al <em>umbral</em>.
+- 0: Si el valor del pixel es menor o igual al <em>umbral</em>.
+- El <code class="docutils literal notranslate"><span class="pre">dtype</span></code> debe ser <code class="docutils literal notranslate"><span class="pre">np.uint8</span></code>.
+- Para <code class="docutils literal notranslate"><span class="pre">black_and_white_example.jpg</span></code> un umbral adecuado es <code class="docutils literal notranslate"><span class="pre">20</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">umbral</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">my_img_np_aux</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-16-218a8ef2ed4a&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="n">my_img_np_aux</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+                    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>Puedes probar que tan bien quedó la imagen con la siguiente linea. Si crees que no se ve bien, puedes cambiar el <em>umbral</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">my_img_np_aux</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">17</span><span class="o">-</span><span class="n">badd23faf767</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">my_img_np_aux</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;my_img_np_aux&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.4 Dividir la imagen en tres arreglos de tamaño (2160, 1280) y guardarlos en una lista con el nombre <code class="docutils literal notranslate"><span class="pre">my_img_split</span></code>. Hint: Revisa en la documentación de <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_img_split</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-18-32501510ca79&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">my_img_split</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+                   <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>Revisa utilizando la siguiente iteración.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">img_array</span> <span class="ow">in</span> <span class="n">my_img_split</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">img_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">19</span><span class="o">-</span><span class="mi">9</span><span class="n">ca9769ba52e</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">for</span> <span class="n">img_array</span> <span class="ow">in</span> <span class="n">my_img_split</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="nb">print</span><span class="p">(</span><span class="n">img_array</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;my_img_split&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.5 La imagen donde se esconderá tu imagen selecionada está en la carpeta <code class="docutils literal notranslate"><span class="pre">images</span></code> con el nombre <code class="docutils literal notranslate"><span class="pre">gatito_original.png</span></code>, que sospechosamente es de 2160 x 1280 pixeles. Carga la imagen en la variable <code class="docutils literal notranslate"><span class="pre">cat</span></code> y luego crea arreglo <code class="docutils literal notranslate"><span class="pre">cat_np</span></code> utilizando <code class="docutils literal notranslate"><span class="pre">cat</span></code>. Verifica que <code class="docutils literal notranslate"><span class="pre">cat_np.shape</span> <span class="pre">=</span> <span class="pre">(2160,</span> <span class="pre">1280,</span> <span class="pre">3)</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+<span class="n">cat_np</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">cat_np</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-20-dd84e50525cd&gt;&quot;</span><span class="gt">, line </span><span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cat_np</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+                       <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unexpected EOF while parsing
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.6 Convierte todos los valores de <code class="docutils literal notranslate"><span class="pre">cat_np</span></code> a valores pares. Esto lo puedes hacer sumando 1 a cada valor de arreglo si es impar</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat_np</span> <span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">21</span><span class="o">-</span><span class="mi">2179680</span><span class="n">b1e4d</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">cat_np</span> <span class="c1">## FIX ME ##</span>
+
+<span class="ne">NameError</span>: name &#39;cat_np&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.7 Itera por canal RGB de <code class="docutils literal notranslate"><span class="pre">cat_np</span></code> y en cada capa suma los valores de uno de los arreglos de <code class="docutils literal notranslate"><span class="pre">my_img_split</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="c1">## FIX ME ##:</span>
+    <span class="n">cat_np</span><span class="p">[</span><span class="c1">## FIX ME ##] += ## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-22-c3b2afec1430&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="c1">## FIX ME ##:</span>
+                   <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.8 Crea una variable llamada <code class="docutils literal notranslate"><span class="pre">cat_secret_im</span></code> con <code class="docutils literal notranslate"><span class="pre">Image.fromarray</span></code> y la variable <code class="docutils literal notranslate"><span class="pre">cat_np</span></code> (que ya ha sido modificada). Luego guarda la imagen en la carpeta <code class="docutils literal notranslate"><span class="pre">images</span></code> con el nombre <code class="docutils literal notranslate"><span class="pre">my_secret.png</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cat_secret_im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+<span class="n">cat_secret_im</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-23-bf7302cd7e05&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="n">cat_secret_im</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+                                    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unexpected EOF while parsing
+</pre></div>
+</div>
+</div>
+</div>
+<p>2.9 Crea una función llamada <code class="docutils literal notranslate"><span class="pre">imagenception()</span></code> que como argumento tenga la ruta de la imagen que quieres descifrar y que descifre la imagen secreta recientemente creada. Hint: Utiliza todos los pasos de la primera parte.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">imagenception</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+   <span class="c1">## FIX ME ##</span>
+    <span class="k">return</span> <span class="n">secret_img</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_secret_img</span> <span class="o">=</span> <span class="n">imagenception</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;images&quot;</span><span class="p">,</span> <span class="s2">&quot;my_secret.png&quot;</span><span class="p">))</span>
+<span class="n">my_secret_img</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">25</span><span class="o">-</span><span class="mi">9556</span><span class="n">f88bde72</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">my_secret_img</span> <span class="o">=</span> <span class="n">imagenception</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;images&quot;</span><span class="p">,</span> <span class="s2">&quot;my_secret.png&quot;</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">my_secret_img</span>
+
+<span class="nn">&lt;ipython-input-24-07129585a431&gt;</span> in <span class="ni">imagenception</span><span class="nt">(filepath)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">imagenception</span><span class="p">(</span><span class="n">filepath</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>    <span class="c1">## FIX ME ##</span>
+<span class="ne">----&gt; </span><span class="mi">3</span>     <span class="k">return</span> <span class="n">secret_img</span>
+
+<span class="ne">NameError</span>: name &#39;secret_img&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="ii-analizando-la-felicidad">
+<h2>II.- Analizando la Felicidad<a class="headerlink" href="#ii-analizando-la-felicidad" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="https://static01.nyt.com/images/2019/09/29/opinion/sunday/29HolsonStill/29HolsonStill-popup.jpg"><img alt="https://static01.nyt.com/images/2019/09/29/opinion/sunday/29HolsonStill/29HolsonStill-popup.jpg" class="align-center" src="https://static01.nyt.com/images/2019/09/29/opinion/sunday/29HolsonStill/29HolsonStill-popup.jpg" style="width: 480px; height: 360px;" /></a>
+<p>Este ejercicio es netamente análisis de datos, tratando de abarcar problemas típicos como la lectura de datos, corrección de errores, métricas agrupadas, unión de datos, etc. Utilizaremos un conjunto de datos llamado <strong>World Happiness Report</strong> disponible en el siguiente <a class="reference external" href="https://www.kaggle.com/unsdsn/world-happiness">link</a>, de donde se puede obtener información al respecto.</p>
+<div class="section" id="context">
+<h3>Context<a class="headerlink" href="#context" title="Permalink to this headline">¶</a></h3>
+<p>The World Happiness Report is a landmark survey of the state of global happiness. The first report was published in 2012, the second in 2013, the third in 2015, and the fourth in the 2016 Update. The World Happiness 2017, which ranks 155 countries by their happiness levels, was released at the United Nations at an event celebrating International Day of Happiness on March 20th. The report continues to gain global recognition as governments, organizations and civil society increasingly use happiness indicators to inform their policy-making decisions. Leading experts across fields – economics, psychology, survey analysis, national statistics, health, public policy and more – describe how measurements of well-being can be used effectively to assess the progress of nations. The reports review the state of happiness in the world today and show how the new science of happiness explains personal and national variations in happiness.</p>
+</div>
+<div class="section" id="content">
+<h3>Content<a class="headerlink" href="#content" title="Permalink to this headline">¶</a></h3>
+<p>The happiness scores and rankings use data from the Gallup World Poll. The scores are based on answers to the main life evaluation question asked in the poll. This question, known as the Cantril ladder, asks respondents to think of a ladder with the best possible life for them being a 10 and the worst possible life being a 0 and to rate their own current lives on that scale. The scores are from nationally representative samples for the years 2013-2016 and use the Gallup weights to make the estimates representative. The columns following the happiness score estimate the extent to which each of six factors – economic production, social support, life expectancy, freedom, absence of corruption, and generosity – contribute to making life evaluations higher in each country than they are in Dystopia, a hypothetical country that has values equal to the world’s lowest national averages for each of the six factors. They have no impact on the total score reported for each country, but they do explain why some countries rank higher than others.</p>
+</div>
+<div class="section" id="lectura-de-datos">
+<h3>2.1 Lectura de datos<a class="headerlink" href="#lectura-de-datos" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># libraries</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s2">&quot;display.max_columns&quot;</span><span class="p">,</span> <span class="mi">999</span><span class="p">)</span>  <span class="c1"># Permite mostrar hasta 999 columnas de un DataFrame en Jupyter.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>En la carpeta <code class="docutils literal notranslate"><span class="pre">data/world-happiness</span></code> se disponen de tres archivos, uno por cada reporte anual (años 2015, 2016 y 2017). No es de sorprender que envíen un archivo por año (podría ser mensual, semestral, etc.), lo imortante es ser capaces de leer una cantidad <strong>variable</strong> de archivos al mismo tiempo. Una buena práctica es crear un diccionario de dataframes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Comprehension dictionary</span>
+<span class="n">df_dict</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">year</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;world-happiness&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">year</span><span class="si">}</span><span class="s2">.csv&quot;</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">year</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2015</span><span class="p">,</span> <span class="mi">2016</span><span class="p">,</span> <span class="mi">2017</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Por ejemplo, se puede acceder al DataFrame asociado al archivo <code class="docutils literal notranslate"><span class="pre">data/world-happiness/2016.csv</span></code> de la siguiente manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_dict</span><span class="p">[</span><span class="mi">2016</span><span class="p">]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Country</th>
+      <th>Region</th>
+      <th>Happiness Rank</th>
+      <th>Happiness Score</th>
+      <th>Lower Confidence Interval</th>
+      <th>Upper Confidence Interval</th>
+      <th>Economy (GDP per Capita)</th>
+      <th>Family</th>
+      <th>Health (Life Expectancy)</th>
+      <th>Freedom</th>
+      <th>Trust (Government Corruption)</th>
+      <th>Generosity</th>
+      <th>Dystopia Residual</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Denmark</td>
+      <td>Western Europe</td>
+      <td>1</td>
+      <td>7.526</td>
+      <td>7.460</td>
+      <td>7.592</td>
+      <td>1.44178</td>
+      <td>1.16374</td>
+      <td>0.79504</td>
+      <td>0.57941</td>
+      <td>0.44453</td>
+      <td>0.36171</td>
+      <td>2.73939</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Switzerland</td>
+      <td>Western Europe</td>
+      <td>2</td>
+      <td>7.509</td>
+      <td>7.428</td>
+      <td>7.590</td>
+      <td>1.52733</td>
+      <td>1.14524</td>
+      <td>0.86303</td>
+      <td>0.58557</td>
+      <td>0.41203</td>
+      <td>0.28083</td>
+      <td>2.69463</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Iceland</td>
+      <td>Western Europe</td>
+      <td>3</td>
+      <td>7.501</td>
+      <td>7.333</td>
+      <td>7.669</td>
+      <td>1.42666</td>
+      <td>1.18326</td>
+      <td>0.86733</td>
+      <td>0.56624</td>
+      <td>0.14975</td>
+      <td>0.47678</td>
+      <td>2.83137</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Norway</td>
+      <td>Western Europe</td>
+      <td>4</td>
+      <td>7.498</td>
+      <td>7.421</td>
+      <td>7.575</td>
+      <td>1.57744</td>
+      <td>1.12690</td>
+      <td>0.79579</td>
+      <td>0.59609</td>
+      <td>0.35776</td>
+      <td>0.37895</td>
+      <td>2.66465</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Finland</td>
+      <td>Western Europe</td>
+      <td>5</td>
+      <td>7.413</td>
+      <td>7.351</td>
+      <td>7.475</td>
+      <td>1.40598</td>
+      <td>1.13464</td>
+      <td>0.81091</td>
+      <td>0.57104</td>
+      <td>0.41004</td>
+      <td>0.25492</td>
+      <td>2.82596</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Una pequeña descripción de las columnas</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Country</span></code> Name of the country.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Region</span></code> Region the country belongs to.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Happiness</span> <span class="pre">Rank</span></code> Rank of the country based on the Happiness Score.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Happiness</span> <span class="pre">Score</span></code> A metric measured in 2015 by asking the sampled people the question: “How would you rate your happiness on a scale of 0 to 10 where 10 is the happiest.”</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Standard</span> <span class="pre">Error</span></code> The standard error of the happiness score.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Economy</span> <span class="pre">(GDP</span> <span class="pre">per</span> <span class="pre">Capita)</span></code> The extent to which GDP contributes to the calculation of the Happiness Score.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Family</span></code> The extent to which Family contributes to the calculation of the Happiness Score</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Health</span> <span class="pre">(Life</span> <span class="pre">Expectancy)</span></code> The extent to which Life expectancy contributed to the calculation of the Happiness Score</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Freedom</span></code> The extent to which Freedom contributed to the calculation of the Happiness Score.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Trust</span> <span class="pre">(Government</span> <span class="pre">Corruption)</span></code> The extent to which Perception of Corruption contributes to Happiness Score.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Generosity</span></code> The extent to which Generosity contributed to the calculation of the Happiness Score.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Dystopia</span> <span class="pre">Residual</span></code> The extent to which Dystopia Residual contributed to the calculation of the Happiness Score.</p></li>
+</ul>
+<p>Notar que los conjuntos de datos no poseen las mismas columnas, por lo tanto, solo se trabajarán con las columnas en común y posteriormente agregaremos el año con tal de concatenar los tres conjuntos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">reduce</span>
+<span class="n">intersection_columns</span> <span class="o">=</span> <span class="n">reduce</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">intersect1d</span><span class="p">,</span> <span class="p">[</span><span class="n">df_i</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">values</span> <span class="k">for</span> <span class="n">df_i</span> <span class="ow">in</span> <span class="n">df_dict</span><span class="o">.</span><span class="n">values</span><span class="p">()])</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;Year&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">intersection_columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;Country&#39;, &#39;Dystopia Residual&#39;, &#39;Economy (GDP per Capita)&#39;, &#39;Family&#39;, &#39;Freedom&#39;, &#39;Generosity&#39;, &#39;Happiness Rank&#39;, &#39;Happiness Score&#39;, &#39;Health (Life Expectancy)&#39;, &#39;Trust (Government Corruption)&#39;, &#39;Year&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Explica con tus palabras las operaciones que se realizaron para obtener la variable <code class="docutils literal notranslate"><span class="pre">intersection_columns</span></code>.</p>
+<p><strong>Respuesta:</strong>  &lt; RESPONDER AQUÍ &gt;</p>
+</div>
+<div class="section" id="concatenacion-y-procesado">
+<h3>2.2 Concatenación y procesado<a class="headerlink" href="#concatenacion-y-procesado" title="Permalink to this headline">¶</a></h3>
+<p>Define el DataFrame <code class="docutils literal notranslate"><span class="pre">happiness</span></code> tal que:</p>
+<ul class="simple">
+<li><p>Sea la concatenación de los dataframes de <code class="docutils literal notranslate"><span class="pre">df_dict</span></code></p>
+<ul>
+<li><p>Nota que en la documentación de <code class="docutils literal notranslate"><span class="pre">pd.concat</span></code> puedes entregar como argumento directamente un diccionario.</p></li>
+<li><p>No ordenes los <em>axis</em> (ver documentación).</p></li>
+<li><p>Los nombres de los <em>levels</em> para los multi-index resultante deben ser <code class="docutils literal notranslate"><span class="pre">[&quot;Year&quot;,</span> <span class="pre">&quot;drop_me&quot;]</span></code>.</p></li>
+</ul>
+</li>
+<li><p>Aplica el método <code class="docutils literal notranslate"><span class="pre">drop_level</span></code> con tal de eliminar el nivel del multi-index llamado <code class="docutils literal notranslate"><span class="pre">drop_me</span></code>.</p></li>
+<li><p>Resetea los índices.</p></li>
+<li><p>Selecciona solo las columnas de la lista <code class="docutils literal notranslate"><span class="pre">intersection_columns</span></code>.</p></li>
+<li><p>Los nombres de las columnas deben estar en minísculas, reemplazar espacios por guiones bajos (<code class="docutils literal notranslate"><span class="pre">_</span></code>) y elimina los paréntesis.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">happiness</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+    <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+    <span class="o">.</span><span class="c1">## FIX ME ##</span>
+    <span class="o">.</span><span class="c1">## FIX ME ##</span>
+    <span class="o">.</span><span class="c1">## FIX ME ##</span>
+<span class="p">)</span>
+<span class="n">happiness</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-30-47cd6d0094ac&gt;&quot;</span><span class="gt">, line </span><span class="mi">3</span>
+    <span class="o">.</span><span class="n">droplevel</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="analisis">
+<h3>2.3 Análisis<a class="headerlink" href="#analisis" title="Permalink to this headline">¶</a></h3>
+<p>Como siempre, partimos con un análisis descriptivo simple.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">happiness</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">31</span><span class="o">-</span><span class="mi">4</span><span class="n">dd266b16f95</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">happiness</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+
+<span class="ne">NameError</span>: name &#39;happiness&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>¿Cuántos países no tienen mediciones de felicidad en los tres años del estudio? ¿Cuáles son?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Respuesta:</strong>  &lt; RESPONDER AQUÍ &gt;</p>
+<p>Note que la lista de países proveniente de la pregunta anterior tiene errores de consistencia, por ejemplo están los registros de <code class="docutils literal notranslate"><span class="pre">Hong</span> <span class="pre">Kong</span></code> y <code class="docutils literal notranslate"><span class="pre">Hong</span> <span class="pre">Kong</span> <span class="pre">S.A.R.,</span> <span class="pre">China</span></code> que escencialmente son el mismo. Lo mismo ocurre con <code class="docutils literal notranslate"><span class="pre">Taiwan</span></code> y <code class="docutils literal notranslate"><span class="pre">Somaliland</span> <span class="pre">Region</span></code>.</p>
+<p>Modifique la columna <code class="docutils literal notranslate"><span class="pre">country</span></code> del dataframe <code class="docutils literal notranslate"><span class="pre">happiness</span></code> con tal de reparar los errores de <code class="docutils literal notranslate"><span class="pre">Hong</span> <span class="pre">Kong</span></code>, <code class="docutils literal notranslate"><span class="pre">Taiwan</span></code> y <code class="docutils literal notranslate"><span class="pre">Somaliland</span> <span class="pre">Region</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bad_country_names_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Hong Kong S.A.R., China&quot;</span><span class="p">:</span> <span class="s2">&quot;Hong Kong&quot;</span><span class="p">,</span> <span class="c1">## FIX ME ##}</span>
+<span class="n">happiness</span> <span class="o">=</span> <span class="n">happiness</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-34-333accfafbfd&gt;&quot;</span><span class="gt">, line </span><span class="mi">2</span>
+    <span class="n">happiness</span> <span class="o">=</span> <span class="n">happiness</span><span class="o">.</span><span class="n">assign</span><span class="p">(</span><span class="c1">## FIX ME ##)</span>
+              <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>Luego de la modificación, ¿Cuántos países no tienen mediciones en los tres años de estudio?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Respuesta:</strong>  &lt; RESPONDER AQUÍ &gt;</p>
+<p>Pivotea el dataframe <code class="docutils literal notranslate"><span class="pre">happines</span></code> tal que los índices sean los años, las columnas los países y el valor su <code class="docutils literal notranslate"><span class="pre">happiness_score</span></code>. LLena los valores nulos con un <em>string</em> vacío <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>. Un país no puede tener más de un registro por año, por lo que puedes utilizar directamente el médoto <code class="docutils literal notranslate"><span class="pre">pd.DataFrame.pivot()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>¿Qué información podrías sacar rápidamente de esta tabla pivoteada? ¿Podrías decir que siempre es útil pivotear una tabla?</p>
+<p><strong>Respuesta:</strong>  &lt; RESPONDER AQUÍ &gt;</p>
+<p>En promedio, ¿Cuáles son los tres países con el mejor ranking de felicidad?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Respuesta:</strong>  &lt; RESPONDER AQUÍ &gt;</p>
+<p>En promedio, ¿Cuáles son los tres países con el mayor <em>score</em> de felicidad? ¿Son distintos a los con mejor ranking en promedio?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Respuesta:</strong>  &lt; RESPONDER AQUÍ &gt;</p>
+<p>Calcula el promedio anual de todas las columnas factores de felicidad, es decir, todas las variables numéricas excepto <code class="docutils literal notranslate"><span class="pre">happiness_score</span></code> y <code class="docutils literal notranslate"><span class="pre">happiness_rank</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hap_mean_factors</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+<span class="n">hap_mean_factors</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-39-eceacdb6551a&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">hap_mean_factors</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+                       <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>Respecto al cálculo anterior, para cada uno de los años, ¿Cuál es el factor que más contribuye (en promedio) al <em>score</em> de la felicidad y en qué medida?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Resuesta:</strong></p>
+<ul class="simple">
+<li><p>2015:  &lt; RESPONDER AQUÍ &gt;</p></li>
+<li><p>2016:  &lt; RESPONDER AQUÍ &gt;</p></li>
+<li><p>2017:  &lt; RESPONDER AQUÍ &gt;</p></li>
+</ul>
+</div>
+<div class="section" id="agregando-mas-datos">
+<h3>2.4 Agregando más datos<a class="headerlink" href="#agregando-mas-datos" title="Permalink to this headline">¶</a></h3>
+<p>A continuación, agregaremos un nuevo conjunto de datos, el que contiene estadísticas de suicidio por años, países y rangos etáreos. Se encuentra disponible en el siguiente <a class="reference external" href="https://www.kaggle.com/russellyates88/suicide-rates-overview-1985-to-2016">link</a>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suicide</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;suicide_rates.csv&quot;</span><span class="p">))</span>
+<span class="n">suicide</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>country</th>
+      <th>year</th>
+      <th>sex</th>
+      <th>age</th>
+      <th>suicides_no</th>
+      <th>population</th>
+      <th>suicides/100k pop</th>
+      <th>country-year</th>
+      <th>HDI for year</th>
+      <th>gdp_for_year ($)</th>
+      <th>gdp_per_capita ($)</th>
+      <th>generation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Albania</td>
+      <td>1987</td>
+      <td>male</td>
+      <td>15-24 years</td>
+      <td>21</td>
+      <td>312900</td>
+      <td>6.71</td>
+      <td>Albania1987</td>
+      <td>NaN</td>
+      <td>2,156,624,900</td>
+      <td>796</td>
+      <td>Generation X</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Albania</td>
+      <td>1987</td>
+      <td>male</td>
+      <td>35-54 years</td>
+      <td>16</td>
+      <td>308000</td>
+      <td>5.19</td>
+      <td>Albania1987</td>
+      <td>NaN</td>
+      <td>2,156,624,900</td>
+      <td>796</td>
+      <td>Silent</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Albania</td>
+      <td>1987</td>
+      <td>female</td>
+      <td>15-24 years</td>
+      <td>14</td>
+      <td>289700</td>
+      <td>4.83</td>
+      <td>Albania1987</td>
+      <td>NaN</td>
+      <td>2,156,624,900</td>
+      <td>796</td>
+      <td>Generation X</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Albania</td>
+      <td>1987</td>
+      <td>male</td>
+      <td>75+ years</td>
+      <td>1</td>
+      <td>21800</td>
+      <td>4.59</td>
+      <td>Albania1987</td>
+      <td>NaN</td>
+      <td>2,156,624,900</td>
+      <td>796</td>
+      <td>G.I. Generation</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Albania</td>
+      <td>1987</td>
+      <td>male</td>
+      <td>25-34 years</td>
+      <td>9</td>
+      <td>274300</td>
+      <td>3.28</td>
+      <td>Albania1987</td>
+      <td>NaN</td>
+      <td>2,156,624,900</td>
+      <td>796</td>
+      <td>Boomers</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>La mayoría de las columnas son autoexplicativas.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">country</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">year</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">sex</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">age</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">suicides_no</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">population</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">suicides/100k</span> <span class="pre">pop</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">country-year</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">HDI</span> <span class="pre">for</span> <span class="pre">year</span></code> Human Development Index</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gdp_for_year</span> <span class="pre">($)</span></code> Gross Domestic Product</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gdp_per_capita</span> <span class="pre">($)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">generation</span></code> based on age grouping average</p></li>
+</ul>
+<p>Un poco de estadística descriptiva.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suicide</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+      <th>unique</th>
+      <th>top</th>
+      <th>freq</th>
+      <th>mean</th>
+      <th>std</th>
+      <th>min</th>
+      <th>25%</th>
+      <th>50%</th>
+      <th>75%</th>
+      <th>max</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>country</th>
+      <td>27820</td>
+      <td>101</td>
+      <td>Netherlands</td>
+      <td>382</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>year</th>
+      <td>27820.0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>2001.258375</td>
+      <td>8.469055</td>
+      <td>1985.0</td>
+      <td>1995.0</td>
+      <td>2002.0</td>
+      <td>2008.0</td>
+      <td>2016.0</td>
+    </tr>
+    <tr>
+      <th>sex</th>
+      <td>27820</td>
+      <td>2</td>
+      <td>female</td>
+      <td>13910</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>age</th>
+      <td>27820</td>
+      <td>6</td>
+      <td>25-34 years</td>
+      <td>4642</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>suicides_no</th>
+      <td>27820.0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>242.574407</td>
+      <td>902.047917</td>
+      <td>0.0</td>
+      <td>3.0</td>
+      <td>25.0</td>
+      <td>131.0</td>
+      <td>22338.0</td>
+    </tr>
+    <tr>
+      <th>population</th>
+      <td>27820.0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>1844793.617398</td>
+      <td>3911779.441756</td>
+      <td>278.0</td>
+      <td>97498.5</td>
+      <td>430150.0</td>
+      <td>1486143.25</td>
+      <td>43805214.0</td>
+    </tr>
+    <tr>
+      <th>suicides/100k pop</th>
+      <td>27820.0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>12.816097</td>
+      <td>18.961511</td>
+      <td>0.0</td>
+      <td>0.92</td>
+      <td>5.99</td>
+      <td>16.62</td>
+      <td>224.97</td>
+    </tr>
+    <tr>
+      <th>country-year</th>
+      <td>27820</td>
+      <td>2321</td>
+      <td>Australia2012</td>
+      <td>12</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>HDI for year</th>
+      <td>8364.0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>0.776601</td>
+      <td>0.093367</td>
+      <td>0.483</td>
+      <td>0.713</td>
+      <td>0.779</td>
+      <td>0.855</td>
+      <td>0.944</td>
+    </tr>
+    <tr>
+      <th>gdp_for_year ($)</th>
+      <td>27820</td>
+      <td>2321</td>
+      <td>652,825,364,726</td>
+      <td>12</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    <tr>
+      <th>gdp_per_capita ($)</th>
+      <td>27820.0</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>16866.464414</td>
+      <td>18887.576472</td>
+      <td>251.0</td>
+      <td>3447.0</td>
+      <td>9372.0</td>
+      <td>24874.0</td>
+      <td>126352.0</td>
+    </tr>
+    <tr>
+      <th>generation</th>
+      <td>27820</td>
+      <td>6</td>
+      <td>Generation X</td>
+      <td>6408</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Crea un nuevo DataFrame llamado suicide_agg siguiendo las siguientes instrucciones:</p>
+<ul class="simple">
+<li><p>Agrupa por país y año.</p></li>
+<li><p>Suma la población y el número de suicidios.</p></li>
+<li><p>Resetea los índices.</p></li>
+<li><p>Agrega una nueva columna llamada <code class="docutils literal notranslate"><span class="pre">suicides_ratio_100k</span></code> formada por la división de <code class="docutils literal notranslate"><span class="pre">suicides_no</span></code> y <code class="docutils literal notranslate"><span class="pre">population</span></code>, para posteriormente muliplicarla por 100,000.</p></li>
+<li><p>Agrega una nuevale columna llamada <code class="docutils literal notranslate"><span class="pre">suicides_rank</span></code> similar a <code class="docutils literal notranslate"><span class="pre">happiness_rank</span></code>, es decir, que asigne un orden <strong>por año</strong> a cada país según la columna <code class="docutils literal notranslate"><span class="pre">suicides_ratio_100k</span></code> tal que el rank 1 corresponda al que tenga mayor <code class="docutils literal notranslate"><span class="pre">suicides_ratio_100k</span></code>. Hint: Usa el método <code class="docutils literal notranslate"><span class="pre">rank()</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Es posible hacer todas las operaciones encadenadas!</span>
+<span class="n">suicides_agg</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">suicide</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="c1">## FIX ME ##])</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+      <span class="c1">## FIX ME ##</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="c1">## FIX ME ##</span>
+    <span class="o">.</span><span class="n">assign</span><span class="p">(</span>
+        <span class="n">suicides_ratio_100k</span><span class="o">=</span><span class="c1">## FIX ME ##,</span>
+        <span class="n">suicides_rank</span><span class="o">=</span><span class="c1">## FIX ME ##</span>
+    <span class="p">)</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-43-24e854ff79f5&gt;&quot;</span><span class="gt">, line </span><span class="mi">4</span>
+    <span class="o">.</span><span class="n">agg</span><span class="p">(</span>
+    <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>Crea un nuevo DataFrame con el nombre <code class="docutils literal notranslate"><span class="pre">hap_sui</span></code> al unir <code class="docutils literal notranslate"><span class="pre">happiness</span></code> y <code class="docutils literal notranslate"><span class="pre">suicides_agg</span></code> tal que coincidan país y año, quédate con solo los registros que coincidan en ambas DataFrames.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hap_sui</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+<span class="n">hap_sui</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-44-a021e7e34e9f&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">hap_sui</span> <span class="o">=</span> <span class="c1">## FIX ME ##</span>
+              <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p>¿Qué tipo de correlación lineal hay entre las variables <code class="docutils literal notranslate"><span class="pre">happiness_rank</span></code> y <code class="docutils literal notranslate"><span class="pre">suicides_rank</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hap_sui</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s2">&quot;happiness_rank&quot;</span><span class="p">,</span> <span class="s2">&quot;suicides_rank&quot;</span><span class="p">]]</span><span class="o">.</span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-45-488132856d10&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">hap_sui</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="p">[</span><span class="s2">&quot;happiness_rank&quot;</span><span class="p">,</span> <span class="s2">&quot;suicides_rank&quot;</span><span class="p">]]</span><span class="o">.</span><span class="c1">## FIX ME ##</span>
+                                                        <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Respuesta:</strong>  &lt; RESPONDER AQUÍ &gt;</p>
+<p>¿Qué tipo de correlación lineal hay entre las variables <code class="docutils literal notranslate"><span class="pre">happiness_rank</span></code> y <code class="docutils literal notranslate"><span class="pre">suicides_rank</span></code> por cada año?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Respuesta:</strong>  &lt; RESPONDER AQUÍ &gt;</p>
+<p>¿La respuesta de las dos preguntas anteriores cambia si se utilizan las variables <code class="docutils literal notranslate"><span class="pre">happiness_score</span></code> y <code class="docutils literal notranslate"><span class="pre">suicides_ratio_100k</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## FIX ME ##</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="iii-learnplatform">
+<h3>III.- LearnPlatform<a class="headerlink" href="#iii-learnplatform" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="https://iltpp.org/wp-content/uploads/2020/11/LearnPlatform.png"><img alt="https://iltpp.org/wp-content/uploads/2020/11/LearnPlatform.png" class="align-center" src="https://iltpp.org/wp-content/uploads/2020/11/LearnPlatform.png" style="width: 480px; height: 360px;" /></a>
+</div>
+<div class="section" id="introduccion">
+<h3>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h3>
+<p>Nelson Mandela creía que la educación era el arma más poderosa para cambiar el mundo. Pero no todos los estudiantes tienen las mismas oportunidades de aprender. Es necesario promulgar políticas y planes efectivos para que la educación sea más equitativa, y tal vez su innovador análisis de datos ayude a revelar la solución.</p>
+<p>La investigación actual muestra que los resultados educativos están lejos de ser equitativos. El desequilibrio se vio agravado por la pandemia de COVID-19. Existe una necesidad urgente de comprender y medir mejor el alcance y el impacto de la pandemia en estas inequidades.</p>
+<p>La empresa de tecnología educativa LearnPlatform se fundó en 2014 con la misión de ampliar el acceso equitativo a la tecnología educativa para todos los estudiantes y profesores. Los distritos y estados utilizan el sistema integral de efectividad de la tecnología educativa de LearnPlatform para mejorar continuamente la seguridad, la equidad y la efectividad de su tecnología educativa. LearnPlatform lo hace generando una base de evidencia de lo que está funcionando y promulgándola en beneficio de los estudiantes, los profesores y los presupuestos.</p>
+<p>En esta competencia de análisis, trabajará para descubrir tendencias en el aprendizaje digital. Logre esto con un análisis de datos sobre cómo el compromiso con el aprendizaje digital se relaciona con factores como la demografía del distrito, el acceso a la banda ancha y las políticas y eventos a nivel estatal / nacional. Luego, envíe un notebook de Kaggle para proponer su mejor solución a estas desigualdades educativas.</p>
+<p>Sus presentaciones informarán las políticas y prácticas que cierran la brecha digital. Con una mejor comprensión de las tendencias de aprendizaje digital, puede ayudar a revertir la pérdida de aprendizaje a largo plazo entre los más vulnerables de Estados Unidos, haciendo que la educación sea más equitativa.</p>
+</div>
+<div class="section" id="planteamiento-del-problema">
+<h3>Planteamiento del problema<a class="headerlink" href="#planteamiento-del-problema" title="Permalink to this headline">¶</a></h3>
+<p>La pandemia COVID-19 ha interrumpido el aprendizaje de más de 56 millones de estudiantes en los Estados Unidos. En la primavera de 2020, la mayoría de los gobiernos estatales y locales de los EE. UU. Cerraron las instituciones educativas para detener la propagación del virus. En respuesta, las escuelas y los maestros han intentado llegar a los estudiantes de forma remota a través de herramientas de aprendizaje a distancia y plataformas digitales. Hasta el día de hoy, las preocupaciones sobre la exacerbación de la brecha digital y la pérdida de aprendizaje a largo plazo entre los estudiantes más vulnerables de Estados Unidos continúan creciendo.</p>
+</div>
+<div class="section" id="desafio">
+<h3>Desafío<a class="headerlink" href="#desafio" title="Permalink to this headline">¶</a></h3>
+<p>Los estudiantes deben explorar (1) el estado del aprendizaje digital en 2020 y (2) cómo la participación del aprendizaje digital se relaciona con factores como la demografía del distrito, el acceso a banda ancha y las políticas y eventos a nivel estatal/nacional.</p>
+<p>Le recomendamos que oriente el análisis con preguntas relacionadas con los temas descritos anteriormente (en negrita). A continuación se muestran algunos ejemplos de preguntas que se relacionan con el planteamiento de nuestro problema:</p>
+<ul class="simple">
+<li><p>¿Cuál es el panorama de la conectividad y el compromiso digitales en 2020?</p></li>
+<li><p>¿Cuál es el efecto de la pandemia de COVID-19 en el aprendizaje en línea y a distancia, y cómo podría evolucionar también en el futuro?</p></li>
+<li><p>¿Cómo cambia la participación de los estudiantes con los diferentes tipos de tecnología educativa durante el transcurso de la pandemia?</p></li>
+<li><p>¿Cómo se relaciona la participación de los estudiantes con las plataformas de aprendizaje en línea con las diferentes geografías? ¿Contexto demográfico (por ejemplo, raza/etnia, ESL, discapacidad de aprendizaje)? Contexto de aprendizaje? ¿Estatus socioeconómico?</p></li>
+<li><p>¿Se correlacionan ciertas intervenciones, prácticas o políticas estatales (por ejemplo, estímulo, reapertura, moratoria de desalojo) con el aumento o la disminución de la participación en línea?</p></li>
+</ul>
+</div>
+<div class="section" id="evaluacion">
+<h3>Evaluación<a class="headerlink" href="#evaluacion" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="claridad">
+<h4>Claridad<a class="headerlink" href="#claridad" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>¿El autor presentó un hilo claro de preguntas o temas que motivaron su análisis?</p></li>
+<li><p>¿El autor documentó por qué/cómo se eligió y utilizó un conjunto de métodos para su análisis?</p></li>
+<li><p>¿Está documentado el notebook de una manera que sea fácilmente reproducible (p. Ej., Código, fuentes de datos adicionales, citas)?</p></li>
+<li><p>¿El notebook contiene visualizaciones de datos claras que ayuden a comunicar de manera eficaz los hallazgos del autor tanto a expertos como a no expertos?</p></li>
+</ul>
+</div>
+<div class="section" id="precision">
+<h4>Precisión<a class="headerlink" href="#precision" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>¿El autor procesó los datos (por ejemplo, fusionando) y/o fuentes de datos adicionales con precisión?</p></li>
+<li><p>¿La metodología utilizada en el análisis es apropiada y razonable?</p></li>
+<li><p>¿Son razonables y convincentes las interpretaciones basadas en el análisis y la visualización?</p></li>
+</ul>
+</div>
+<div class="section" id="creatividad">
+<h4>Creatividad<a class="headerlink" href="#creatividad" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>¿El notebook ayuda al lector a aprender algo nuevo o lo desafía a pensar de una manera nueva?</p></li>
+<li><p>¿El notebook aprovecha métodos novedosos y/o visualizaciones que ayudan a revelar información a partir de datos y/o comunicar hallazgos?</p></li>
+<li><p>¿El autor utilizó fuentes de datos públicas adicionales en su análisis?</p></li>
+</ul>
+</div>
+<div class="section" id="hints">
+<h4>Hints<a class="headerlink" href="#hints" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Esto corresponde a un desafio de Kaggle (<a class="reference external" href="https://www.kaggle.com/c/learnplatform-covid19-impact-on-digital-learning/overview/description">link</a>).</p></li>
+<li><p>La descripción de las columnas, lo pueden encontrar en el siguiente <a class="reference external" href="https://www.kaggle.com/c/learnplatform-covid19-impact-on-digital-learning/data">link</a>.</p></li>
+<li><p>Los datos del desafio se encuentran en el siguiente <a class="reference external" href="https://drive.google.com/drive/folders/15t3gGwGNazuW5Zs4Mj_9_d2sMJdJg7qo">link</a>.</p></li>
+<li><p>A modo de inspiración, pueden ocupar algunos gráficos de otros participantes del desafío (<a class="reference external" href="https://www.kaggle.com/c/learnplatform-covid19-impact-on-digital-learning/code">link</a>).</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># libraries</span>
+<span class="kn">import</span> <span class="nn">glob</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># read data</span>
+
+<span class="c1">## products dataset</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;data/learnplatform-covid19-impact-on-digital-learning/&#39;</span>
+<span class="n">products_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;products_info.csv&quot;</span><span class="p">)</span>
+<span class="n">products_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">products_df</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">50</span><span class="o">-</span><span class="mi">402</span><span class="n">f1e175ccf</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1">## products dataset</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;data/learnplatform-covid19-impact-on-digital-learning/&#39;</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">products_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;products_info.csv&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">products_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">products_df</span><span class="o">.</span><span class="n">columns</span><span class="p">]</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">608</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">609</span> 
+<span class="ne">--&gt; </span><span class="mi">610</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">611</span> 
+<span class="g g-Whitespace">    </span><span class="mi">612</span> 
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">460</span> 
+<span class="g g-Whitespace">    </span><span class="mi">461</span>     <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">462</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span> 
+<span class="g g-Whitespace">    </span><span class="mi">464</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">817</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">818</span> 
+<span class="ne">--&gt; </span><span class="mi">819</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">820</span> 
+<span class="g g-Whitespace">    </span><span class="mi">821</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1048</span>             <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1049</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1050</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1051</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1052</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1865</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1866</span>         <span class="c1"># open handles</span>
+<span class="ne">-&gt; </span><span class="mi">1867</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1868</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1869</span>         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="s2">&quot;compression&quot;</span><span class="p">):</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1360</span>         <span class="n">Let</span> <span class="n">the</span> <span class="n">readers</span> <span class="nb">open</span> <span class="n">IOHanldes</span> <span class="n">after</span> <span class="n">they</span> <span class="n">are</span> <span class="n">done</span> <span class="k">with</span> <span class="n">their</span> <span class="n">potential</span> <span class="n">raises</span><span class="o">.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1361</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1362</span><span class="s2">         self.handles = get_handle(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1363</span><span class="s2">             src,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1364</span><span class="s2">             &quot;r&quot;,</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">640</span><span class="s2">                 errors = &quot;replace&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">641</span><span class="s2">             # Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">642</span><span class="s2">             handle = open(</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span><span class="s2">                 handle,</span>
+<span class="g g-Whitespace">    </span><span class="mi">644</span><span class="s2">                 ioargs.mode,</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;data/learnplatform-covid19-impact-on-digital-learning/products_info.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## districts dataset</span>
+<span class="n">districts_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span><span class="s2">&quot;districts_info.csv&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">51</span><span class="o">-</span><span class="n">d0891af2e2db</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">## districts dataset</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">districts_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span><span class="s2">&quot;districts_info.csv&quot;</span><span class="p">)</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">608</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">609</span> 
+<span class="ne">--&gt; </span><span class="mi">610</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">611</span> 
+<span class="g g-Whitespace">    </span><span class="mi">612</span> 
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">460</span> 
+<span class="g g-Whitespace">    </span><span class="mi">461</span>     <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">462</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span> 
+<span class="g g-Whitespace">    </span><span class="mi">464</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">817</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">818</span> 
+<span class="ne">--&gt; </span><span class="mi">819</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">820</span> 
+<span class="g g-Whitespace">    </span><span class="mi">821</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1048</span>             <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1049</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1050</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1051</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1052</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1865</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1866</span>         <span class="c1"># open handles</span>
+<span class="ne">-&gt; </span><span class="mi">1867</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1868</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1869</span>         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="s2">&quot;compression&quot;</span><span class="p">):</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1360</span>         <span class="n">Let</span> <span class="n">the</span> <span class="n">readers</span> <span class="nb">open</span> <span class="n">IOHanldes</span> <span class="n">after</span> <span class="n">they</span> <span class="n">are</span> <span class="n">done</span> <span class="k">with</span> <span class="n">their</span> <span class="n">potential</span> <span class="n">raises</span><span class="o">.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1361</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1362</span><span class="s2">         self.handles = get_handle(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1363</span><span class="s2">             src,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1364</span><span class="s2">             &quot;r&quot;,</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">640</span><span class="s2">                 errors = &quot;replace&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">641</span><span class="s2">             # Encoding</span>
+<span class="ne">--&gt; </span><span class="mi">642</span><span class="s2">             handle = open(</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span><span class="s2">                 handle,</span>
+<span class="g g-Whitespace">    </span><span class="mi">644</span><span class="s2">                 ioargs.mode,</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;data/learnplatform-covid19-impact-on-digital-learning/districts_info.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## engagement dataset</span>
+<span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;data/learnplatform-covid19-impact-on-digital-learning/engagement_data/&#39;</span> 
+<span class="n">all_files</span> <span class="o">=</span> <span class="n">glob</span><span class="o">.</span><span class="n">glob</span><span class="p">(</span><span class="n">path</span> <span class="o">+</span> <span class="s2">&quot;/*.csv&quot;</span><span class="p">)</span>
+<span class="n">li</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">all_files</span><span class="p">:</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">district_id</span> <span class="o">=</span> <span class="n">filename</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">df</span><span class="p">[</span><span class="s2">&quot;district_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">district_id</span>
+    <span class="n">li</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="n">engagement_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="n">engagement_df</span> <span class="o">=</span> <span class="n">engagement_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">52</span><span class="o">-</span><span class="mi">3</span><span class="n">b0b72887479</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">df</span><span class="p">[</span><span class="s2">&quot;district_id&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">district_id</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">li</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="n">engagement_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">(</span><span class="n">li</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">engagement_df</span> <span class="o">=</span> <span class="n">engagement_df</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/core/reshape/concat.py</span> in <span class="ni">concat</span><span class="nt">(objs, axis, join, ignore_index, keys, levels, names, verify_integrity, sort, copy)</span>
+<span class="g g-Whitespace">    </span><span class="mi">283</span>     <span class="ne">ValueError</span><span class="p">:</span> <span class="n">Indexes</span> <span class="n">have</span> <span class="n">overlapping</span> <span class="n">values</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">284</span>     <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">285</span><span class="s2">     op = _Concatenator(</span>
+<span class="g g-Whitespace">    </span><span class="mi">286</span><span class="s2">         objs,</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span><span class="s2">         axis=axis,</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/core/reshape/concat.py</span> in <span class="ni">__init__</span><span class="nt">(self, objs, axis, join, keys, levels, names, ignore_index, verify_integrity, copy, sort)</span>
+<span class="g g-Whitespace">    </span><span class="mi">340</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">341</span><span class="s2">         if len(objs) == 0:</span>
+<span class="ne">--&gt; </span><span class="mi">342</span><span class="s2">             raise ValueError(&quot;No objects to concatenate&quot;)</span>
+<span class="g g-Whitespace">    </span><span class="mi">343</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">344</span><span class="s2">         if keys is None:</span>
+
+<span class="ne">ValueError</span>: No objects to concatenate
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/homeworks"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>

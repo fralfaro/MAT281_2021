@@ -1,0 +1,761 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jupyter &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    
+  <link href="../../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/togglebutton.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="shortcut icon" href="../../../_static/logo_python.jpeg"/>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="Numpy" href="../data_manipulation/scientific_computing/numpy.html" />
+    <link rel="prev" title="Python" href="lecture_012_python.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../../index.html">
+      
+      <img src="../../../_static/logo_python.jpeg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../../index.html">
+   Home
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Herramientas Básicas
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="lecture_000_intro.html">
+   Introducción
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lecture_000_configuraciones.html">
+     Configuraciones
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture_011_os.html">
+   Linux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture_015_git.html">
+   Git
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture_013_ide.html">
+   IDE’s
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture_016_venv.html">
+   Virtual Environment
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lecture_012_python.html">
+   Python
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Jupyter
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Computación cientifica
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/scientific_computing/numpy.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/scientific_computing/scipy.html">
+   SciPy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/scientific_computing/sympy.html">
+   Sympy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Manipulación de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/data_manipulation/base_datos.html">
+   Base de datos
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_manipulation/data_manipulation/pandas/pandas.html">
+   Pandas
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_manipulation/data_manipulation/modulos_pandas/groupby.html">
+     Groupby
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_manipulation/data_manipulation/modulos_pandas/merge_concat.html">
+     Merge &amp; Concat
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_manipulation/data_manipulation/modulos_pandas/pivot.html">
+     Pivot
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/data_manipulation/sqlalchemy/sqlalchemy.html">
+   SQLAlchemy
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Visualización
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/visualization/visualizacion/introduction.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_manipulation/visualization/visualizacion/imperativa.html">
+   Visualización Imperativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_manipulation/visualization/visualizacion/matplotlib.html">
+     Matplotlib
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../data_manipulation/visualization/visualizacion/declarativa.html">
+   Visualización Declarativa
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../data_manipulation/visualization/visualizacion/seaborn.html">
+     Seaborn
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Análisis exploratorio de datos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/eda/intro.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../data_manipulation/eda/eda.html">
+   Caso Aplicado
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Machine Learning
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/introduccion_ml/introduccion.html">
+   Introducción
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/analisis_supervisado_regresion/intro.html">
+   Aprendizaje supervisado - Regresión
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/analisis_supervisado_regresion/02_regresion_lineal.html">
+     Modelos de regressión lineal
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/analisis_supervisado_regresion/02_modelos_regresion.html">
+     Modelos de regressión multiple
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/analisis_supervisado_clasificacion/intro.html">
+   Aprendizaje supervisado - Clasificación
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/analisis_supervisado_clasificacion/02_clasificacion.html">
+     Modelo de regresión logística
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/introduccion_ml/no_supervisados.html">
+   Aprendizaje no supervisado
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/analisis_no_supervisado/03_clustering.html">
+     Clustering
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/analisis_no_supervisado/03_reduccion_dimensionalidad.html">
+     Reducción de dimensionalidad
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ml/overfitting/04_overfitting_underfitting.html">
+   Overfitting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+  <label for="toctree-checkbox-8">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ml/overfitting/04_reducir_overfitting.html">
+     Reducir el overfitting
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../ml/time_series/05_series_temporales.html">
+   Series Temporales
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/mat281/lectures/basic_tools/lecture_014_jupyter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funciones-basicas">
+   Funciones Básicas
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#toolbox">
+   Toolbox
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algunos-atajos-importantes">
+   Algunos atajos importantes
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#completado-mediantes-tabs">
+     Completado mediantes Tabs.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#buscando-ayuda">
+     Buscando ayuda
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#magias-magics">
+     Magias (magics).
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tiempo-por-celda">
+     Tiempo por celda
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#comandos-bash">
+     Comandos bash
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#referencia">
+   Referencia
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="jupyter">
+<h1>Jupyter<a class="headerlink" href="#jupyter" title="Permalink to this headline">¶</a></h1>
+<a class="reference internal image-reference" href="https://2.bp.blogspot.com/-Q23VBETHLS0/WN_lgpxinkI/AAAAAAAAA-k/f3DJQfBre0QD5rwMWmGIGhBGjU40MTAxQCLcB/s1600/jupyter.png"><img alt="" class="align-center" src="https://2.bp.blogspot.com/-Q23VBETHLS0/WN_lgpxinkI/AAAAAAAAA-k/f3DJQfBre0QD5rwMWmGIGhBGjU40MTAxQCLcB/s1600/jupyter.png" style="width: 300px; height: 300px;" /></a>
+<p><a id='c1'></a></p>
+<div class="section" id="funciones-basicas">
+<h2>Funciones Básicas<a class="headerlink" href="#funciones-basicas" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyter.org/">Jupyter Notebook</a> es una herramienta de desarrollo para facilitar la programación.</p></li>
+<li><p>Está orientada a la Computación Científica y a la Ciencia de Datos.</p></li>
+<li><p>Es un entorno de computación interactivo agnóstico, se puede ocupar en R, python o Julia.</p></li>
+<li><p>Jupyter notebook ofrece muchas herramientas que serán de gran utilidad a lo largo de este curso.</p></li>
+</ul>
+</div>
+<div class="section" id="toolbox">
+<h2>Toolbox<a class="headerlink" href="#toolbox" title="Permalink to this headline">¶</a></h2>
+<p>Jupyter notebook nos ofrece el siguiente toolbox:</p>
+<ul class="simple">
+<li><p><strong>File</strong>: En él, puede crear un nuevo cuaderno o abrir uno preexistente. Aquí es también a donde iría para cambiar el nombre de un Cuaderno. Creo que el elemento de menú más interesante es la opción Guardar y Checkpoint. Esto le permite crear puntos de control a los que puede retroceder si lo necesita.</p></li>
+<li><p><strong>Edit</strong>: Aquí puede cortar, copiar y pegar celdas. Aquí también es donde irías si quisieras eliminar, dividir o fusionar una celda. Puede reordenar celdas aquí también.</p></li>
+<li><p><strong>View</strong>: es útil para alternar la visibilidad del encabezado y la barra de herramientas. También puede activar o desactivar los números de línea dentro de las celdas. Aquí también es donde irías si quieres meterte con la barra de herramientas de la celda.</p></li>
+<li><p><strong>Insert</strong>: es solo para insertar celdas encima o debajo de la celda seleccionada actualmente.</p></li>
+<li><p><strong>Cell</strong>: le permite ejecutar una celda, un grupo de celdas o todas las celdas. También puede ir aquí para cambiar el tipo de celda, aunque personalmente considero que la barra de herramientas es más intuitiva para eso.</p></li>
+<li><p><strong>Kernel</strong>: es para trabajar con el kernel que se ejecuta en segundo plano. Aquí puede reiniciar el kernel, volver a conectarlo, apagarlo o incluso cambiar el kernel que está utilizando su computadora portátil.</p></li>
+<li><p><strong>Widgets</strong>: es para guardar y borrar el estado del widget. Los widgets son básicamente widgets de JavaScript que puede agregar a sus celdas para crear contenido dinámico utilizando Python (u otro Kernel).</p></li>
+<li><p><strong>Help</strong>: es donde debe aprender sobre los atajos de teclado del Notebook, un recorrido por la interfaz de usuario y mucho material de referencia.</p></li>
+</ul>
+<p>A medida que se avance en el cuso se entrará en detalle en cada una de estas herramientas. Ahora se enseñará las virtudes de los <strong>notebooks</strong> en aspectos de presentación tipo latex (markdown) y algunos atajos importantes que nos ayudarán en el desarrollo de códigos.</p>
+</div>
+<div class="section" id="markdown">
+<h2>Markdown<a class="headerlink" href="#markdown" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/800px-Markdown-mark.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/800px-Markdown-mark.svg.png" class="align-center" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/800px-Markdown-mark.svg.png" style="width: 240px; height: 240px;" /></a>
+<p><strong>Jupyter Notebook</strong> permite que escribamos texto formateado, es decir, texto con cursiva, negritas, títulos de distintos tamaños, etc., de forma simple. Para ello <em>Jupyter</em> nos permite usar <em>Markdown</em>, que es un lenguaje de marcado (markup) muy popular.</p>
+<p>Los lenguajes de markup son lenguajes ideados para procesar texto, algunos de los más conocidos son <a class="reference external" href="https://es.wikipedia.org/wiki/HTML">HTML</a> y <span class="math notranslate nohighlight">\(\LaTeX\)</span>. <em>Markdown</em> tiene como objetivo ser un lenguaje de sintaxis minimalista, simple de aprender y usar; de esa forma uno puede dar formato al texto pero sin perder demasiado tiempo en los detalles.</p>
+<p>La cantidad de <a class="reference external" href="https://joedicastro.com/pages/markdown.html">tutoriales</a> en la red sobre <em>Markdown</em> es inmenso, por lo que nos centraremos en indicar las opciones que más se utilizan.</p>
+<ul class="simple">
+<li><p><strong>Texto en negrita/cursiva</strong>: El texto en negrita se indica entre dos pares de asteriscos. De este modo <code class="docutils literal notranslate"><span class="pre">**palabra**</span></code> aparecerá como <strong>palabra</strong>. Por otro lado, el texto en cursiva se indica entre dos asteriscos simples; es decir <code class="docutils literal notranslate"><span class="pre">*palabra*</span></code> aparecerá como <em>palabra</em>.</p></li>
+<li><p><strong>Listas</strong>: Las listas en <em>Markdown</em> se realizan indicando un asterisco o un número seguido de un punto si se desean listas numeradas. <em>Markdown</em> organiza automáticamente los items asignándoles el número correcto.</p></li>
+<li><p><strong>Inclusión de imágenes</strong>: La sintaxis para incluir imágenes en Markdown es <code class="docutils literal notranslate"><span class="pre">![nombre</span> <span class="pre">alternativo](dirección</span> <span class="pre">de</span> <span class="pre">la</span> <span class="pre">imagen)</span></code> en donde el nombre alternativo aparecerá en caso de que no se pueda cargar la imágen y la dirección puede referirse a una imagen local o un enlace en Internet.</p></li>
+<li><p><strong>Inclusión de código HTML</strong>: El lenguaje <em>Markdown</em> es un subconjunto del lenguaje HTML y en donde se necesite un mayor control del formato, se puede incluir directamente el código HTML.</p></li>
+<li><p><strong>Enlaces</strong>: Las celdas de texto pueden contener enlaces, tanto a otras partes del documento, como a páginas en internet u otros archivos locales. Su sintaxis es <code class="docutils literal notranslate"><span class="pre">[texto](dirección</span> <span class="pre">del</span> <span class="pre">enlace)</span></code>.</p></li>
+<li><p><strong>Fórmulas matemáticas</strong>: Gracias al uso de <em>MathJax</em>, se puede incluir código en <span class="math notranslate nohighlight">\(\LaTeX\)</span> para mostrar todo tipo de fórmulas y expresiones matemáticas. Las fórmulas dentro de una línea de texto se escriben entre símbolos de dólar <code class="docutils literal notranslate"><span class="pre">$...$</span></code>, mientras que las expresiones separadas del texto utilizan símbolos de dólar dobles <code class="docutils literal notranslate"><span class="pre">$$...$$</span></code>. Los siguientes son ejemplos de fórmulas matemáticas escritas en <span class="math notranslate nohighlight">\(\LaTeX\)</span>:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[p(x) = 3x^2 + 5y^2 + x^2y^2\]</div>
+<div class="math notranslate nohighlight">
+\[e^{\pi i} - 1 = 0\]</div>
+<div class="math notranslate nohighlight">
+\[\lim_{x \rightarrow \infty} 3x+1\]</div>
+<div class="math notranslate nohighlight">
+\[\sum_{n=1}^\infty\frac{1}{n^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\int_0^\infty\frac{\sin x}{x}\,\mathrm{d}x=\frac{\pi}{2}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^2 = 
+\begin{pmatrix} c &amp; s \end{pmatrix} 
+\begin{pmatrix} 1 &amp; 0\\ 0 &amp; 1 \end{pmatrix}
+\begin{pmatrix} c \\ s \end{pmatrix} 
+= c^2 + s^2\end{split}\]</div>
+</div>
+<div class="section" id="algunos-atajos-importantes">
+<h2>Algunos atajos importantes<a class="headerlink" href="#algunos-atajos-importantes" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="completado-mediantes-tabs">
+<h3>Completado mediantes Tabs.<a class="headerlink" href="#completado-mediantes-tabs" title="Permalink to this headline">¶</a></h3>
+<p>La completación mediante tabs, especialmente para los atributos, es una forma conveniente de explorar la estructura de cualquier objeto con el que esté tratando.</p>
+<p>Simplemente escriba object_name. <code class="docutils literal notranslate"><span class="pre">&lt;TAB&gt;</span></code> para ver los atributos del objeto. Además de los objetos y palabras clave de Python, la finalización de pestañas también funciona en nombres de archivos y directorios.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">collections</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">collections</span><span class="o">.</span> <span class="c1"># aprete la tecla &lt;𝑇𝐴𝐵&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-2-666d5d09e416&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="n">collections</span><span class="o">.</span> <span class="c1"># aprete la tecla &lt;𝑇𝐴𝐵&gt;</span>
+                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="buscando-ayuda">
+<h3>Buscando ayuda<a class="headerlink" href="#buscando-ayuda" title="Permalink to this headline">¶</a></h3>
+<p>En caso de necesitar ayuda sobre cualquier comando de <em>Python</em>, <em>Jupyter</em> nos ofrece una función llamada <code class="docutils literal notranslate"><span class="pre">help</span></code>.</p>
+<p>En resumen, ¡suele ser más importante saber como buscar información que memorizarla! Por todo esto, <em>Jupyter</em> nos ofrece ayuda sobre cualquier comando agregando un signo de interrogación <code class="docutils literal notranslate"><span class="pre">?</span></code> luego del nombre del comando (y luego ejecutar la celda con la combinación de teclas SHIFT + ENTER).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+np.sum<span class="o">?</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="magias-magics">
+<h3>Magias (magics).<a class="headerlink" href="#magias-magics" title="Permalink to this headline">¶</a></h3>
+<p><em>Jupyter</em> posee varias funciones <em>mágicas</em> predefinidas que sirven para simplificar tareas comunes.</p>
+<p>Hay dos tipos de <em>magias</em>:</p>
+<ul class="simple">
+<li><p>Magias por linea (line magics): son comandos que empiezan con el caracter <code class="docutils literal notranslate"><span class="pre">%</span></code> y que toman como argumentos valores escritos en la misma línea.</p></li>
+<li><p>Magias por celda (cell magics): son comandos que empiezan con los caracteres <code class="docutils literal notranslate"><span class="pre">%%</span></code>, y que reciben argumentos en la misma línea y en toda la celda.</p></li>
+</ul>
+<p>En general solo se puede usar una sola mágias por celda en cada celda y <strong>debe ser escrita en la primer linea de la celda</strong>.</p>
+<p>Un buen ejemplo de mágia es <code class="docutils literal notranslate"><span class="pre">%lsmagic</span></code> que lista todas las <em>magias</em> disponibles:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">lsmagic</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Available line magics:
+%alias  %alias_magic  %autoawait  %autocall  %automagic  %autosave  %bookmark  %cat  %cd  %clear  %colors  %conda  %config  %connect_info  %cp  %debug  %dhist  %dirs  %doctest_mode  %ed  %edit  %env  %gui  %hist  %history  %killbgscripts  %ldir  %less  %lf  %lk  %ll  %load  %load_ext  %loadpy  %logoff  %logon  %logstart  %logstate  %logstop  %ls  %lsmagic  %lx  %macro  %magic  %man  %matplotlib  %mkdir  %more  %mv  %notebook  %page  %pastebin  %pdb  %pdef  %pdoc  %pfile  %pinfo  %pinfo2  %pip  %popd  %pprint  %precision  %prun  %psearch  %psource  %pushd  %pwd  %pycat  %pylab  %qtconsole  %quickref  %recall  %rehashx  %reload_ext  %rep  %rerun  %reset  %reset_selective  %rm  %rmdir  %run  %save  %sc  %set_env  %store  %sx  %system  %tb  %time  %timeit  %unalias  %unload_ext  %who  %who_ls  %whos  %xdel  %xmode
+
+Available cell magics:
+%%!  %%HTML  %%SVG  %%bash  %%capture  %%debug  %%file  %%html  %%javascript  %%js  %%latex  %%markdown  %%perl  %%prun  %%pypy  %%python  %%python2  %%python3  %%ruby  %%script  %%sh  %%svg  %%sx  %%system  %%time  %%timeit  %%writefile
+
+Automagic is ON, % prefix IS NOT needed for line magics.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tiempo-por-celda">
+<h3>Tiempo por celda<a class="headerlink" href="#tiempo-por-celda" title="Permalink to this headline">¶</a></h3>
+<p>En varias situaciones resulta necesario medir el tiempo de ejecución de una porción de código. Para ello podemos usar la magia <code class="docutils literal notranslate"><span class="pre">%timeit</span></code>. Esta <em>magia</em> está disponible tanto para línea como para celda:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>it 
+<span class="mi">1</span><span class="o">+</span><span class="mi">1</span> <span class="c1"># timeit repite (adaptativamente) la medición a fin de reducir el error.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>7.21 ns ± 0.0522 ns per loop (mean ± std. dev. of 7 runs, 100000000 loops each)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="comandos-bash">
+<h3>Comandos bash<a class="headerlink" href="#comandos-bash" title="Permalink to this headline">¶</a></h3>
+<p><em>Jupyter</em> permite también mezclar varios lenguajes de programación en una misma notebook. Por ejemplo, podríamos escribir en <em>bash</em> lo siguiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="k">bash</span>
+for i in {3..1}; do
+    echo $i
+done
+echo &quot;Hola desde $BASH&quot;
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+2
+1
+Hola desde /usr/bin/bash
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="referencia">
+<h2>Referencia<a class="headerlink" href="#referencia" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p><a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/examples/Notebook/Notebook%20Basics.html">Notebook Basics</a></p></li>
+<li><p><a class="reference external" href="https://jupyter.readthedocs.io/en/latest/running.html">Running the Notebook</a></p></li>
+</ol>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./mat281/lectures/basic_tools"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="lecture_012_python.html" title="previous page">Python</a>
+    <a class='right-next' id="next-link" href="../data_manipulation/scientific_computing/numpy.html" title="next page">Numpy</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Francisco Alfaro Medina<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+<script async="" src="https://www.google-analytics.com/analytics.js"></script>
+<script>
+                        window.ga = window.ga || function () {
+                            (ga.q = ga.q || []).push(arguments) };
+                        ga.l = +new Date;
+                        ga('create', 'UA-177357392-1', 'auto');
+                        ga('set', 'anonymizeIp', true);
+                        ga('send', 'pageview');
+                    </script>
+
+  </body>
+</html>
