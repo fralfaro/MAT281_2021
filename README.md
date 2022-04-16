@@ -1,9 +1,10 @@
 # MAT281 - Aplicaciones de la Matemática en la Ingeniería
 
-<a href="https://faam.github.io/mat281_2021/"><img alt="Link a la Documentación" src="https://jupyterbook.org/badge.svg"></a>
-[![YourActionName Actions Status](https://github.com/fralfaro/mat281_2021/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/fralfaro/mat281_2021/actions)
+<a href="https://fralfaro.github.io/MAT281_2021/"><img alt="Link a la Documentación" src="https://jupyterbook.org/badge.svg"></a>
+[![YourActionName Actions Status](https://github.com/fralfaro/MAT281_2021/actions/workflows/github-actions-demo.yml/badge.svg)](https://github.com/fralfaro/MAT281_2021/actions)
 [![clases](https://img.shields.io/badge/clases-link-brightgreen)](https://drive.google.com/drive/folders/1dk8ZNP-ayZQg6yfNqDdsflRFcJg_TaGw)
 [![notas](https://img.shields.io/badge/notas-link-brightgreen)](https://docs.google.com/spreadsheets/d/1eMQswXSvpV4c6V-XQhqhnkM7KRHd60P0/edit#gid=470036635)
+
 
 
 ## Identificación de la asignatura
