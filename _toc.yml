@@ -1,0 +1,65 @@
+format: jb-book
+root: index
+parts:
+  - caption:  "Herramientas Básicas"
+    chapters:
+      - file: mat281/lectures/basic_tools/lecture_000_intro
+        sections:
+          - file: mat281/lectures/basic_tools/lecture_000_configuraciones
+      - file: mat281/lectures/basic_tools/lecture_011_os
+      - file: mat281/lectures/basic_tools/lecture_015_git
+      - file: mat281/lectures/basic_tools/lecture_013_ide
+      - file: mat281/lectures/basic_tools/lecture_016_venv
+      - file: mat281/lectures/basic_tools/lecture_012_python
+      - file: mat281/lectures/basic_tools/lecture_014_jupyter
+
+  - caption: Computación cientifica
+    chapters:
+      - file: mat281/lectures/data_manipulation/scientific_computing/numpy
+      - file: mat281/lectures/data_manipulation/scientific_computing/scipy
+      - file: mat281/lectures/data_manipulation/scientific_computing/sympy
+
+  - caption: Manipulación de datos
+    chapters:
+      - file: mat281/lectures/data_manipulation/data_manipulation/base_datos
+      - file: mat281/lectures/data_manipulation/data_manipulation/pandas/pandas
+        sections:
+          - file: mat281/lectures/data_manipulation/data_manipulation/modulos_pandas/groupby
+          - file: mat281/lectures/data_manipulation/data_manipulation/modulos_pandas/merge_concat
+          - file: mat281/lectures/data_manipulation/data_manipulation/modulos_pandas/pivot
+      - file: mat281/lectures/data_manipulation/data_manipulation/sqlalchemy/sqlalchemy
+
+  - caption: Visualización
+    chapters:
+      - file: mat281/lectures/data_manipulation/visualization/visualizacion/introduction
+      - file: mat281/lectures/data_manipulation/visualization/visualizacion/imperativa
+        sections:
+          - file: mat281/lectures/data_manipulation/visualization/visualizacion/matplotlib
+      - file:  mat281/lectures/data_manipulation/visualization/visualizacion/declarativa
+        sections:
+          - file:  mat281/lectures/data_manipulation/visualization/visualizacion/seaborn
+  - caption: Análisis exploratorio de datos
+    chapters:
+      - file: mat281/lectures/data_manipulation/eda/intro
+      - file: mat281/lectures/data_manipulation/eda/eda
+
+  - caption: Machine Learning
+    chapters:
+      - file: mat281/lectures/ml/introduccion_ml/introduccion
+      - file: mat281/lectures/ml/analisis_supervisado_regresion/intro
+        sections:
+          - file: mat281/lectures/ml/analisis_supervisado_regresion/02_regresion_lineal
+          - file: mat281/lectures/ml/analisis_supervisado_regresion/02_modelos_regresion
+      - file: mat281/lectures/ml/analisis_supervisado_clasificacion/intro
+        sections:
+          - file: mat281/lectures/ml/analisis_supervisado_clasificacion/02_clasificacion
+      - file: mat281/lectures/ml/introduccion_ml/no_supervisados
+        sections:
+          - file: mat281/lectures/ml/analisis_no_supervisado/03_clustering
+          - file: mat281/lectures/ml/analisis_no_supervisado/03_reduccion_dimensionalidad
+
+      - file: mat281/lectures/ml/overfitting/04_overfitting_underfitting
+        sections:
+          - file: mat281/lectures/ml/overfitting/04_reducir_overfitting
+      - file: mat281/lectures/ml/time_series/05_series_temporales
+
