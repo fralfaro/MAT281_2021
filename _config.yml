@@ -1,14 +1,18 @@
 #######################################################################################
 # Book settings
-title                       : Aplicaciones de la Matematica en la Ingenieria # The title of the book. Will be placed in the left navbar.
+title                       : MAT281 - Aplicaciones de la Matemática en la Ingeniería # The title of the book. Will be placed in the left navbar.
 author                      : Francisco Alfaro Medina  # The author of the book
 copyright                   : "2021"  # Copyright year to be placed in the footer
-logo                        : "images/logo_python.jpeg"  # A path to the book logo
+logo                        : "images/utfsm.png"  # A path to the book logo
 exclude_patterns            : [README.md,
                                '_build',
                                "**.ipynb_checkpoints",
                                "**myst",
-                               "**terminal"]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+                               "**terminal",
+                               "labs/*", "homeworks/*", "Untitled*.ipynb"
+                              ]  # Patterns to skip when building the book. Can be glob-style (e.g. "*skip.ipynb")
+
+
 
 #######################################################################################
 # Execution settings
@@ -20,7 +24,7 @@ execute:
 #######################################################################################
 # HTML-specific settings
 html:
-  favicon                   : "images/usm.png"  # A path to a favicon image
+  favicon                   : "images/utfsm.png"  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button     : true  # Whether to add a link to your repository button
   use_issues_button         : false  # Whether to add an "open an issue" button
@@ -36,16 +40,16 @@ html:
 #######################################################################################
 # Launch button settings
 launch_buttons:
-  notebook_interface        : "" # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url             : ""  # The URL of the BinderHub (e.g., https://mybinder.org)
+  notebook_interface        : jupyterlab  # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url             : https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
   jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
   thebe                     : false  # Add a thebe button to pages (requires the repository to run on Binder)
-  colab_url                 : "" # The URL of Google Colab (e.g., https://colab.research.google.com)
+  colab_url                 : https://colab.research.google.com # The URL of Google Colab (e.g., https://colab.research.google.com)
 
 repository:
-  url                       : https://gitlab.com/FAAM/mat281_2021 # The URL to your book's repository
-  # path_to_book              : ""  # A path to your book's folder, relative to the repository root.
+  url                       : https://github.com/fralfaro/MAT281_2021  # The URL to your book's repository
   branch                    : master  # Which branch of the repository should be used when creating links
+
 
 #######################################################################################
 # Advanced and power-user settings
