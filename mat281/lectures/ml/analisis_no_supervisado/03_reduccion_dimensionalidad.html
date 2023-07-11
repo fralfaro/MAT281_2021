@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Reducción de dimensionalidad &#8212; Aplicaciones de la Matematica en la Ingenieria</title>
+    <title>Reducción de dimensionalidad &#8212; MAT281 - Aplicaciones de la Matemática en la Ingeniería</title>
     
   <link href="../../../../_static/css/theme.css" rel="stylesheet" />
   <link href="../../../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -51,7 +51,7 @@
     <script async="async" src="../../../../_static/sphinx-thebe.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
-    <link rel="shortcut icon" href="../../../../_static/usm.png"/>
+    <link rel="shortcut icon" href="../../../../_static/utfsm.png"/>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" />
     <link rel="next" title="Overfitting" href="../overfitting/04_overfitting_underfitting.html" />
@@ -74,8 +74,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../../index.html">
       
+      <img src="../../../../_static/utfsm.png" class="logo" alt="logo">
       
-      <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
+      
+      <h1 class="site-logo" id="site-title">MAT281 - Aplicaciones de la Matemática en la Ingeniería</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../../../../search.html" method="get">
@@ -424,7 +426,7 @@
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://gitlab.com/FAAM/mat281_2021"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/fralfaro/MAT281_2021"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         
@@ -440,6 +442,28 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/fralfaro/MAT281_2021/master?urlpath=lab/tree/mat281/lectures/ml/analisis_no_supervisado/03_reduccion_dimensionalidad.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <a class="colab-button" href="https://colab.research.google.com/github/fralfaro/MAT281_2021/blob/master/mat281/lectures/ml/analisis_no_supervisado/03_reduccion_dimensionalidad.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="../../../../_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -3027,26 +3051,26 @@ Valores reconstruidos
     </tr>
     <tr>
       <th>1</th>
-      <td>9.1336</td>
-      <td>130.7117</td>
-      <td>11.4329</td>
-      <td>0.8866</td>
-      <td>0.5235</td>
-      <td>0.4755</td>
-      <td>0.6996</td>
-      <td>0.5448</td>
+      <td>9.1377</td>
+      <td>130.5552</td>
+      <td>11.4261</td>
+      <td>0.8899</td>
+      <td>0.5231</td>
+      <td>0.4757</td>
+      <td>0.7016</td>
+      <td>0.5445</td>
       <td>LocallyLinearEmbedding</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>9.4209</td>
-      <td>149.9513</td>
-      <td>12.2455</td>
-      <td>0.9603</td>
-      <td>0.5153</td>
-      <td>0.4905</td>
-      <td>0.7234</td>
-      <td>0.5458</td>
+      <td>7.7553</td>
+      <td>106.7593</td>
+      <td>10.3324</td>
+      <td>0.7665</td>
+      <td>0.4436</td>
+      <td>0.4038</td>
+      <td>0.5806</td>
+      <td>0.4613</td>
       <td>MDS</td>
     </tr>
     <tr>
@@ -3063,14 +3087,14 @@ Valores reconstruidos
     </tr>
     <tr>
       <th>4</th>
-      <td>8.7884</td>
-      <td>128.2187</td>
-      <td>11.3234</td>
-      <td>0.8213</td>
-      <td>0.4944</td>
-      <td>0.4575</td>
-      <td>0.6452</td>
-      <td>0.5117</td>
+      <td>8.3703</td>
+      <td>119.3625</td>
+      <td>10.9253</td>
+      <td>0.8728</td>
+      <td>0.4722</td>
+      <td>0.4358</td>
+      <td>0.6586</td>
+      <td>0.4938</td>
       <td>TSNE</td>
     </tr>
   </tbody>
