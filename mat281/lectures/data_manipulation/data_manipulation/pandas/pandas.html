@@ -49,7 +49,7 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="../../../../../_static/sphinx-thebe.js"></script>
-    <link rel="shortcut icon" href="../../../../../_static/logo_python.jpeg"/>
+    <link rel="shortcut icon" href="../../../../../_static/usm.png"/>
     <link rel="index" title="Index" href="../../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../../search.html" />
     <link rel="next" title="Groupby" href="../modulos_pandas/groupby.html" />
@@ -71,8 +71,6 @@
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../../../../index.html">
-      
-      <img src="../../../../../_static/logo_python.jpeg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">Aplicaciones de la Matematica en la Ingenieria</h1>
@@ -817,8 +815,8 @@ dtype: float64
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Conteo:
 c    4
 a    2
-d    1
 b    1
+d    1
 dtype: int64
 </pre></div>
 </div>
@@ -1129,8 +1127,9 @@ hour:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>string to datetime:
-
-DatetimeIndex([&#39;2019-01-01 00:00:00&#39;, &#39;2019-01-01 04:00:00&#39;,
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2019-01-01 00:00:00&#39;, &#39;2019-01-01 04:00:00&#39;,
                &#39;2019-01-01 08:00:00&#39;, &#39;2019-01-01 12:00:00&#39;,
                &#39;2019-01-01 16:00:00&#39;, &#39;2019-01-01 20:00:00&#39;,
                &#39;2019-01-02 00:00:00&#39;, &#39;2019-01-02 04:00:00&#39;,
@@ -1282,160 +1281,123 @@ DatetimeIndex([&#39;2019-01-01 00:00:00&#39;, &#39;2019-01-01 04:00:00&#39;,
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">33</span><span class="o">-</span><span class="n">e10ec3a066fb</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">url</span><span class="o">=</span><span class="s1">&#39;https://drive.google.com/uc?id=&#39;</span> <span class="o">+</span> <span class="n">url</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> 
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">player_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">url</span> <span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">player_data</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, dialect, error_bad_lines, warn_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">608</span>     <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">609</span> 
+<span class="ne">--&gt; </span><span class="mi">610</span>     <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">611</span> 
+<span class="g g-Whitespace">    </span><span class="mi">612</span> 
 
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>name</th>
-      <th>year_start</th>
-      <th>year_end</th>
-      <th>position</th>
-      <th>height</th>
-      <th>weight</th>
-      <th>birth_date</th>
-      <th>college</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>Alaa Abdelnaby</td>
-      <td>1991</td>
-      <td>1995</td>
-      <td>F-C</td>
-      <td>6-10</td>
-      <td>240.0</td>
-      <td>June 24, 1968</td>
-      <td>Duke University</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>Zaid Abdul-Aziz</td>
-      <td>1969</td>
-      <td>1978</td>
-      <td>C-F</td>
-      <td>6-9</td>
-      <td>235.0</td>
-      <td>April 7, 1946</td>
-      <td>Iowa State University</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>Kareem Abdul-Jabbar</td>
-      <td>1970</td>
-      <td>1989</td>
-      <td>C</td>
-      <td>7-2</td>
-      <td>225.0</td>
-      <td>April 16, 1947</td>
-      <td>University of California, Los Angeles</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>Mahmoud Abdul-Rauf</td>
-      <td>1991</td>
-      <td>2001</td>
-      <td>G</td>
-      <td>6-1</td>
-      <td>162.0</td>
-      <td>March 9, 1969</td>
-      <td>Louisiana State University</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>Tariq Abdul-Wahad</td>
-      <td>1998</td>
-      <td>2003</td>
-      <td>F</td>
-      <td>6-6</td>
-      <td>223.0</td>
-      <td>November 3, 1974</td>
-      <td>San Jose State University</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>4545</th>
-      <td>Ante Zizic</td>
-      <td>2018</td>
-      <td>2018</td>
-      <td>F-C</td>
-      <td>6-11</td>
-      <td>250.0</td>
-      <td>January 4, 1997</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4546</th>
-      <td>Jim Zoet</td>
-      <td>1983</td>
-      <td>1983</td>
-      <td>C</td>
-      <td>7-1</td>
-      <td>240.0</td>
-      <td>December 20, 1953</td>
-      <td>Kent State University</td>
-    </tr>
-    <tr>
-      <th>4547</th>
-      <td>Bill Zopf</td>
-      <td>1971</td>
-      <td>1971</td>
-      <td>G</td>
-      <td>6-1</td>
-      <td>170.0</td>
-      <td>June 7, 1948</td>
-      <td>Duquesne University</td>
-    </tr>
-    <tr>
-      <th>4548</th>
-      <td>Ivica Zubac</td>
-      <td>2017</td>
-      <td>2018</td>
-      <td>C</td>
-      <td>7-1</td>
-      <td>265.0</td>
-      <td>March 18, 1997</td>
-      <td>NaN</td>
-    </tr>
-    <tr>
-      <th>4549</th>
-      <td>Matt Zunic</td>
-      <td>1949</td>
-      <td>1949</td>
-      <td>G-F</td>
-      <td>6-3</td>
-      <td>195.0</td>
-      <td>December 19, 1919</td>
-      <td>George Washington University</td>
-    </tr>
-  </tbody>
-</table>
-<p>4550 rows × 8 columns</p>
-</div></div></div>
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">460</span> 
+<span class="g g-Whitespace">    </span><span class="mi">461</span>     <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">462</span>     <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">463</span> 
+<span class="g g-Whitespace">    </span><span class="mi">464</span>     <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">817</span>             <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">818</span> 
+<span class="ne">--&gt; </span><span class="mi">819</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">820</span> 
+<span class="g g-Whitespace">    </span><span class="mi">821</span>     <span class="k">def</span> <span class="nf">close</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">_make_engine</span><span class="nt">(self, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1048</span>             <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1049</span>         <span class="c1"># error: Too many arguments for &quot;ParserBase&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1050</span>         <span class="k">return</span> <span class="n">mapping</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span><span class="bp">self</span><span class="o">.</span><span class="n">f</span><span class="p">,</span> <span class="o">**</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">)</span>  <span class="c1"># type: ignore[call-arg]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1051</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1052</span>     <span class="k">def</span> <span class="nf">_failover_to_python</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">__init__</span><span class="nt">(self, src, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1865</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1866</span>         <span class="c1"># open handles</span>
+<span class="ne">-&gt; </span><span class="mi">1867</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_open_handles</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1868</span>         <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1869</span>         <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="s2">&quot;compression&quot;</span><span class="p">):</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/parsers.py</span> in <span class="ni">_open_handles</span><span class="nt">(self, src, kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1360</span>         <span class="n">Let</span> <span class="n">the</span> <span class="n">readers</span> <span class="nb">open</span> <span class="n">IOHanldes</span> <span class="n">after</span> <span class="n">they</span> <span class="n">are</span> <span class="n">done</span> <span class="k">with</span> <span class="n">their</span> <span class="n">potential</span> <span class="n">raises</span><span class="o">.</span>
+<span class="g g-Whitespace">   </span><span class="mi">1361</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1362</span><span class="s2">         self.handles = get_handle(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1363</span><span class="s2">             src,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1364</span><span class="s2">             &quot;r&quot;,</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/common.py</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">556</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">557</span><span class="s2">     # open URLs</span>
+<span class="ne">--&gt; </span><span class="mi">558</span><span class="s2">     ioargs = _get_filepath_or_buffer(</span>
+<span class="g g-Whitespace">    </span><span class="mi">559</span><span class="s2">         path_or_buf,</span>
+<span class="g g-Whitespace">    </span><span class="mi">560</span><span class="s2">         encoding=encoding,</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/common.py</span> in <span class="ni">_get_filepath_or_buffer</span><span class="nt">(filepath_or_buffer, encoding, compression, mode, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">287</span><span class="s2">                 &quot;storage_options passed with file object or non-fsspec file path&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">288</span><span class="s2">             )</span>
+<span class="ne">--&gt; </span><span class="mi">289</span><span class="s2">         req = urlopen(filepath_or_buffer)</span>
+<span class="g g-Whitespace">    </span><span class="mi">290</span><span class="s2">         content_encoding = req.headers.get(&quot;Content-Encoding&quot;, None)</span>
+<span class="g g-Whitespace">    </span><span class="mi">291</span><span class="s2">         if content_encoding == &quot;gzip&quot;:</span>
+
+<span class="nn">~/.cache/pypoetry/virtualenvs/mat281-2021-V7B8LTfe-py3.8/lib/python3.8/site-packages/pandas/io/common.py</span> in <span class="ni">urlopen</span><span class="nt">(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">193</span><span class="s2">     import urllib.request</span>
+<span class="g g-Whitespace">    </span><span class="mi">194</span><span class="s2"> </span>
+<span class="ne">--&gt; </span><span class="mi">195</span><span class="s2">     return urllib.request.urlopen(*args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">196</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">197</span><span class="s2"> </span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.17/x64/lib/python3.8/urllib/request.py</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
+<span class="g g-Whitespace">    </span><span class="mi">220</span><span class="s2">     else:</span>
+<span class="g g-Whitespace">    </span><span class="mi">221</span><span class="s2">         opener = _opener</span>
+<span class="ne">--&gt; </span><span class="mi">222</span><span class="s2">     return opener.open(url, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">223</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">224</span><span class="s2"> def install_opener(opener):</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.17/x64/lib/python3.8/urllib/request.py</span> in <span class="ni">open</span><span class="nt">(self, fullurl, data, timeout)</span>
+<span class="g g-Whitespace">    </span><span class="mi">529</span><span class="s2">         for processor in self.process_response.get(protocol, []):</span>
+<span class="g g-Whitespace">    </span><span class="mi">530</span><span class="s2">             meth = getattr(processor, meth_name)</span>
+<span class="ne">--&gt; </span><span class="mi">531</span><span class="s2">             response = meth(req, response)</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span><span class="s2">         return response</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.17/x64/lib/python3.8/urllib/request.py</span> in <span class="ni">http_response</span><span class="nt">(self, request, response)</span>
+<span class="g g-Whitespace">    </span><span class="mi">638</span><span class="s2">         # request was successfully received, understood, and accepted.</span>
+<span class="g g-Whitespace">    </span><span class="mi">639</span><span class="s2">         if not (200 &lt;= code &lt; 300):</span>
+<span class="ne">--&gt; </span><span class="mi">640</span><span class="s2">             response = self.parent.error(</span>
+<span class="g g-Whitespace">    </span><span class="mi">641</span><span class="s2">                 &#39;http&#39;, request, response, code, msg, hdrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">642</span><span class="s2"> </span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.17/x64/lib/python3.8/urllib/request.py</span> in <span class="ni">error</span><span class="nt">(self, proto, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span><span class="s2">         if http_err:</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span><span class="s2">             args = (dict, &#39;default&#39;, &#39;http_error_default&#39;) + orig_args</span>
+<span class="ne">--&gt; </span><span class="mi">569</span><span class="s2">             return self._call_chain(*args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">570</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">571</span><span class="s2"> # XXX probably also want an abstract factory that knows when it makes</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.17/x64/lib/python3.8/urllib/request.py</span> in <span class="ni">_call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span><span class="s2">         for handler in handlers:</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span><span class="s2">             func = getattr(handler, meth_name)</span>
+<span class="ne">--&gt; </span><span class="mi">502</span><span class="s2">             result = func(*args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span><span class="s2">             if result is not None:</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span><span class="s2">                 return result</span>
+
+<span class="nn">/opt/hostedtoolcache/Python/3.8.17/x64/lib/python3.8/urllib/request.py</span> in <span class="ni">http_error_default</span><span class="nt">(self, req, fp, code, msg, hdrs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">647</span><span class="s2"> class HTTPDefaultErrorHandler(BaseHandler):</span>
+<span class="g g-Whitespace">    </span><span class="mi">648</span><span class="s2">     def http_error_default(self, req, fp, code, msg, hdrs):</span>
+<span class="ne">--&gt; </span><span class="mi">649</span><span class="s2">         raise HTTPError(req.full_url, code, msg, hdrs, fp)</span>
+<span class="g g-Whitespace">    </span><span class="mi">650</span><span class="s2"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">651</span><span class="s2"> class HTTPRedirectHandler(BaseHandler):</span>
+
+<span class="ne">HTTPError</span>: HTTP Error 404: Not Found
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2287,7 +2249,7 @@ Name: position, dtype: object
       <td>G</td>
       <td>6-7</td>
       <td>NaN</td>
-      <td>August 8, 1979</td>
+      <td>September 21, 1990</td>
       <td>University of Kentucky</td>
     </tr>
     <tr>
